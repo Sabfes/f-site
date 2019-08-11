@@ -8,10 +8,19 @@
   grid-template-columns: auto auto auto auto; 
   grid-template-rows: 80px 1000px 80px;
 }
+
 .site-header {
   grid-column-start: 1;
   grid-column-end: 5;
   background-color: #26292E;
+}
+.site-nav a{
+  color: white;
+  margin-left: 20px;
+}
+.site-nav {
+  margin-left: 300px;
+  padding: 20px 20px;
 }
 
 .site-main{
@@ -20,6 +29,7 @@
   background-image: url(img/peachy-flecks.png);
   background-repeat: ;
 }
+
 .site-footer {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -34,7 +44,7 @@
   color: white;
 }
 
-a {
+.contacts a {
   color: white;
   margin-left: 30px;
 }
