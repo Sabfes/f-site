@@ -36,21 +36,61 @@
   top: 45%;
   right: 15px;
 }
-.skills {
-    margin: 150px;
+.MyName {
+    min-height: 100vh;
 }
-.skills h1 {
+.MyName h1 {
+    float: left;
+    font-size: 70px;
+    margin-left: 150px;
+    margin-top: 200px;
+}
+
+.MySkills {
     font-size: 90px;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+.main-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 1;
+    justify-content: space-evenly;
 }
 
 
 
+.card {
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    background-color: #26292E;
+}
 
 
 
+.html {
+    background-color: rgb(223, 33, 33);
+    grid-column-start: 1;
+    grid-column-end: 2;
 
-
-
+}
+.css {
+    background-color: rgb(86, 86, 187);
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.javascript {
+    background-color: rgb(243, 243, 36);
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.git{
+    background-color: rgb(204, 194, 194);
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
 
 
 
