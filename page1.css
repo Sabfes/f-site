@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    text-decoration: none;
+}
+.site-header {
+    background-color: #26292E;
+}
+.site-nav a{
+    color: white;
+    margin-left: 20px;
+}
+.site-nav {
+    margin-left: 300px;
+    padding: 20px 20px;
+}
+.logo {
+    padding: 20px 20px;
+    float: left;
+    color: white;
+}
+
+
+
+
+.site-main{
+  min-height: 200vh;
+}
+.button-up {
+  border-radius: 100px;
+  max-width: 45px;
+  max-height: 45px;
+  color: white;
+  background: #26292E;
+  padding: 15px;
+  position: fixed;
+  top: 45%;
+  right: 15px;
+}
+.skills {
+    margin: 150px;
+}
+.skills h1 {
+    font-size: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.site-footer {
+  background-color: #26292E;
+}
+.contacts {
+  padding: 20px 20px 20px 45px;
+}
+.logo {
+  padding: 20px 20px;
+  float: left;
+  color: white;
+}
+
+.contacts a {
+  color: white;
+  margin-left: 30px;
+}

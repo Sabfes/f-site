@@ -1,17 +1,10 @@
 * {
   margin: 0px;
-  font-size: 25px;
   text-decoration: none;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto; 
-  grid-template-rows: 80px auto 80px;
-}
+
 
 .site-header {
-  grid-column-start: 1;
-  grid-column-end: 5;
   background-color: #26292E;
 }
 .site-nav a{
@@ -23,17 +16,41 @@
   padding: 20px 20px;
 }
 
+
+
+
+
+
 .site-main{
-  min-height: 100vh;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  background-image: url(img/peachy-flecks.png);
-  background-repeat: ;
+  min-height: 200vh;
+}
+.button-up {
+  border-radius: 100px;
+  max-width: 45px;
+  max-height: 45px;
+  color: white;
+  background: #26292E;
+  padding: 15px;
+  position: fixed;
+  top: 45%;
+  right: 15px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .site-footer {
-  grid-column-start: 1;
-  grid-column-end: 5;
+
   background-color: #26292E;
 }
 .contacts {
