@@ -6,7 +6,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto; 
-  grid-template-rows: 80px 1000px 80px;
+  grid-template-rows: 80px auto 80px;
 }
 
 .site-header {
@@ -24,6 +24,7 @@
 }
 
 .site-main{
+  min-height: 100vh;
   grid-column-start: 1;
   grid-column-end: 5;
   background-image: url(img/peachy-flecks.png);
