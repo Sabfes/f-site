@@ -24,6 +24,16 @@
 .site-main{
   min-height: 200vh;
 }
+.site-main h1{
+  font-size: 70px;
+  margin-left: 150px;
+  margin-top: 200px;
+}
+.site-main h2{
+  font-size: 70px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
 .button-up {
   border-radius: 100px;
   max-width: 45px;
