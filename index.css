@@ -23,6 +23,8 @@
 
 .site-main{
   min-height: 200vh;
+  background-image: url(img/sAcvAS23Kac.jpg);
+  background-size: cover;
 }
 .site-main h1{
   font-size: 70px;
