@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    height: 100px;
+    background-color: FBFDFF;
+    position: fixed;
+    min-width: 1440px;
+}
+.logo {
+    margin: 36px;
+    float: left;
+}
+a {
+    float: right;
+}
+.first-section {
+    height: 800px;
+    background-color: #FBFDFF;
+}
+h1 {  
+    position: absolute;
+    width: 657px;
+    height: 122px;
+    left: 389px;
+    top: 212px;
+
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #000000;
+}
+p {
+    position: absolute;
+    width: 1045px;
+    height: 149px;
+    left: 198px;
+    top: 382px;
+    margin-left: auto;
+
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 33px;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+}
+a {
+    text-decoration: none;
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.a1 {
+    position: absolute;
+    width: 177px;
+    height: 25px;
+    left: 845px;
+    top: 45px;
+}
+.a2 {
+    position: absolute;
+    width: 134px;
+    height: 25px;
+    left: 1079px;
+    top: 45px;
+}
+.a3 {
+    position: absolute;
+    width: 113px;
+    height: 25px;
+    left: 1269px;
+    top: 45px;
+}
+.button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+}
+.button1 {
+    position: absolute;
+    width: 224px;
+    height: 65px;
+    left: 417px;
+    top: 531px;
+    background-color: #F7FB46;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+}
+.button span{
+    margin-left: auto;
+    margin-right: auto;
+}
+.button2 {
+    position: absolute;
+    width: 351px;
+    height: 65px;
+    left: 671px;
+    top: 531px;
+    background-color: #F0F1F3;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+}
+.vector {
+    position: absolute;
+    left: 942.27px;
+    top: 616px;
+}
+.zapis {
+    position: absolute;
+    left: 1122.27px;
+    top: 656px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+}
