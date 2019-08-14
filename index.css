@@ -4,11 +4,9 @@
 }
 .header {
     height: 100px;
-    background-color: FBFDFF;
-    position: fixed;
-    min-width: 1440px;
+    background-color: #FBFDFF;
 }
-.logo {
+.header-logo {
     margin: 36px;
     float: left;
 }
@@ -16,7 +14,7 @@ a {
     float: right;
 }
 .first-section {
-    height: 800px;
+    height: 700px;
     background-color: #FBFDFF;
 }
 h1 {  
@@ -134,4 +132,62 @@ a {
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
+}
+.whyme {
+    height: 1100px;
+    background-color: #F3F3F3;
+}
+.whyme-h2 {
+    position: absolute;
+    width: 503px;
+    height: 37px;
+    left: 510px;
+    top: 844px;
+}
+h2 {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 37px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    color: #000000;
+}
+.portfolio {
+    height: 800px;
+}
+.portfolio-h2 {
+    position: absolute;
+    width: 548px;
+    height: 68px;
+    left: 550px;
+    top: 1919px;
+}
+
+.contacts {
+    height: 750px;
+    background-color: #F3F3F3;
+}
+.contacts-h2 {
+    position: absolute;
+    width: 610px;
+    height: 37px;
+    left: 464px;
+    top: 2739px;
+}
+
+
+.footer {
+    height: 100px;
+    background-color:white;
+}
+.footer-logo {
+    margin: 30px;
+    float: left;
 }
