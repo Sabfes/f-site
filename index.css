@@ -181,7 +181,124 @@ h2 {
     left: 464px;
     top: 2739px;
 }
+.contacts-box {
+    position: absolute;
+    width: 500px;
+    height: 550px;
+    left: 160px;
+    top: 2847px;
 
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+}
+h3 {
+    position: absolute;
+    width: 400px;
+    height: 99px;
+    top: 45px;
+    left: 50px;
+
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 31px;
+
+    color: #000000;
+}
+.box-name {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: 50px;
+    top: 174px;
+    
+    background: #F3F3F3;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.box-number {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    left: 50px;
+    top: 304px;
+    
+    background: #F3F3F3;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.contacts-box2 {
+    position: absolute;
+    width: 500px;
+    height: 550px;
+    left: 770px;
+    top: 2847px;
+
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.button3 {
+    position: absolute;
+    width: 351px;
+    height: 65px;
+    left: 75px;
+    top: 442px;
+    background-color: #F0F1F3;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;    
+}
+.number {
+    position: absolute;
+    left: 50px;
+    top: 75px;
+    width: 100px;
+    height: 100px;
+}
+.mail {
+    position: absolute;
+    left: 50px;
+    top: 225px;
+    width: 100px;
+    height: 100px;
+}
+.seti {
+    width: 100px;
+    height: 100px;  
+    position: absolute;
+    left: 50px;
+    top: 375px;
+}
+h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 25px;
+    color: #000000;
+}
+.number-h4 {
+    position: absolute;
+    width: 184px;
+    height: 68px;
+    left: 168px;
+    top: 91px;    
+}
+.mail-h4 {
+    position: absolute;
+    width: 231px;
+    height: 85px;
+    left: 168px;
+    top: 240px;
+}
+.seti-h4 {
+
+    position: absolute;
+    width: 189px;
+    height: 108px;
+    left: 168px;
+    top: 384px;
+}
 
 .footer {
     height: 100px;
