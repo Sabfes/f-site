@@ -183,9 +183,9 @@ h2 {
 }
 .contacts-box {
     position: absolute;
-    width: 500px;
-    height: 550px;
-    left: 160px;
+    width: 420px;
+    height: 520px;
+    left: 254px;
     top: 2847px;
 
     background: #FFFFFF;
@@ -210,18 +210,18 @@ h3 {
 }
 .box-name {
     position: absolute;
-    width: 400px;
-    height: 100px;
+    width: 336px;
+    height: 94px;
     left: 50px;
     top: 174px;
     
     background: #F3F3F3;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
-.box-number {
+.box-mail {
     position: absolute;
-    width: 400px;
-    height: 100px;
+    width: 336px;
+    height: 94px;
     left: 50px;
     top: 304px;
     
@@ -230,9 +230,9 @@ h3 {
 }
 .contacts-box2 {
     position: absolute;
-    width: 500px;
-    height: 550px;
-    left: 770px;
+    width: 420px;
+    height: 520px;
+    left: 766px;
     top: 2847px;
 
     background: #FFFFFF;
@@ -241,12 +241,12 @@ h3 {
 }
 .button3 {
     position: absolute;
-    width: 351px;
-    height: 65px;
-    left: 75px;
-    top: 442px;
+    width: 295px;
+    height: 62px;
+    left: 63px;
+    top: 432px;
     background-color: #F0F1F3;
-    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), inset 2px 2px 6px rgba(0, 0, 0, 0.25);
     border-radius: 70px;    
 }
 .number {
