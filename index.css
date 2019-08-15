@@ -21,7 +21,7 @@ h1 {
     position: absolute;
     width: 657px;
     height: 122px;
-    left: 389px;
+    left: 450px;
     top: 212px;
 
     font-family: Questrial;
@@ -40,7 +40,7 @@ p {
     position: absolute;
     width: 1045px;
     height: 149px;
-    left: 198px;
+    left: 240px;
     top: 382px;
     margin-left: auto;
 
@@ -99,7 +99,7 @@ a {
     position: absolute;
     width: 224px;
     height: 65px;
-    left: 417px;
+    left: 460px;
     top: 531px;
     background-color: #F7FB46;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
@@ -113,7 +113,7 @@ a {
     position: absolute;
     width: 351px;
     height: 65px;
-    left: 671px;
+    left: 714px;
     top: 531px;
     background-color: #F0F1F3;
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25), inset 6px 6px 10px rgba(0, 0, 0, 0.25);
