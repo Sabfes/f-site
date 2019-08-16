@@ -160,6 +160,54 @@ h2 {
 
     color: #000000;
 }
+.card {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;    
+}
+.card1 {
+    left: 100px;
+    top: 903px;
+}
+.card2{ 
+    left: 450px;
+    top: 983px;
+}
+.card3 {
+    left: 800px;
+    top: 983px;
+}
+.card4{
+    left: 1150px;
+    top: 903px;
+    
+}
+.card5 {
+    left: 100px;
+    top: 1336px;
+}
+.card6 {
+    left: 450px;
+    top: 1426px;
+}
+.card7 {
+    left: 800px;
+    top: 1426px;
+}
+.card8 {
+    left: 1150px;
+    top: 1336px;
+}
+
+
+
+
+
+
+
 
 
 .portfolio {
@@ -188,8 +236,16 @@ h2 {
     width: 40px;
     background-image: url(img/Arrow.png);
     position: absolute;
-    top: 2250px;
+    top: 2270px;
     left: 30px;
+}
+.arrow-right {
+    height: 40px;
+    width: 40px;
+    background-image: url(img/ArrowR.png);
+    position: absolute;
+    top: 2270px;
+    left: 850px;
 }
 
 
