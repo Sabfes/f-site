@@ -181,7 +181,6 @@ h2 {
     top: 2050px;
     left: 100px;
     border: 1px solid black;
-    transition: 2s;
     background-size: cover;
 }
 .arrow-left {
@@ -224,7 +223,7 @@ h3 {
     width: 400px;
     height: 99px;
     top: 45px;
-    left: 50px;
+    left: 40px;
 
     font-family: Questrial;
     font-style: normal;
@@ -238,7 +237,7 @@ h3 {
     position: absolute;
     width: 336px;
     height: 94px;
-    left: 50px;
+    left: 40px;
     top: 174px;
     
     background: #F3F3F3;
@@ -248,7 +247,7 @@ h3 {
     position: absolute;
     width: 336px;
     height: 94px;
-    left: 50px;
+    left: 40px;
     top: 304px;
     
     background: #F3F3F3;
