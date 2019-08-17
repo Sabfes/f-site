@@ -276,7 +276,20 @@ h2 {
     top: 1820px;
     left: 850px;
 }
-
+.slide-count {
+    position: absolute;
+    left: 410px;
+    top: 2130px;
+}
+li {
+    list-style-type: none;
+    margin-left: 10px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: gray;
+}
 
 
 
