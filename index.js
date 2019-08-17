@@ -20,7 +20,6 @@ function slideLeft() {
     console.log(counter);
   }
 }
-
 function slideRight() {
   if (counter < listLen) {
     document.getElementById('slider').style.backgroundImage = 'url(' + list[counter] + ')';  
