@@ -25,13 +25,11 @@ function slideLeft() {
     document.getElementById(li[counter - 2]).style.backgroundColor = 'gray';
     console.log(counter);
   }
-  
   if (counter != 0) {
     document.getElementById(li[counter]).style.backgroundColor = 'yellow';
   } else {
     document.getElementById(li[counter]).style.backgroundColor = 'yellow';
   }
-  
 }
 function slideRight() {
   if (counter < 2) {
@@ -45,7 +43,6 @@ function slideRight() {
     document.getElementById(li[counter + 2]).style.backgroundColor = 'gray';
     console.log(counter);
   }
-
   if (counter == 2) {
     document.getElementById(li[counter]).style.backgroundColor = 'yellow';
   } else {
