@@ -17,12 +17,12 @@ function slideLeft() {
   if (counter > 0) {
     counter -= 1;
     document.getElementById('slider').style.backgroundImage = 'url(' + list[counter] + ')';
-    document.getElementById(li[counter + 1]).style.backgroundColor = 'gray';
+    document.getElementById(li[counter + 1]).style.backgroundColor = '#F3F3F3';
     console.log(counter);
   } else {
     counter = 2;
     document.getElementById('slider').style.backgroundImage = 'url(' + list[counter] + ')';
-    document.getElementById(li[counter - 2]).style.backgroundColor = 'gray';
+    document.getElementById(li[counter - 2]).style.backgroundColor = '#F3F3F3';
     console.log(counter);
   }
   if (counter != 0) {
@@ -35,12 +35,12 @@ function slideRight() {
   if (counter < 2) {
     counter += 1;
     document.getElementById('slider').style.backgroundImage = 'url(' + list[counter] + ')'; 
-    document.getElementById(li[counter - 1]).style.backgroundColor = 'gray';  
+    document.getElementById(li[counter - 1]).style.backgroundColor = '#F3F3F3';  
     console.log(counter);
   } else {
     counter = 0;
     document.getElementById('slider').style.backgroundImage = 'url(' + list[counter] + ')';
-    document.getElementById(li[counter + 2]).style.backgroundColor = 'gray';
+    document.getElementById(li[counter + 2]).style.backgroundColor = '#F3F3F3';
     console.log(counter);
   }
   if (counter == 2) {
