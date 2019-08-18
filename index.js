@@ -1,5 +1,5 @@
 let list = [
-    'img/site-example/s1.png',
+    'img/site-example/s1.jpg',
     'img/site-example/s2.jpg',
     'img/site-example/s3.jpg'
 ];
