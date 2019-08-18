@@ -232,9 +232,6 @@ h2 {
 
 
 
-
-
-
 .portfolio {
     height: 800px;
 }
@@ -249,11 +246,10 @@ h2 {
     width: 720px;
     height: 500px;
     background-image: url(img/site-example/s1.png);
-    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(0, 0, 0, 0.25);
     position: absolute;
     top: 1600px;
     left: 100px;
-    border: 1px solid black;
     background-size: cover;
     transition: 0.5s;
 }
@@ -290,11 +286,21 @@ li {
 #li1 {
     background-color: yellow;
 }
+.portfolio-box {
+    width: 500px;
+    height: 500px;
+    background-color: #F3F3F3;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 0px;
+    top: 1600px;
+}
+
 
 
 .contacts {
     height: 750px;
-    background-color: #FBFDFF;
+    background-color: #F3F3F3;
 }
 .contacts-h2 {
     position: absolute;
@@ -314,7 +320,6 @@ li {
     border-radius: 20px;
 }
 h3 {
-
     position: absolute;
     width: 400px;
     height: 99px;
@@ -333,7 +338,6 @@ h3 {
     height: 94px;
     left: 40px;
     top: 174px;
-    
     background: #F3F3F3;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
@@ -343,7 +347,6 @@ h3 {
     height: 94px;
     left: 40px;
     top: 304px;
-    
     background: #F3F3F3;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
@@ -353,7 +356,6 @@ h3 {
     height: 520px;
     left: 766px;
     top: 2397px;
-
     background: #FFFFFF;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;

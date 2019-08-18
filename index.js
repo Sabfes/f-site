@@ -47,7 +47,6 @@ function slideRight() {
     document.getElementById(li[counter]).style.backgroundColor = 'yellow';
   } else {
     document.getElementById(li[counter]).style.backgroundColor = 'yellow';
-  }
-  
+  } 
 }
-
+ 
