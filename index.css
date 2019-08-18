@@ -3,6 +3,9 @@
     margin: 0px;
     padding: 0px; 
 }
+.main {
+    width: 1440px;
+}
 .header {
     height: 100px;
     background-color: #FBFDFF;
@@ -179,6 +182,7 @@ h2 {
 }
 .cardp {
     font-size: 17px;
+    text-align: start;
 }
 
 
@@ -191,7 +195,7 @@ h2 {
 }
 .card1p {
     position: absolute;
-    left: -400px;
+    left: 25px;
     top: 140px;
 }
 
@@ -203,8 +207,8 @@ h2 {
     margin-left: 30px;
 }
 .card2p {
-    left: -400px;
-    top: 140px;
+    left: 30px;
+    top: 175px;
 }
 .card3 {
     left: 800px;
@@ -214,7 +218,7 @@ h2 {
 
 }
 .card3p {
-    left: -400px;
+    left: 25px;
     top: 175px;
 }
 .card4{
@@ -226,7 +230,7 @@ h2 {
     margin-left: 10px;
 }
 .card4p {
-    left: -400px;
+    left: 15px;
     top: 140px;
 }
 
@@ -245,7 +249,7 @@ h2 {
 .slider {
     width: 720px;
     height: 500px;
-    background-image: url(img/site-example/s1.png);
+    background-image: url(img/site-example/s1.jpg);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(0, 0, 0, 0.25);
     position: absolute;
     top: 1600px;
@@ -295,8 +299,17 @@ li {
     right: 0px;
     top: 1600px;
 }
-
-
+.portfolio-box-logo {
+    margin: 25px;
+}
+.portfolio-box p {
+    font-size: 20px;
+    width: 400px;
+    text-align: start;
+    position: absolute;
+    left: 50px;
+    top: 80px; 
+}
 
 .contacts {
     height: 750px;
