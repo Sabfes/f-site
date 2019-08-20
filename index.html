@@ -2,21 +2,116 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>bitaev.db</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
-    <header class="header">
 
+    <header class="header" id="header">
+        <nav class='nav'>
+                
+            <img src="img/logo.png" alt="logo" class="header-logo">
+                
+            <ul>
+                <a href="#whyme" class="a1">Преимущества</a>
+                <a href="#portfolio" class="a2">Портфолио</a>
+                <a href="#contacts" class="a3">Контакты</a>    
+            </ul>
+
+        </nav>
     </header>
-    
-    
-    
-    
+
+    <main class="main">
+
+        <div class="first-section">
+
+            <h1>Frontend - разработчик</h1>
+            <p>Разработка и верстка сайтов.<br>
+                У меня можно заказать дизайн, верстку небольшого сайта,<br>
+                интернет-магазина или landing page.
+            </p>
+            <a href="#" class="button1 button"><span>Заказать</span></a>
+            <a href="#button3" class="button2 button"><span>Бесплатная консультация</span></a>
+
+            <img src="img/Vector.png" alt="vector" class="vector">
+        
+            <span class="zapis">Записаться</span>
+
+        </div>
+        
+        <div class="whyme" id='whyme'>
+            <h2 class="whyme-h2">ПОЧЕМУ ИМЕННО Я?</h2>
+            <div class="card1 card">
+                <img src="img/social-media.png" alt="img" class="card1img cardimg">
+                <h2 class="card1h2 cardh2">Работа в срок</h2>
+                <p class="card1p cardp">Вся работа<br> выполняется в срок.<br> Выполняю ваши заказы<br> качественно и<br> сосредотачиваюсь<br> только на них</p>
+            </div>
+            <div class="card2 card">
+                <img src="img/email.png" alt="img" class="card1img cardimg">
+                <h2 class="card2h2 cardh2">Цена для вас</h2>
+                <p class="card2p cardp">Если у вас нетиповой <br>проект, сделаю расчет<br> цены и объясню из<br> чего она складывается</p>
+            </div>
+            <div class="card3 card">
+                <img src="img/sitemap.png" alt="img" class="card1img cardimg">
+                <h2 class="card3h2 cardh2">Промежуточные итоги</h2>
+                <p class="card3p cardp">Показываю работу<br> поэтапно, а не в<br> последний момент<br> перед крайним сроком</p>
+            </div>
+            <div class="card4 card">
+                <img src="img/shared-folder.png" alt="img" class="card1img cardimg ">
+                <h2 class="card4h2 cardh2">Сопровождение</h2>
+                <p class="card4p cardp">Научу вас или<br> вашего сотрудника<br> пользоваться сайтом,<br> запишу видео-инструкции<br> по пользованию <br>и поддержке сайта.</p>
+            </div>
+        </div>
+            
+        <div class="portfolio" id="portfolio">
+            <h2 class="portfolio-h2">ПРИМЕРЫ РАБОТ</h2>
+            <div class="slider" id='slider'></div>
+            <div class="arrow-left" onclick='slideLeft()'></div>
+            <div class="arrow-right" onclick='slideRight()'></div>
+            <div class="slide-count">
+                    <li id="li1"></li>
+                    <li id="li2"></li>
+                    <li id="li3"></li>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/logo.png" alt="logo" class="portfolio-box-logo">
+                <p>Сайт, или веб-сайт, — одна или несколько логически связанных между собой веб-страниц; также место расположения контента сервера. Обычно сайт в Интернете представляет собой массив связанных данных, имеющий уникальный адрес и воспринимаемый пользователем как единое целое. Веб-сайты называются так, потому что доступ к ним происходит по протоколу HTTP.</p>
+            </div>
+        </div>
+
+        <div class="contacts" id='contacts'>
+
+            <h2 class="contacts-h2">СВЯЖИТЕСЬ СО МНОЙ</h2>
+
+            <div class="contacts-box">
+
+                <h3>Оставьте здесь свои<br> данные и я обязательно с<br> вами свяжусь.</h3>
+
+                <input class="box-name" type="text" placeholder="       Ваше имя" required></input>
+                <input class="box-mail" type="email" placeholder="       Ваша почта" required></input>
+                <a href="#button3" class="button3 button" id="button3"><span>Бесплатная консультация</span></a>
+            </div>
+
+            <div class="contacts-box2">
+                <img src="img/phone-call.png" alt="number" class="number">
+                <h4 class="number-h4">Телефон <br> +7-9333-99-33-99 </h4>
+
+                <img src="img/app.png" alt="mail" class="mail">
+                <h4 class="mail-h4">Почта <br> bitaev.db@gmail.com </h4>
+
+                <img src="img/online-support.png" alt="soc" class="seti">
+                <h4 class="seti-h4">Соц. сети<br> vk.com/ <br>instagram.com/ </h4>
+
+            </div>
+
+        </div>
+
+    </main>
+
     <footer class="footer">
-
+        <a href="#header" class="footer-logo"><img src="img/logo.png" alt="logo"></a>
     </footer>
-
-    <script src="index.js"></script>
+    
 </body>
 </html>
