@@ -6,9 +6,10 @@
     padding: 0px;
     text-decoration: none;
     color: black;
+    font-family: 'Quantico', sans-serif;
 }
 .header {
-    height: 100px;
+    height: 80px;
     background-color: #F2F2F2;
     position: fixed;
     width: 100%;
@@ -19,9 +20,9 @@
     font-family: 'Quantico', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 51px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -29,7 +30,7 @@
     font-family: 'Quantico', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 14px;
     line-height: 34px;
     width: 523px;
     justify-content: space-between;
@@ -46,15 +47,16 @@
     transition: 0.5s;
 }
 .aboutMe {
+    width: 100%;
     font-family: 'Quantico', sans-serif;
     height: calc(100vh - 100px);
     padding-top: 100px;
     background-color: #F2F2F2;
 }
-h1 {
+.aboutMe-h1 {
     text-shadow: 4px -2px 0px #9D9D9D;
-    margin-top: 120px;
-    margin-left: 150px;
+    margin-top: 80px;
+    margin-left: 10%;
     font-style: normal;
     font-weight: normal;
     font-size: 120px;
@@ -62,7 +64,7 @@ h1 {
     width: 701px;
     height: 172px;
 }
-h2 {
+.aboutMe-h2 {
     text-shadow: 4px -2px 0px #9D9D9D;
     display: flex;
     justify-content: center;
@@ -72,6 +74,153 @@ h2 {
     line-height: 143px;
     width: 928px;
     height: 143px;
-    margin-left: 150px;
+    margin-left: 10%;
     margin-top: -40px;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-box {
+    display: flex;
+    align-items: center;
+}
+.arrow-left {
+    margin-right: 10px;
+}
+.portfolio-slide {
+    margin-top: 80px;
+    height: 512px;
+    width: 720px;
+    background: #EFEFEF;
+    box-shadow: 4px 4px 5px rgba(132, 127, 127, 0.52);
+}
+.arrow-right {
+    margin-left: 10px;
+}
+.slider-index {
+    display: flex;
+    margin-top: 20px;
+    margin-left: -500px;
+}
+.slide-index1, .slide-index2, .slide-index3, .slide-index4, .slide-index5 {
+    background: #C4C4C4;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+
+/* SKILLS */
+.skills {
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.skills-h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 86px;
+    margin-left: 7%;
+}
+.skills-p {
+    font-size: 18px;
+    line-height: 34px;
+    margin-left: 7%;
+    margin-top: 40px;
+    width: 90%;
+}
+.skil {
+    font-size: 18px;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 7%;
+}
+.skil1, .skil2{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CONTACTS */
+.contacts {
+    height: calc(100vh - 80px);
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #F2F2F2;
+    font-family: 'Quantico', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 4px;
+    width: 100%;
+}
+
+
+
+
+
+
+@media (max-width: 475px) {
+.header-nav {
+    font-size: 10px;
+    justify-content: flex-start;
+    margin-right: 0px;
+    width: 40px;
+}
+.header {
+    justify-content: flex-start;
+    width: 100%;
+}
+.header-logo {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.aboutMe-h1 {
+    margin-left: 10px;
+    font-size: 55px;
+    width: 100px;
+}
+.aboutMe-h2 {
+    font-size: 40px;
+    width: 100px;
+    
+}
+
+
 }
