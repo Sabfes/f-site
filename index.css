@@ -42,9 +42,24 @@
 .header-nav a {
     color: #7B7A7A;
     margin-right: 10px;
+    position: relative;
+    overflow: hidden;
 }
 .header-nav a:hover {
     color: black;
+    transition: 0.5s;
+}
+.header-nav a::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 5px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.header a:hover::after {
+    transform: translateX(100%);
     transition: 0.5s;
 }
 .aboutMe {
