@@ -30,9 +30,9 @@ function slideLeft() {
     console.log(counter);
   }
   if (counter != 0) {
-    document.getElementById(li[counter]).style.backgroundColor = 'yellow';
+    document.getElementById(li[counter]).style.backgroundColor = 'white';
   } else {
-    document.getElementById(li[counter]).style.backgroundColor = 'yellow';
+    document.getElementById(li[counter]).style.backgroundColor = 'white';
   }
 }
 function slideRight() {
@@ -48,8 +48,8 @@ function slideRight() {
     console.log(counter);
   }
   if (counter == 4) {
-    document.getElementById(li[counter]).style.backgroundColor = 'yellow';
+    document.getElementById(li[counter]).style.backgroundColor = 'white';
   } else {
-    document.getElementById(li[counter]).style.backgroundColor = 'yellow';
+    document.getElementById(li[counter]).style.backgroundColor = 'white';
   } 
 }
