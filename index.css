@@ -15,7 +15,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #cecaca;
 }
 .header-logo {
     font-family: 'Quantico', sans-serif;
