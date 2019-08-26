@@ -63,14 +63,32 @@
     </section>
     <section class="contacts" id="contacts">
         <div class="social">
-            <div class="codepen">Cp</div>
-            <div class="Vk">Vk</div>
-            <div class="git">Git</div>
+            <a href='https://codepen.io/Sabfes/pen/KLWNqY?editors=0110' class="codepen soc">Cp</a>
+            <a href="https://vk.com/d.bitaev" class="vk soc">Vk</a>
+            <a href="https://github.com/Sabfes" class="git soc">Git</a>
         </div>
         <div class="sendbox">
-            <div class="name"></div>
-            <div class="mail"></div>
-            <div class="button"></div>
+            <div class="form1 form">
+                <input type="text" name="name" autocomplete="off" required>
+                <label for="name">
+                    <span>Name</span>
+                </label>
+            </div>
+            <div class="form2 form">
+                <input type="email" name="mail" autocomplete="off" required>
+                <label for="mail">
+                    <span>Mail</span>
+                </label>
+            </div>
+            <div class="form3 form">
+                <input type="text" name="message" autocomplete="off" required>
+                <label for="message">
+                    <span>Message</span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <button class="sendbutton">Send</button>
         </div>
     </section>
     <footer class="footer">
