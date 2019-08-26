@@ -29,16 +29,16 @@
     </section>
     <section class="portfolio" id="portfolio">
         <div class="portfolio-box">
-            <div class="arrow-left"><img src="img/ArrowL.png" alt="arrowLeft"></div>
-            <div class="portfolio-slide"></div>
-            <div class="arrow-right"><img src="img/ArrowR.png" alt="arrowRight"></div>
+            <div class="arrow-left" onclick='slideLeft()'><img src="img/ArrowL.png" alt="arrowLeft"></div>
+            <div class="portfolio-slide" id="portfolio-slide"></div>
+            <div class="arrow-right" onclick='slideRight()'><img src="img/ArrowR.png" alt="arrowRight"></div>
         </div>
         <div class="slider-index">
-            <div class="slide-index1"></div>
-            <div class="slide-index2"></div>
-            <div class="slide-index3"></div>
-            <div class="slide-index4"></div>
-            <div class="slide-index5"></div>
+            <div class="slide-index1" id="li1"></div>
+            <div class="slide-index2" id="li2"></div>
+            <div class="slide-index3" id="li3"></div>
+            <div class="slide-index4" id="li4"></div>
+            <div class="slide-index5" id="li5"></div>
         </div>
     </section>
     <section class="skills" id="skills">
@@ -77,5 +77,7 @@
     <footer class="footer">
         <span class="footer-span">(c) Bitaev Denis 2019</span>
     </footer>
+    
+    <script src="index.js"></script>
 </body>
 </html>

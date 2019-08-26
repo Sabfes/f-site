@@ -15,6 +15,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #cecaca;
 }
 .header-logo {
     font-family: 'Quantico', sans-serif;
@@ -100,7 +101,8 @@
     margin-top: 80px;
     height: 512px;
     width: 720px;
-    background: #EFEFEF;
+    background-image: url(img/s1.jpg);
+    background-size: cover;
     box-shadow: 4px 4px 5px rgba(132, 127, 127, 0.52);
 }
 .arrow-right {
@@ -117,6 +119,9 @@
     height: 14px;
     border-radius: 100px;
     margin-right: 5px;
+}
+.slide-index1 {
+    background-color: yellow;
 }
 
 /* SKILLS */
