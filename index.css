@@ -308,10 +308,7 @@ input:valid + label span {
 
 @media (max-width: 475px) {
 .header-nav {
-    font-size: 10px;
-    justify-content: flex-start;
-    margin-right: 0px;
-    width: 40px;
+    display: none;
 }
 .header {
     justify-content: flex-start;
@@ -333,5 +330,27 @@ input:valid + label span {
     width: 100px;
     
 }
-
+.portfolio-slide {
+    height: 240px;
+    width: 280px;
+}
+.aboutMe-h1 {
+    width: 313px;
+    height: 203px;
+    font-size: 96px;
+    line-height: 100px;
+}
+.aboutMe-h2 {
+    width: 351px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 51px;
+    margin-left: 5px;
+}
+.slider-index {
+    margin-left: 0px;
+}
+.contacts {
+    display: none;
+}
 }
