@@ -270,11 +270,16 @@ input:valid + label span {
 }
 .sendbutton {
     margin-top: 10px;
-    margin-left: 600px;
+    
     background-color: #f2f2f2;
     border: none;
     outline: none;
     font-size: 18px;
+}
+#sendbutton {
+    width:600px;
+    display: flex;
+    justify-content: flex-end;
 }
 .sendbutton:active {
     Color: #7B7A7A;;
@@ -301,7 +306,7 @@ input:valid + label span {
 
 
 
-@media (max-width: 1200px){
+@media (max-width: 1000px){
     .aboutMe-h1 {
         font-size: 115px;
     }
@@ -322,6 +327,9 @@ input:valid + label span {
         margin-left: 0px;
     }
     .form {
+        width: 400px;
+    }
+    #sendbutton {
         width: 400px;
     }
 }
@@ -379,6 +387,9 @@ input:valid + label span {
         height: 70vh;
     }
     .form {
+        width: 300px;
+    }
+    #sendbutton {
         width: 300px;
     }
     .sendbutton {
