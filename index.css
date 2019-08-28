@@ -71,25 +71,22 @@
 .aboutMe-h1 {
     text-shadow: 4px -2px 0px #9D9D9D;
     margin-top: 80px;
-    margin-left: 10%;
     font-style: normal;
     font-weight: normal;
     font-size: 120px;
-    line-height: 172px;
-    width: 701px;
+    line-height: 100px;
     height: 172px;
+    margin-left: 5%;
 }
 .aboutMe-h2 {
     text-shadow: 4px -2px 0px #9D9D9D;
     display: flex;
-    justify-content: center;
     font-style: normal;
     font-weight: normal;
     font-size: 100px;
-    line-height: 143px;
-    width: 928px;
+    line-height: 90px;
     height: 143px;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: -40px;
 }
 
@@ -304,53 +301,88 @@ input:valid + label span {
 
 
 
+@media (max-width: 1200px){
+    .aboutMe-h1 {
+        font-size: 115px;
+    }
+    .aboutMe-h2{
+        font-size: 85px;
+    }
+}
+@media (max-width: 990px) {
+    .portfolio-slide {
+        width: 360px;
+        height: 240px;
+    }
+    .slider-index {
+        justify-self: flex-start;
+        margin-left: 0px;
+    }
+    .sendbutton{
+        margin-left: 0px;
+    }
+    .form {
+        width: 400px;
+    }
+}
+@media (max-width: 724px) {
+    .aboutMe-h2 {
+        margin-top: 10px;
+    }
+} 
 
 
 @media (max-width: 475px) {
-.header-nav {
-    display: none;
-}
-.header {
-    justify-content: flex-start;
-    width: 100%;
-}
-.header-logo {
-    font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-.aboutMe-h1 {
-    margin-left: 10px;
-    font-size: 55px;
-    width: 100px;
-}
-.aboutMe-h2 {
-    font-size: 40px;
-    width: 100px;
-    
-}
-.portfolio-slide {
-    height: 240px;
-    width: 280px;
-}
-.aboutMe-h1 {
-    width: 313px;
-    height: 203px;
-    font-size: 96px;
-    line-height: 100px;
-}
-.aboutMe-h2 {
-    width: 351px;
-    height: 50px;
-    font-size: 36px;
-    line-height: 51px;
-    margin-left: 5px;
-}
-.slider-index {
-    margin-left: 0px;
-}
-.contacts {
-    display: none;
-}
+    .header-nav {
+        display: none;
+    }
+    .header {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .header-logo {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .aboutMe {
+        height: 100vh;
+    }
+    .portfolio-slide {
+        height: 240px;
+        width: 280px;
+        margin-top: 0px;
+    }
+    .aboutMe-h1 {
+        width: 313px;
+        height: 203px;
+        font-size: 96px;
+        line-height: 100px;
+        margin-left: 5%;
+    }
+    .aboutMe-h2 {
+        width: 351px;
+        height: 50px;
+        font-size: 56px;
+        line-height: 51px;
+        margin-left: 5%;
+        text-shadow: none;
+        margin-top: 5px;
+    }
+    .slider-index {
+        margin-left: 0px;
+    }
+    .portfolio {
+        height: 300px;
+    }
+    .contacts {
+        height: 70vh;
+    }
+    .form {
+        width: 300px;
+    }
+    .sendbutton {
+        margin-top: 10px;
+        margin-left: 250px;
+    }
 }
