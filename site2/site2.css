@@ -1,0 +1,118 @@
+@import url(http://allfont.ru/allfont.css?fonts=open-sans-semibold);
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans - Semibold";
+}
+
+.header {
+    background-image: url(img/pexels-photo-356056.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header-nav {
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+}
+.header-nav a {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+.navigation {
+    margin-left: 344px;
+    display: flex;
+    width: 650px;
+    justify-content: space-between;
+}
+.header-nav-logo {
+    margin-left: 112px;
+}
+.search-button {
+    margin-right: 121px;
+}
+.opacity-block {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-color: black;
+    opacity: 0.80;
+}
+.header-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    z-index: 1;
+}
+.header-main-button {
+    margin-top: 60px;
+    width: 465px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.our-services{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 216px;
+    height: 66px;
+    border: 2px solid white;
+    color: white;
+}
+.hereisnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00897b;
+    width: 220px;
+    height: 70px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.header-main-h1 {
+    height: 60px;
+    color: #ffffff;
+    font-family: 'Open Sans Semibold', arial;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 3px;
+    margin-top: 180px;
+}
+.header-main-p {
+    height: 22px;
+    color: #ffffff;
+    font-family: 'Open Sans Semibold', arial;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1.1px;
+}
+.button-down{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
