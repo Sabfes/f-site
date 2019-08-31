@@ -335,6 +335,7 @@ h3 {
 .lastworks-button:hover {
     background-color: #00897b;
     color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 .all {
     width: 100px;
@@ -386,4 +387,7 @@ h3 {
     height: 70px;
     background-color: #00897b;
     margin-top: 130px;
+}
+.end-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
