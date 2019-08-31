@@ -281,3 +281,109 @@ h3 {
     border: 2px solid white;
     color: white;
 }
+
+/*   LATEST WORKS */
+
+.lastworks {
+    height: 1616px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lastworks-text {
+    font-family: "Open Sans", arial;
+    margin-top: 130px;
+    width: 620px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.lastworks-h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+}
+.lastworks-p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+}
+.lastworks-button-section {
+    width: 687px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+}
+.lastworks-button {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #00897b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastworks-button:hover {
+    background-color: #00897b;
+    color: white;
+}
+.all {
+    width: 100px;
+}
+.webdesign {
+    width: 180px;
+}
+.uxdesign {
+    width: 180px;
+}
+.mockups {
+    width: 180px;
+}
+.lastworks-box {
+    margin-top: 120px;
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-example {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 370px;
+    height: 370px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box-example1 {
+    background-image: url(img/box-example1.png);
+}
+.box-example2 {
+    background-image: url(img/box-example2.png);
+}
+.box-example3 {
+    background-image: url(img/box-example3.png);
+}
+.box-example4 {
+    background-image: url(img/box-example4.png);
+}
+.box-example5 {
+    background-image: url(img/box-example5.png);
+}
+.box-example6 {
+    background-image: url(img/box-example6.png);
+}
+.end-button {
+    width: 220px;
+    height: 70px;
+    background-color: #00897b;
+    margin-top: 130px;
+}
