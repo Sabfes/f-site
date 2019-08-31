@@ -176,3 +176,108 @@ h3 {
     letter-spacing: 0.75px;
     text-align: center;
 }
+
+/* ourservices */
+
+.ourservices {
+    height: 1414px;
+    background-color: #e4fdf9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ourservices-text{
+    margin-top: 170px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 620px;
+}
+.services-text-h1 {
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+}
+.services-text-p {
+    margin-top: 36px;
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+.ourserv-box-p {
+    width: 271px;
+    height: 90px;
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+.ourserv-box-h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 19px;
+    color: #212121;
+    font-family: "Open Sans - Semibold", arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+.ourserv-box-button {
+    width: 140px;
+    height: 60px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: #212121;
+    font-family: "Open Sans - Semibold", arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.ourservices-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1217px;
+    margin-top: 120px;
+}
+.ourserv-box {
+    width: 370px;
+    height: 438px;
+    background-color: #ffffff;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.ourserv-box img {
+    margin-top: 50px;
+    width: 56px;
+    height: 62px;
+}
+.ourserv-box:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    background-color: #00897b;
+}
+.ourserv-box-button:hover {
+    border: 2px solid white;
+    color: white;
+}
