@@ -394,6 +394,154 @@ h3 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
+/*  PRISING PLAN*/
+.prisingplan {
+    height: 1142px;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    justify-content: center;
+}
+.prisingplanbox {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.prisingplan-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plan-text-h1 {
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+}
+.plan-text-p{
+    width: 620px;
+    margin-top: 30px;
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+
+
+.prisingplan-box {
+    width: 1175px;
+    display: flex;
+    justify-content: space-between;
+}
+.plan-box-card{
+    width: 370px;
+    height: 667px;
+    background-color: #fff;
+    background-image: url(img/card-header.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+.plan-box-card:hover {
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
+}
+.card-header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header h1 {
+    color: #ffffff;
+    font-family: "Open Sans", arial;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1.25px;
+    margin-top: 60px;
+}
+.card-header p {
+    color: #ffffff;
+    font-family: "Open Sans",arial;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.85px;
+    margin-bottom: 50px;
+}
+.card-header span {
+    color: #ffffff;
+    font-family: "Open Sans", arial;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 2.5px;
+}
+.card-main {
+    height: 287px;
+}
+.card-main-box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-main-box h2 {
+    color: #212121;
+    font-family: "Open Sans", arial;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.85px;
+    border-bottom: 1px solid #000000;
+}
+.card-footer {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-footer-but {
+    box-sizing: border-box;
+    width: 180px;
+    height: 60px;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+    font-family: "Open Sans - Semibold", arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-footer-but:hover {
+    width: 180px;
+    height: 60px;
+    background-color: #00897b;
+    color: #ffffff;
+    font-family: "Open Sans - Semibold", arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+/*  MEDIA */
+
 @media screen and (max-width: 475px) {
     .opacity-block {
         width: 1200px;
