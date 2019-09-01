@@ -8,7 +8,9 @@
     color: black;
     font-family: "Open Sans - Semibold";
 }
-
+body {
+    min-width: 1200px;
+}
 .header {
     background-image: url(img/pexels-photo-356056.jpg);
     background-size: cover;
