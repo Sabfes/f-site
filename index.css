@@ -71,27 +71,6 @@
     padding-top: 100px;
     background-color: #F2F2F2;
 }
-.aboutMe-h1 {
-    text-shadow: 4px -2px 0px #9D9D9D;
-    margin-top: 80px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    line-height: 100px;
-    height: 172px;
-    margin-left: 5%;
-}
-.aboutMe-h2 {
-    text-shadow: 4px -2px 0px #9D9D9D;
-    display: flex;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100px;
-    line-height: 90px;
-    height: 143px;
-    margin-left: 5%;
-    margin-top: -40px;
-}
 
 /* PORTFOLIO */
 .portfolio {
@@ -145,37 +124,6 @@
     justify-content: center;
 
 }
-.skills-h1 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 86px;
-    margin-left: 5%;
-}
-.skills-p {
-    font-size: 18px;
-    line-height: 34px;
-    margin-left: 5%;
-    margin-top: 40px;
-    width: 90%;
-}
-.skil {
-    font-size: 18px;
-    line-height: 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100px;
-    margin-top: 40px;
-    width: 90%;
-    margin-left: 5%;
- 
-}
-.skil1, .skil2{
-    display: flex;
-    justify-content: space-between;
-}
-
 
 /* CONTACTS */
 .contacts {
