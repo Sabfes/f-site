@@ -721,13 +721,17 @@ h3 {
     width: 220px;
     height: 70px;
     background-color: #00897b;
-    color: #ffffff;
+    color: black;
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
     line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+.blog-footer-but:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
 }
 /* CONTACT  */
 .contact {
