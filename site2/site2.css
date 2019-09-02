@@ -870,5 +870,17 @@ label {
     margin-left: 10px;
     margin-top: 5px;
 }
-
+.footer {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer span {
+    color: #212121;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
 
