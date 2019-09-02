@@ -647,8 +647,88 @@ h3 {
 .ourteam-footer-index:hover {
     background-color: #3949ab;
 }
-
-
+/*   BLOG  */
+.Blog {
+    height: 1870px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e4fdf9;
+}
+.blog-text {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog-text-h1 {
+    font-family: "Open Sans", arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+}
+.blog-text-p {
+    margin-top: 30px;
+    width: 620px;
+    text-align: center;
+    font-family: "Open Sans", arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+}
+.blog-main {
+    height: 1210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog-main-box {
+    display: flex;
+    width: 1170px;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-main-box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    margin-left: 20px;
+    align-items: flex-start;
+}
+.box-text-p {
+    width: 450px;
+}
+.box-text-info {
+    display: flex;  
+    width: 230px;
+    justify-content: space-between;
+}
+.blog-footer {
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-footer-but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 70px;
+    background-color: #00897b;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 
 
