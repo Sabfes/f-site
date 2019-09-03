@@ -113,7 +113,9 @@
 .box-example3{
     background-image: url(img/box-example3.jpg);
 }
-
+.box-example4{
+    background-image: url(img/box-example4.jpg);
+}
 /* SKILLS */
 .skills {
     width: 100%;
