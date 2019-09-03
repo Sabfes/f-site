@@ -7,7 +7,9 @@
     padding: 0;
     text-decoration: none;
 }
-
+body {
+    min-width: 1200px;
+}
 .header {
     height: 670px;
     width: 100%;
