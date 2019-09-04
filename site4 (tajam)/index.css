@@ -3,6 +3,7 @@
 @import url(http://allfont.ru/allfont.css?fonts=playfair-display-black);
 @import url(http://allfont.ru/allfont.css?fonts=playfair-display);
 @import url(http://allfont.ru/allfont.css?fonts=playfair-display);
+@import url(http://allfont.ru/allfont.css?fonts=roboto-black);
 
 * {
     margin: 0;
@@ -181,4 +182,50 @@ body {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
+}
+.video-story {
+    height: 550px;
+    background-image: url(img/section-video-bgi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-story-opacity {
+    position: absolute;
+    height: 550px;
+    background-image: linear-gradient(to right, #09052f 0%, #311d5e 100%);
+    opacity: 0.85;
+    top: 1070px;
+    width: 100%;
+}
+.video-story-box {;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.story-box-button {
+    background-image: url(img/play-button.png);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: 50% 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 3px solid white;
+}
+.story-box-h1 {
+    font-family: 'Roboto Black', arial;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    z-index: 1;
 }
