@@ -89,33 +89,33 @@
     z-index: 0;
     position: relative;
     left: -100%;
-    width: 800px;
+    width: 1170px;
     height: 210px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 2s;
+    transition: 2.4s;
 }
-.port-box-example2 {
-    width: 800px;
+.port-box-example2{
+    width: 1170px;
     position: relative;
     left: 100%;
     height: 210px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 4s;
+    transition: 3s;
 }
 .port-box-example3 {
     z-index: 0;
     position: relative;
     left: -100%;
-    width: 800px;
+    width: 1170px;
     height: 210px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 5s;
+    transition: 3.4s;
 }
 .box-example {
     width: 380px;
