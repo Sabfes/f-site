@@ -324,17 +324,14 @@ input:valid + label span {
         height: 1800px;
         justify-content: space-between;
     }
-    .portfolio-box {
-        width: 360px;
-    }
-    .box-example {
-        width: 375px;
-    }
-    .portfolio-box {
-        margin-top: 0px;
-    }
-    .box-example:nth-of-type(even) {
-        margin-left: 0px;
+    .port-box-example {
+        width: 285px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;;
+        transition: 2.4s;
+        align-items: center;
     }
     .contacts {
         height: 70vh;
