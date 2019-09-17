@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap'); /* font-family: 'Raleway', sans-serif; */
-
+@import url(http://allfont.ru/allfont.css?fonts=raleway-semibold); /*  font-family: 'Raleway SemiBold', arial; */
 
 * {
     margin: 0px;
@@ -141,3 +141,85 @@ body {
     height: 325px;
 }
 /*  EASY SECTION  */
+.easyuse {
+    height: 800px;
+    background-color: #fff;
+}
+.easyuse-header {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Raleway SemiBold', arial;
+}
+.easyuse-header h1 {
+    margin-top: 100px;
+    color: #061e37;
+    font-size: 45px;
+    font-weight: 400;
+}
+.easyuse-header h2 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.easyuse-header p {
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    width: 555px;
+    color: #b0bec5;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.easyuse-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 215px;
+}
+.easyuse-main-block {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.easyuse-main-block h1 {
+    color: #061e37;
+    font-family: "Raleway - Semi Bold", arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.easyuse-main-block p {
+    color: #78909c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.easyuse-foot {
+    height: 235px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.easyuse-foot-but button {
+    width: 150px;
+    height: 55px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #1de9b6;
+    color: white;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none;
+}
