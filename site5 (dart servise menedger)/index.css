@@ -223,3 +223,39 @@ body {
     text-transform: uppercase;
     outline: none;
 }
+/* BUTTON SECTION */
+.but-sec {
+    height: 150px;
+    display: flex;
+}
+.butsec {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.butsec1 {
+    background-color: #80d8ff;
+}
+.butsec2 {
+    background-color: #82b1ff;
+}
+.butsec3 {
+    background-color: #b388ff;
+}
+.butsec4 {
+    background-color: #ea80fc;
+}
+.butsec-text {
+    padding-left: 20px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: 'Raleway SemiBold', arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+}
