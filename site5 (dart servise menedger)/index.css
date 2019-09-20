@@ -308,7 +308,7 @@ body {
     border-radius: 5px;
 }
 .card-header {
-    width: 640px;
+    width: 620px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -320,7 +320,7 @@ body {
     justify-content: space-between;
 }
 .card-main {
-    width: 640px;
+    width: 620px;
     height: 200px;
     justify-content: space-around;
     align-items: center;
