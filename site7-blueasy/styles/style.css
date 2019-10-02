@@ -3,26 +3,98 @@
     padding: 0px;
 }
 
-/* Header */
-.header__navbar {
-    height: 100px;
-    width: 100%;
-    background-color: #475159;
-    opacity: 0.85;
-}
+/* 
+    Header 
+*/
 .header {
     height: 100vh;
     background-image: url(../image/header/bg-image.png);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Main */
+/* Header navbar */
+.header__navbar {
+    top: 0px;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #475159;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    margin-left: 10%;
+}
+.header__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    opacity: 0.9;
+    color: #ffffff;
+    margin-right: 50px;
+    /* ПОДКЛЮЧИТЬ ФОНТ ФАМИЛИ*/
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 80px;
+    height: 35px;
+}
+.header__link:last-child {
+    margin-right: 0px;
+}
+.header__links {
+    display: flex;
+    margin-right: 10%;
+}
+.header__link:hover {
+    border: 2px solid #4bcaff;
+    color: #4bcaff;
+}
+
+/* Header text */
+.header__title, .header__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a555d;
+    height: 60px;
+    color: #ffffff;
+    /* Добавить ФОНТ ФАМИЛИ*/
+    font-family: "Segoe UI";
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 75px;
+    text-transform: uppercase;
+}
+.header__title {
+    width: 709px;
+}
+.header__subtitle {
+    margin-top: 10px;
+    width: 989px;
+}
+
+/* 
+    Main 
+*/
 .main {
 
 }
 
-/* footer */
+/* 
+    footer 
+*/
 .footer {
     
 }
