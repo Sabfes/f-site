@@ -1,0 +1,28 @@
+.page {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Header */
+.header__navbar {
+    height: 100px;
+    width: 100%;
+    background-color: #475159;
+    opacity: 0.85;
+}
+.header {
+    height: 100vh;
+    background-image: url(../image/header/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Main */
+.main {
+
+}
+
+/* footer */
+.footer {
+    
+}
