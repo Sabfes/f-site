@@ -134,11 +134,14 @@
 .box-example2 {
     background-image: url(img/box-example2.jpg);
 }
-.box-example3{
+.box-example3 {
     background-image: url(img/box-example3.jpg);
 }
-.box-example4{
+.box-example4 {
     background-image: url(img/box-example4.jpg);
+}
+.box-example5 {
+    background-image: url();
 }
 /* SKILLS */
 .skills {
