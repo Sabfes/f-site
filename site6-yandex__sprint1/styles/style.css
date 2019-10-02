@@ -314,3 +314,6 @@
     font-size: 18px;
     font-weight: normal;
 }
+.logo_place-footer {
+    position: static;
+}
