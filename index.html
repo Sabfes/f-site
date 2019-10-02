@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 <body>
+    <!-- HEADER -->
     <header class="header">
+        <!-- Logo -->
         <div class="header-logo">
             <a href="№">Bitaev.db</a>
         </div>
+        <!-- Header navigation -->
         <nav class="header-nav">
             <a href="#aboutMe">AboutMe</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#skills">Skills</a>
             <a href="#contacts">Contacts</a>
         </nav>
+        <!-- Button mobile -->
         <div class="mobnav" id="mobnav">
             <div class="mobnav-line"></div>
             <div class="mobnav-line"></div>
             <div class="mobnav-line"></div>
         </div>
     </header>
-    <section class="aboutMe" id="aboutMe">
-       
-    </section>
+    <!-- Section aboutMe -->
+    <section class="aboutMe" id="aboutMe"></section>
+    <!-- Section portfolio -->
     <section class="portfolio" id="portfolio">
+        <!-- Portfolio boxs -->
         <div class="port-box-example1 port-box-example" id="port-box-example1">
             <a href='site2/site2.html' class="box-example box-example1"></a>
             <a href='site3 (praktikum)/index.html' class="box-example box-example2"></a>
-            <a href='#aboutMe' class="box-example box-example3"></a>
+            <a href='site6-yandex__sprint1/index.html' class="box-example box-example3"></a>
         </div>
         <div class="port-box-example2 port-box-example" id="port-box-example2">
             <a href='site4 (tajam)/index.html' class="box-example box-example4"></a>
-            <a href='' class="box-example box-example5"></a>
+            <a href='site5 (dart servise menedger)/index.html' class="box-example box-example5"></a>
             <a href='' class="box-example box-example6"></a>
         </div>
         <div class="port-box-example3 port-box-example" id="port-box-example3">
@@ -44,28 +49,33 @@
             <a href='' class="box-example box-example9"></a>
         </div>
     </section>
-    <section class="skills" id="skills">
-    
-    </section>
+    <!-- Section skills -->
+    <section class="skills" id="skills"></section>
+    <!-- Section contacts -->
     <section class="contacts" id="contacts">
+        <!-- Social links -->
         <div class="social">
             <a href='https://codepen.io/Sabfes/pen/KLWNqY?editors=0110' class="codepen soc">Cp</a>
             <a href="https://vk.com/d.bitaev" class="vk soc">Vk</a>
             <a href="https://github.com/Sabfes" class="git soc">Git</a>
         </div>
+        <!-- Input box -->
         <div class="sendbox">
+            <!-- Input name-->
             <div class="form1 form">
                 <input type="text" name="name" autocomplete="off" required>
                 <label for="name">
                     <span>Name</span>
                 </label>
             </div>
+            <!-- Input mail -->
             <div class="form2 form">
                 <input type="email" name="mail" autocomplete="off" required>
                 <label for="mail">
                     <span>Mail</span>
                 </label>
             </div>
+            <!-- Input message-->
             <div class="form3 form">
                 <input type="text" name="message" autocomplete="off" required>
                 <label for="message">
@@ -77,10 +87,11 @@
             <button class="sendbutton">Send</button>
         </div>
     </section>
+    <!-- FOOTER -->
     <footer class="footer">
-        <span class="footer-span">(c) Bitaev Denis 2019</span>
+        <span class="footer-span">&copy; Bitaev Denis 2019</span>
     </footer>
-    
+    <!-- JS script -->
     <script src="index.js"></script>
 </body>
 </html>
