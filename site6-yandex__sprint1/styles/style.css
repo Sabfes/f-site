@@ -85,11 +85,6 @@
     color: #2F80ED;
     margin: 0px;
 }
-/*
-Нужно исправить:
-Удалите вложенность селекторов
-стилизуйте напрямую через класс
-*/
 .two-columns__paragraph {
     line-height: 34px;
     font-size: 24px;
