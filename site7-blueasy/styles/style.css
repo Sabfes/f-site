@@ -47,7 +47,7 @@
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
-    width: 80px;
+    width: 90px;
     height: 35px;
 }
 .header__link:last-child {
@@ -91,6 +91,66 @@
 .main {
 
 }
+/* section services */
+.services {
+    height: 400px;
+    background-color: #4bcaff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+}
+.services__title_h1 {
+    color: #ffffff;
+    /* Добавить ФОНТ ФАМИЛИ*/
+    font-family: "Segoe UI";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+    height: 40px;
+}
+.services__border-line {
+    width: 45px;
+    height: 40px;
+    border-top: 2px solid white;
+}
+.services__card-title {
+    color: #ffffff;
+    /* Добавить ФОНТ ФАМИЛИ*/
+    font-family: "Segoe UI - Semi Bold";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.services__cards {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.services__card {
+    width: 258px;
+    display: flex;
+    flex-direction: column;
+    height: 175px;
+    justify-content: space-between;
+}
+.services__card-subtitle {
+    color: #ffffff;
+    /* Добавить ФОНТ ФАМИЛИ*/
+    font-family: "Segoe UI - Semi Bold";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
 
 /* 
     footer 
