@@ -1,4 +1,6 @@
 .page {
+    min-width: 1100px;
+    max-width: 1600px;
     margin: 0px;
     padding: 0px;
 }
@@ -88,10 +90,12 @@
 /* 
     Main 
 */
-.main {
 
-}
-/* section services */
+.main {}
+
+/* 
+    section services 
+*/
 .services {
     height: 400px;
     background-color: #4bcaff;
@@ -150,7 +154,6 @@
     font-weight: 400;
     line-height: 18px;
 }
-
 
 /* 
     footer 
