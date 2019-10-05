@@ -17,7 +17,6 @@ button1.onclick = () => {
     blocktest.prepend(newB);
     
     /* ПЕРЕНОС ЗАДАЧ В DELETE SECTION */
-
     newB.onclick = () => {
       let mainsec2 = document.querySelector('.mainsec2');
       mainsec2.append(newB);  

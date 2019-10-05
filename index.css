@@ -65,12 +65,44 @@
     transform: translateX(100%);
     transition: 0.4s;
 }
-.aboutMe {
+.about {
     width: 100%;
     font-family: 'Quantico', sans-serif;
     height: calc(100vh - 100px);
     padding-top: 100px;
     background-color: #F2F2F2;
+}
+/* ABOUT ME */
+.about {
+    height: 100vh;
+    overflow: hidden;
+}
+.about__title {
+    margin: 100px 100px 0px;
+    font-size: 140px;
+    color: rgba(0, 0, 0, 0.747);
+    width: 12ch;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+    border-right: 4px solid orange;
+    animation: printed-text 5s steps(12),
+               flashin-border .75s step-start infinite;
+}
+.about__subtitle {
+    margin: 0px 100px;
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.233);
+    animation: opacity;
+    animation-duration: 6s;
+}
+.about__img {
+    position: relative;
+    top: -300px;
+    left: 800px;
+    animation: opacity-laptop;
+    animation-duration: 6s;
+    opacity: .3;
 }
 
 /* PORTFOLIO */
@@ -165,7 +197,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 /* CONTACTS */
@@ -178,7 +209,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .social {
     display: flex;
 }
@@ -193,7 +223,6 @@
     width: 40px;
     height: 40px;
     background-color: #c4c4c4;
-    
 }
 .form {
     height: 65px;
@@ -236,7 +265,6 @@ label::after {
     width: 100%;
     border-bottom: 3px solid black;
     transform: translateX(-100%);
-
 }
 label span {
     color: #cfcfcf;
@@ -289,8 +317,52 @@ input:valid + label span {
     line-height: 4px;
     width: 100%;
 }
+/* Анимации */
+@keyframes flashin-border{
+    0%{
+      border-color: orange;
+    }
+    50%{
+      border-color: transparent;
+    }
+    100%{
+      border-color: orange;
+    }
+}
+@keyframes printed-text{
+    from {
+      width: 0%;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) 
+    }
+}
+@keyframes opacity-laptop {
+    0% {
+        opacity: 0;
+        transform: translateX(800px) 
+    }
+    50% {
+        transform: translateX(800px) 
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .3;
+        transform: translateX(0px) 
+    }
+}
 
-
+/* Медиа запросы */
 @media (max-width: 990px) {
     .sendbutton{
         margin-left: 0px;
