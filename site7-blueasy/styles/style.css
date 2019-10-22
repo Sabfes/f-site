@@ -4,13 +4,12 @@
     margin: 0px;
     padding: 0px;
 }
-
 /* 
     Header 
 */
 .header {
     height: 100vh;
-    background-image: url(../image/header/bg-image.png);
+    background-image: url(../image/header/bgimage.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -18,7 +17,6 @@
     align-items: center;
     flex-direction: column;
 }
-
 /* Header navbar */
 .header__navbar {
     top: 0px;
@@ -49,7 +47,7 @@
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
-    width: 90px;
+    width: 100px;
     height: 35px;
 }
 .header__link:last-child {
@@ -87,17 +85,13 @@
     width: 989px;
 }
 
-/* 
-    Main 
-*/
-
+/* Main */
 .main {}
 
 /* 
     section services 
 */
 .services {
-    height: 400px;
     background-color: #4bcaff;
     display: flex;
     flex-direction: column;
@@ -105,27 +99,28 @@
     align-items: center;
 }
 .services__title {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 80%;
 }
-.services__title_h1 {
-    color: #ffffff;
+.section__title {
+    color: #fff;
     /* Добавить ФОНТ ФАМИЛИ*/
     font-family: "Segoe UI";
     font-size: 30px;
     font-weight: 300;
     line-height: 24px;
     text-transform: uppercase;
-    height: 40px;
 }
-.services__border-line {
+.section__border-line {
+    margin-top: 10px;
     width: 45px;
     height: 40px;
     border-top: 2px solid white;
 }
-.services__card-title {
+.section__card-title {
     color: #ffffff;
     /* Добавить ФОНТ ФАМИЛИ*/
     font-family: "Segoe UI - Semi Bold";
@@ -133,11 +128,13 @@
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase;
+    margin-top: 25px;
 }
 .services__cards {
     display: flex;
     width: 80%;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 .services__card {
     width: 258px;
@@ -153,11 +150,34 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    margin-top: 18px;
 }
 
-/* 
-    footer 
-*/
+/* section portfolio */
+.portfolio {
+    background-color: #fff;
+}
+.portfolio__nav {
+    display: flex;
+    justify-content: space-between;
+}
+.section__title_dark {
+    margin-top: 80px;
+    margin-left: 10%;
+    color: black;
+}
+.section__border-line_dark {
+    border-top: 2px solid black;
+}
+.portfolio__links {
+    margin-top: 80px;
+    margin-right: 0px;
+}
+.portfolio__link {
+    color: black;
+}
+
+/* footer */
 .footer {
     
 }
