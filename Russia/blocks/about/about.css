@@ -1,0 +1,12 @@
+@import url('../about/__title/about__title.css');
+@import url('../about/__subtitle/about__subtitle.css');
+@import url('../about/__figure/about__figure.css');
+
+.about {
+    margin: 48px auto 0px;
+    width: 985px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
