@@ -1,0 +1,10 @@
+@import url('../__p-info/_author/intro__p-info_author.css');
+
+.intro__p-info {
+    width: 283px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+}

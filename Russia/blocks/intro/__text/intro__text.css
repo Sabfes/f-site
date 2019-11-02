@@ -1,0 +1,6 @@
+@import url('../__text/__p/intro__p.css');
+
+.intro__text {
+    margin-top: 35px;
+    display: flex;
+}
