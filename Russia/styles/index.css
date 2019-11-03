@@ -2,9 +2,15 @@
 @import url('../blocks/header/header.css');
 @import url('../blocks/about/about.css');
 @import url('../blocks/intro/intro.css');
+@import url('../blocks/gallery/gallery.css');
+@import url('../blocks/places/places.css');
+
 
 .page {
     background-color: #2A2C2F;
     font-family: inter;
     color: white;
+}
+.link_hover:hover {
+    opacity: 0.7;
 }

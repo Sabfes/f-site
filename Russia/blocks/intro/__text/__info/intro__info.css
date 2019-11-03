@@ -1,6 +1,7 @@
-@import url('../__p-info/_author/intro__p-info_author.css');
+@import url('../__info/_author/intro__info_author.css');
+@import url('../__info/_date/intro__info_date.css');
 
-.intro__p-info {
+.intro__info {
     width: 283px;
     font-family: Inter;
     font-style: normal;
