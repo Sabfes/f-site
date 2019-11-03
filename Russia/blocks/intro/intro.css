@@ -7,7 +7,7 @@
 
 .intro {
     width: 984px;
-    margin: 80px auto 0px;
+    margin: 80px auto 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

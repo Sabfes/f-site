@@ -1,0 +1,10 @@
+@import url('../card/__bot/card__bot.css');
+@import url('../card/__top/card__top.css');
+
+.card {
+    width: 984px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 72px;
+    margin-bottom: 0px;
+}

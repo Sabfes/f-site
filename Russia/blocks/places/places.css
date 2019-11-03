@@ -1,5 +1,7 @@
+@import url('../places/card/card.css');
 
 .places {
+    min-height: 1000px;
     width: 984px;
-    margin: 92px auto 0px;
+    margin: 0px auto 0px;
 }

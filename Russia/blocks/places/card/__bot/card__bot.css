@@ -1,0 +1,7 @@
+@import url('../__bot/__img/card__img.css');
+@import url('../__bot/__paragraph/card__paragraph.css');
+
+.card__bot {
+    display: flex;
+    margin-top: 60px;
+}
