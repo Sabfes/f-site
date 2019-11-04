@@ -1,0 +1,12 @@
+.additional__card_subtext {
+    width: 248px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    left: 18px;
+    bottom: 30px;
+    z-index: 1;
+}

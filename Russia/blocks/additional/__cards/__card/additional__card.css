@@ -1,0 +1,26 @@
+@import url('../__card/__opacity/additional__opacity.css');
+@import url('../__card/__card_name/additional__card_name.css');
+@import url('../__card/__card_subtext/additional__card_subtext.css');
+
+
+
+.additional__card {
+    position: relative;
+    width: 284px;
+    height: 330px;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.additional__card1 {
+    background-image: url(/images/additional/Image1.jpg);
+}
+.additional__card2 {
+    background-image: url(/images/additional/Image2.jpg);
+}
+.additional__card3 {
+    background-image: url(/images/additional/Image3.jpg);
+}
+.additional__card4 {
+    background-image: url(/images/additional/Image4.jpg);
+}

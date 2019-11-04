@@ -1,0 +1,12 @@
+.additional__card_name {
+    width: 248px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 29px;
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    z-index: 1;
+}
