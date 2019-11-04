@@ -1,0 +1,17 @@
+@import url('../__left-sec/__icon/__icon.css');
+@import url('../__left-sec/__duration/video__duration.css');
+@import url('../__left-sec/__name/video__name.css');
+@import url('../__left-sec/__subname/video__subname.css');
+@import url('../__left-sec/__opacity/video__opacity.css');
+
+.video__left-sec {
+    border-radius: 5px;
+    position: relative;
+    width: 583px;
+    height: 323px;
+    background-image: url(/images/video/Image1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
