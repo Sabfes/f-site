@@ -15,3 +15,7 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+.video__right-sec:hover .video__opacity {
+    opacity: .8;
+    transition: .4s;
+}

@@ -6,6 +6,7 @@
 @import url('../blocks/places/places.css');
 @import url('../blocks/video/video.css');
 @import url('../blocks/additional/additional.css');
+@import url('../blocks/comments/comments.css');
 
 .page {
     background-color: #2A2C2F;

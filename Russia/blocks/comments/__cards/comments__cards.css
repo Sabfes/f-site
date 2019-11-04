@@ -1,0 +1,8 @@
+@import url('../__cards/__card/comments__card.css');
+
+.comments__cards {
+    margin-top: 72px;
+    display: flex;
+    width: 1184px;
+    justify-content: space-between;
+}

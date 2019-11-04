@@ -7,7 +7,3 @@
     background-color: black;
     opacity: .5;
 }
-.video__opacity:hover {
-    opacity: .8;
-    transition: .4s;
-}

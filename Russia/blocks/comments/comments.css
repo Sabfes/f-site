@@ -1,0 +1,11 @@
+@import url('../comments/__cards/comments__cards.css');
+
+
+.comments {
+    margin: 102px auto 0px;
+    width: 1184px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
