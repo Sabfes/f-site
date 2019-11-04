@@ -1,0 +1,10 @@
+.cover__opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+    transition: .4s;
+}
