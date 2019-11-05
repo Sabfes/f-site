@@ -1,0 +1,9 @@
+@import url('../__cards/__card/__card.css');
+
+.emblem__cards {
+    margin: 82px auto 0px;
+    width: 1162px;
+    margin-bottom: 0;
+    justify-content: space-between;
+    display: flex;
+}
