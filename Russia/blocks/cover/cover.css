@@ -12,6 +12,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.cover:hover .cover__opacity {
+.cover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+}
+.cover:hover::after {
     opacity: .8;
+    transition: .4s;
 }

@@ -1,5 +1,4 @@
-@import url('../__container/__left-sec/video__left-sec.css');
-@import url('../__container/__right-sec/video__right-sec.css');
+@import url('./__section/video__section.css');
 
 .video__container {
     position: relative;

@@ -1,4 +1,5 @@
-@import url('../__cards/__card/__card.css');
+@import url('./__card/__card.css');
+@import url('./__card/__img/emblem__img.css');
 
 .emblem__cards {
     margin: 82px auto 0px;

@@ -10,10 +10,12 @@
 @import url('../blocks/cover/cover.css');
 @import url('../blocks/emblem/emblem.css');
 @import url('../blocks/barentsburg/barentsburg.css');
+@import url('../blocks/footer/footer.css');
+
 
 .page {
     background-color: #2A2C2F;
-    font-family: inter;
+    font-family: 'Inter', Arial, sans-serif; 
     color: white;
 }
 .link_hover:hover {

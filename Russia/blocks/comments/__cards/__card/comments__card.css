@@ -1,5 +1,6 @@
-@import url('../__card/__quote/comments__quote.css');
-@import url('../__card/__author/comments__author.css');
+@import url('./__quote/comments__quote.css');
+@import url('./__author/comments__author.css');
+@import url('./__img/comments__img.css');
 
 .comments__card {
     width: 382px;

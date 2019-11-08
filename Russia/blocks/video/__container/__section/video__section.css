@@ -1,0 +1,36 @@
+@import url('../__section/__icon/__icon.css');
+@import url('../__section/__duration/video__duration.css');
+@import url('../__section/__name/video__name.css');
+@import url('../__section/__subname/video__subname.css');
+@import url('../__section/__opacity/video__opacity.css');
+
+.video__section {
+    border-radius: 5px;
+    position: relative;
+    width: 583px;
+    height: 323px;
+    background-image: url(/images/video/Image1.jpg);
+    background-size: cover;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.video__section:nth-of-type(2) {
+    background-image: url(/images/video/Image2.jpg);
+}
+.video__section::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background-color: black;
+    opacity: .5;
+}
+.video__section:hover::after{
+    opacity: .8;
+    transition: .4s;
+}

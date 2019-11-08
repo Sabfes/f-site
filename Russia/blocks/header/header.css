@@ -1,9 +1,9 @@
 @import url('./__links/header__links.css');
+@import url('./__logo/header__logo.css');
 
 .header {
     margin: 30px auto;
     display: flex;
-    height: 52px;
     width: 1184px;
     justify-content: space-between;
     align-items: flex-end;
