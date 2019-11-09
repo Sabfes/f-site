@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Russia</title>
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="fonts/Inter/inter.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class='page'>
     <!-- Header -->
@@ -24,7 +25,7 @@
         <!-- link lang (en/ru) -->
         <div class="header__links">
             <a href="#" class="header__link header__link_active">Ru</a>
-            <a href="#" class="header__link header__link_active">En</a>
+            <a href="#" class="header__link ">En</a>
             <!-- Надо исправить:
                 для того, чтобя подчеркнуть "выбранный" язык, нужно использовать модификатор, например, _active или _selected
                 класс link_hover не может использоваться в данном месте. сущность содержит в себе только модификатор. Класс представлен одним модификатором, образованным от элемента. Пример работы с модификаторами: class='block block_mod block_mod_mod-value', где block - блок или элемент (block__element-name_mod). _mod - модификатор блока _mod_mod-value - сложный модификатор, где _mod-value - значение сложного модификатора. Сейчас нету блока от которого можно было бы использовать модификатор. Документацию по БЭМ: https://tech.yandex.ru/bem/
@@ -41,8 +42,7 @@
         <p class="about__subtitle">Настоящая страна не в выпусках новостей, а здесь.</p>
         <!-- About main img -->
         <figure class="about__figure">
-            <img class="about__img" src="images/about-img.jpg" alt="about-img" width="984" height="554.13">
-            <!-- Надо исправить: удалите ширину и высоту у изображения. Стилизация проходит только в css -->
+            <img class="about__img" src="images/about-img.jpg" alt="about-img">
             <figcaption class="about__img-figcaption">ваша полка — верхняя</figcaption>
         </figure>
     </section>
@@ -55,18 +55,18 @@
         <div class="intro__text">
             <p class="intro__p">По опросам ВЦИОМ, 95% россиян мечтают куда-нибудь поехать, но только 36% планируют провести отпуск в родной стране. Мол, чего мы тут, дома, не видели? На самом деле, Россия — это целая вселенная с ласковым морем юга, густыми лесами Саян и суровыми льдами плато Путорана. А ещё увидеть все эти красоты можно без миллионов на счету, загранпаспорта и многочасовых перелетов. Как, например, Вера Башмакова — смелая молодая мама, которая взяла в охапку троих детей, усадила их в свою «Ладу» и проехала 20 тысяч километров по родной стране. Мы выбрали и описали некоторые интересные места, достойные вашего отпуска.</p>
             <div class="intro__info">
-                <p class="intro__info_author">Автор текста: Михаил Мишуткин</p>
-                <p class="intro__info_date">Дата: 12.09.1994</p>
+                <p class="intro__info_author"><span class="intro__text_bold">Автор текста:</span> Михаил Мишуткин</p>
+                <p class="intro__info_date"><span class="intro__text_bold">Дата:</span> 12.09.1994</p>
                 <!-- Надо исправить: тут и ниже часть текста должна иметь жирное начертание. Сверьтесь с макетом. Используйте span, назначите ему класс и правильно его стилизуйте. -->
             </div>
         </div>
         <!-- Intro subtext -->
         <div class="intro__subtexts">
-            <p class="intro__subtext">Часовых поясов 11</p>
-            <p class="intro__subtext">Объектов природного наследия ЮНЕСКО 12</p>
-            <p class="intro__subtext">Объектов культурного наследия ЮНЕСКО 16</p>
-            <p class="intro__subtext">Природных заповедников 105</p>
-            <p class="intro__subtext">Аэропортов 241</p>
+            <p class="intro__subtext"><span class="intro__text_bold">Часовых поясов</span> 11</p>
+            <p class="intro__subtext"><span class="intro__text_bold">Объектов природного наследия ЮНЕСКО</span> 12</p>
+            <p class="intro__subtext"><span class="intro__text_bold">Объектов культурного наследия ЮНЕСКО</span> 16</p>
+            <p class="intro__subtext"><span class="intro__text_bold">Природных заповедников</span> 105</p>
+            <p class="intro__subtext"><span class="intro__text_bold">Аэропортов</span> 241</p>
         </div>
     </section>
     <!-- Section gallery -->

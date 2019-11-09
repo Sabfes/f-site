@@ -3,6 +3,7 @@
 @import url('../about/__figure/about__figure.css');
 
 .about {
+    font-family: "Inter" , Arial, sans-serif; 
     margin: 48px auto 0px;
     width: 985px;
     display: flex;

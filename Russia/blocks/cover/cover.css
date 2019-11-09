@@ -8,7 +8,7 @@
     margin: 102px auto 0px;
     width: 1184px;
     height: 594px;
-    background-image: url(/images/coverbg.jpg);
+    background-image: url(../../images/coverbg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

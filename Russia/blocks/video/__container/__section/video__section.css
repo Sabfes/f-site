@@ -9,7 +9,7 @@
     position: relative;
     width: 583px;
     height: 323px;
-    background-image: url(/images/video/Image1.jpg);
+    background-image: url(../../../../images/video/Image1.jpg);
     background-size: cover;
     display: flex;
     color: white;
@@ -18,7 +18,7 @@
     justify-content: flex-end;
 }
 .video__section:nth-of-type(2) {
-    background-image: url(/images/video/Image2.jpg);
+    background-image: url(../../../../images/video/Image2.jpg);
 }
 .video__section::after {
     width: 100%;

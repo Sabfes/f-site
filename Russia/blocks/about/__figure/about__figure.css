@@ -1,4 +1,5 @@
-@import url('../__figure/__img-figcaption/about__img-figcaprion.css');
+@import url('./__img-figcaption/about__img-figcaprion.css');
+@import url('./__img/about__img.css');
 
 .about__figure {
     margin-top: 75px;

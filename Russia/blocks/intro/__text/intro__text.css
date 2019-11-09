@@ -1,4 +1,5 @@
 @import url('../__text/__p/intro__p.css');
+@import url('./_bold/Intro__text_bold.css');
 
 .intro__text {
     margin-top: 35px;

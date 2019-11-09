@@ -1,4 +1,4 @@
-.header__link_active:focus , .header__link_active:hover {
+.header__link_active {
     border-bottom: 2px solid white;
     opacity: .7;
 }
