@@ -26,13 +26,6 @@
         <div class="header__links">
             <a href="#" class="header__link header__link_active">Ru</a>
             <a href="#" class="header__link ">En</a>
-            <!-- Надо исправить:
-                для того, чтобя подчеркнуть "выбранный" язык, нужно использовать модификатор, например, _active или _selected
-                класс link_hover не может использоваться в данном месте. сущность содержит в себе только модификатор. Класс представлен одним модификатором, образованным от элемента. Пример работы с модификаторами: class='block block_mod block_mod_mod-value', где block - блок или элемент (block__element-name_mod). _mod - модификатор блока _mod_mod-value - сложный модификатор, где _mod-value - значение сложного модификатора. Сейчас нету блока от которого можно было бы использовать модификатор. Документацию по БЭМ: https://tech.yandex.ru/bem/
-
-
-                *** оставьте модификатор только у активного элемента
-                 -->
         </div>
     </header>
     <!-- Section About -->
@@ -55,18 +48,19 @@
         <div class="intro__text">
             <p class="intro__p">По опросам ВЦИОМ, 95% россиян мечтают куда-нибудь поехать, но только 36% планируют провести отпуск в родной стране. Мол, чего мы тут, дома, не видели? На самом деле, Россия — это целая вселенная с ласковым морем юга, густыми лесами Саян и суровыми льдами плато Путорана. А ещё увидеть все эти красоты можно без миллионов на счету, загранпаспорта и многочасовых перелетов. Как, например, Вера Башмакова — смелая молодая мама, которая взяла в охапку троих детей, усадила их в свою «Ладу» и проехала 20 тысяч километров по родной стране. Мы выбрали и описали некоторые интересные места, достойные вашего отпуска.</p>
             <div class="intro__info">
-                <p class="intro__info_author"><span class="intro__text_bold">Автор текста:</span> Михаил Мишуткин</p>
-                <p class="intro__info_date"><span class="intro__text_bold">Дата:</span> 12.09.1994</p>
-                <!-- Надо исправить: тут и ниже часть текста должна иметь жирное начертание. Сверьтесь с макетом. Используйте span, назначите ему класс и правильно его стилизуйте. -->
+                <p class="intro__info-author"><span class="intro_bold">Автор текста:</span> Михаил Мишуткин</p>
+                <p class="intro__info-date"><span class="intro_bold">Дата:</span> 12.09.1994</p>
+                <!--Надо исправить: intro__info_author, intro__text_bold, intro__info_date содержат в себе только модификатор. Класс представлен одним модификатором, образованным от элемента. Пример работы с модификаторами: class='block block_mod block_mod_mod-value', где block - блок или элемент (block__element-name_mod). _mod - модификатор блока _mod_mod-value - сложный модификатор, где _mod-value - значение сложного модификатора. Сейчас нету блока от которого можно было бы использовать модификатор. Документацию по БЭМ: https://tech.yandex.ru/bem/-->
             </div>
         </div>
         <!-- Intro subtext -->
         <div class="intro__subtexts">
-            <p class="intro__subtext"><span class="intro__text_bold">Часовых поясов</span> 11</p>
-            <p class="intro__subtext"><span class="intro__text_bold">Объектов природного наследия ЮНЕСКО</span> 12</p>
-            <p class="intro__subtext"><span class="intro__text_bold">Объектов культурного наследия ЮНЕСКО</span> 16</p>
-            <p class="intro__subtext"><span class="intro__text_bold">Природных заповедников</span> 105</p>
-            <p class="intro__subtext"><span class="intro__text_bold">Аэропортов</span> 241</p>
+            <p class="intro__subtext"><span class="intro_bold">Часовых поясов</span> 11</p>
+            <p class="intro__subtext"><span class="intro_bold">Объектов природного наследия ЮНЕСКО</span> 12</p>
+            <p class="intro__subtext"><span class="intro_bold">Объектов культурного наследия ЮНЕСКО</span> 16</p>
+            <p class="intro__subtext"><span class="intro_bold">Природных заповедников</span> 105</p>
+            <p class="intro__subtext"><span class="intro_bold">Аэропортов</span> 241</p>
+            <!--Надо исправить:  intro__text_bold содержит в себе только модификатор. -->
         </div>
     </section>
     <!-- Section gallery -->
@@ -92,7 +86,9 @@
                 <h2 class="card__title">Куршская коса</h2>
                 <div class="card__links">
                     <span class="card__url">url</span>
-                    <a href="http://park-kosa.ru/" class="card__link link_hover" target="_blank">park-kosa.ru</a>
+                    <a href="http://park-kosa.ru/" class="card__link link-hover" target="_blank">park-kosa.ru</a>
+            <!--Надо исправить: link_hover модификатор от link. но самого класса link нет.
+            Переименуйте link_hover в link-hover, чтобы это был переиспользуемый блок. -->
                 </div>    
             </div>
             <div class="card__bot">
@@ -109,7 +105,8 @@
                 <h2 class="card__title">Кольский</h2>
                 <div class="card__links">
                     <span class="card__url">url</span>
-                    <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="card__link link_hover" target="_blank">National Geographic</a>
+                    <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="card__link link-hover" target="_blank">National Geographic</a>
+            <!--Надо исправить: link_hover модификатор от link. но самого класса link нет. -->
                 </div>    
             </div>
             <div class="card__bot">
@@ -126,7 +123,7 @@
                 <h2 class="card__title">Алтай</h2>
                 <div class="card__links">
                     <span class="card__url">url</span>
-                    <a href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822" class="card__link link_hover" target="_blank">Facebook</a>
+                    <a href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822" class="card__link link-hover" target="_blank">Facebook</a>
                 </div>    
             </div>
             <div class="card__bot">
@@ -143,7 +140,7 @@
                 <h2 class="card__title">Зимний Байкал</h2>
                 <div class="card__links">
                     <span class="card__url">url</span>
-                    <a href="https://vk.com/baikalmile" class="card__link link_hover" target="_blank">https://vk.com/baikalmile</a>
+                    <a href="https://vk.com/baikalmile" class="card__link link-hover" target="_blank">https://vk.com/baikalmile</a>
                 </div>    
             </div>
             <div class="card__bot">
@@ -160,7 +157,7 @@
                 <h2 class="card__title">Карелия</h2>
                 <div class="card__links">
                     <span class="card__url">url</span>
-                    <a href="http://vodlozero.ru/" class="card__link link_hover" target="_blank">http://vodlozero.ru/</a>
+                    <a href="http://vodlozero.ru/" class="card__link link-hover" target="_blank">http://vodlozero.ru/</a>
                 </div>    
             </div>
             <div class="card__bot">
@@ -203,8 +200,10 @@
     <!-- Section additional -->
     <section class="additional">
         <!-- additional title and subtitle -->
-        <h2 class="section__title">А также</h2>
-        <p class="section__subtitle">места, рекомендованные нашими фотографами</p>
+        <h2 class="additional__title">А также</h2>
+        <p class="additional__subtitle">места, рекомендованные нашими фотографами</p>
+            <!--Надо исправить: section__title и section__subtitle элементы блока section. но самого класса section нет.
+            Либо используйте как независимые заголовки с классом через тире, либо переименуйте в additional__title .. -->
         <!-- additional cards-->
         <div class="additional__cards">
             <!-- card 1 -->
@@ -235,25 +234,25 @@
     <!-- Section comments -->
     <section class="comments">
         <!-- comments tittle and subtitle -->
-        <h2 class="section__title">Фотографы, снимающие Россию</h2>
-        <p class="section__subtitle">Природа и люди вдохновили их работы, удостоенные наград на международных конкурсах</p>
+        <h2 class="comments__title">Фотографы, снимающие Россию</h2>
+        <p class="comments__subtitle">Природа и люди вдохновили их работы, удостоенные наград на международных конкурсах</p>
         <!-- comments cards -->
         <div class="comments__cards">
             <!-- card 1 -->
             <div class="comments__card">
-                <img src="images/comments/image1.png" alt="quoteAuthor" class="comments__img">
+                <img src="images/comments/image1.jpg" alt="quoteAuthor" class="comments__img">
                 <q class="comments__quote">«Если вам кажется, что в России ничего не происходит, то просто выгляньте “наружу”…»</q>
                 <cite class="comments__author">Виктор Лягушкин</cite>
             </div>
             <!-- card 2 -->
             <div class="comments__card">
-                <img src="images/comments/image3.png" alt="quoteAuthor" class="comments__img">
+                <img src="images/comments/image2.jpg" alt="quoteAuthor" class="comments__img">
                 <q class="comments__quote">«Если в город едут туристы — неважно за чем они туда едут: за шамбалой или фрески Рублева искать, или на родину Тарковского — туристы обеспечивают любой город молодёжью, рабочими местами и в конечном счёте наполняют его жизнью.»</q>
                 <cite class="comments__author">Иван Хафизов</cite>
             </div>
             <!-- card 3 -->
             <div class="comments__card">
-                <img src="images/comments/image2.png" alt="quoteAuthor" class="comments__img">
+                <img src="images/comments/image3.jpg" alt="quoteAuthor" class="comments__img">
                 <q class="comments__quote">«Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда ты покажешь, как им плохо, то ты сволочь и всё очернил.»</q>
                 <cite class="comments__author">Сергей Максимишин</cite>
             </div>
@@ -262,7 +261,7 @@
     <!-- Section cover -->
     <section class="cover">
         <!-- Cover tittle link -->
-        <a href="https://stampsy.com/na-elektrichkakh-do-baikala" class="cover__link link_hover"><h2 class="cover__title">До Байкала «на собаках»</h2></a>
+        <a href="https://stampsy.com/na-elektrichkakh-do-baikala" class="cover__link link-hover"><h2 class="cover__title">До Байкала «на собаках»</h2></a>
         <!-- cover subtitle -->
         <p class="cover__subtitle">По мотивам учебной темы о Транссибе и iframes — путешествие от столицы до Байкала на электричках.</p>
     </section>
@@ -312,7 +311,7 @@
             <!-- barentsbutg URL and link-->
             <div class="barentsburg__links">
                 <span class="barentsburg__url">URL</span>
-                <a href="https://meduza.io/feature/2016/03/02/umeret-ili-roditsya-zdes-prakticheski-nevozmozhno" class="barentsburg__link link_hover" target="_blank">Умереть или родиться здесь практически невозможно</a>
+                <a href="https://meduza.io/feature/2016/03/02/umeret-ili-roditsya-zdes-prakticheski-nevozmozhno" class="barentsburg__link link-hover" target="_blank">Умереть или родиться здесь практически невозможно</a>
             </div> 
         </div>
     </section>
@@ -320,11 +319,11 @@
     <footer class="footer">
         <!-- footer navbar -->
         <div class="footer__nav">
-            <a href="https://yandex.ru/maps/" class="footer__link link_hover" target="_blank">Карты</a>
-            <a href="https://yandex.ru/pogoda/" class="footer__link link_hover" target="_blank">Погода</a>
-            <a href="https://rasp.yandex.ru/" class="footer__link link_hover" target="_blank">Расписание</a>
-            <a href="https://calendar.yandex.ru/" class="footer__link link_hover" target="_blank">Календарь</a>
-            <a href="https://travel.yandex.ru" class="footer__link link_hover" target="_blank">Путешествия</a>
+            <a href="https://yandex.ru/maps/" class="footer__link link-hover" target="_blank">Карты</a>
+            <a href="https://yandex.ru/pogoda/" class="footer__link link-hover" target="_blank">Погода</a>
+            <a href="https://rasp.yandex.ru/" class="footer__link link-hover" target="_blank">Расписание</a>
+            <a href="https://calendar.yandex.ru/" class="footer__link link-hover" target="_blank">Календарь</a>
+            <a href="https://travel.yandex.ru" class="footer__link link-hover" target="_blank">Путешествия</a>
         </div>
         <!-- copyright -->
         <span class="footer__copyright">&copy; 2019. Битаев Денис</span>
@@ -346,23 +345,13 @@
 
     Нужно исправить:
 
-    - комментарии в index.html
+    Внешне работа соответствует макету. Осталось только поправить последние моменты с БЭМ.
+    Комментарии по БЭМ прописаны в index.html
 
-    - Удалите из архива неспользуемые шрифты. Файлы со шрифтами весят довольно много, и чем больше вы отправляете пользоватею файлов - тем болье траффик и тем дольше будет загружаться сайт. 
 
-    *** не исправлено
 
-    - Проверьте пути изображений. Страница должна внешне соответствовать макету. Сейчас изображения не подключены.
-    Например: <img src="../images/header-logo.png" alt="header-logo" class="header__logo">
-    Данный путь надо заменить на src="images/header-logo.png" так как чтобы зайти в папку images/, вам не нужно подниматься на уровень выше в файловой структуре.
-    Подробнее о путях: https://puzzleweb.ru/html/8_links2.php
 
-    *** изображений, подключаемых через фон по-прежнему нет. Проверьте путь, он должен вести до файла. В ссылке выше описано как расчитать.
      
-
-    Визуальные различия нужно исправить. Работа должна в точности соответствовать брифу
-
-    Проверка на внешнее соответствие с макетом будет проводиться после подключения изображений.
 
     Для получения зачета нужно исправить критичные замечания.
 
@@ -372,8 +361,6 @@
     - В работе присутствует большое количество контентных элементов со свойством width; Такой подход при портировании проекта под разные экраны и устройства приводит к частому изменению свойства width, что добавляет лишний код и в целом негативно влияет на отображение проекта на некоторых разрешениях. Свойство width для текстовых элементов замените, например, на max-width;
 
     - комментарии в index.html
-
-    - .footer__copyright удалите ограничение ширины
 
 
 
