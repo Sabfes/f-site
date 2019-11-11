@@ -48,19 +48,25 @@
         <div class="intro__text">
             <p class="intro__p">По опросам ВЦИОМ, 95% россиян мечтают куда-нибудь поехать, но только 36% планируют провести отпуск в родной стране. Мол, чего мы тут, дома, не видели? На самом деле, Россия — это целая вселенная с ласковым морем юга, густыми лесами Саян и суровыми льдами плато Путорана. А ещё увидеть все эти красоты можно без миллионов на счету, загранпаспорта и многочасовых перелетов. Как, например, Вера Башмакова — смелая молодая мама, которая взяла в охапку троих детей, усадила их в свою «Ладу» и проехала 20 тысяч километров по родной стране. Мы выбрали и описали некоторые интересные места, достойные вашего отпуска.</p>
             <div class="intro__info">
-                <p class="intro__info-author"><span class="intro_bold">Автор текста:</span> Михаил Мишуткин</p>
-                <p class="intro__info-date"><span class="intro_bold">Дата:</span> 12.09.1994</p>
-                <!--Надо исправить: intro__info_author, intro__text_bold, intro__info_date содержат в себе только модификатор. Класс представлен одним модификатором, образованным от элемента. Пример работы с модификаторами: class='block block_mod block_mod_mod-value', где block - блок или элемент (block__element-name_mod). _mod - модификатор блока _mod_mod-value - сложный модификатор, где _mod-value - значение сложного модификатора. Сейчас нету блока от которого можно было бы использовать модификатор. Документацию по БЭМ: https://tech.yandex.ru/bem/-->
+                <p class="intro__info-author"><span class="intro-bold">Автор текста:</span> Михаил Мишуткин</p>
+                <p class="intro__info-date"><span class="intro-bold">Дата:</span> 12.09.1994</p>
+                <!--Можно лучше: intro-bold скорее название элемента к intro
+                    Чтобы использовать универсальный блок для выделения жирного текста, используйте класс, не привязанный к названию родительского блока
+                    text-bold, например
+                -->
             </div>
         </div>
         <!-- Intro subtext -->
         <div class="intro__subtexts">
-            <p class="intro__subtext"><span class="intro_bold">Часовых поясов</span> 11</p>
-            <p class="intro__subtext"><span class="intro_bold">Объектов природного наследия ЮНЕСКО</span> 12</p>
-            <p class="intro__subtext"><span class="intro_bold">Объектов культурного наследия ЮНЕСКО</span> 16</p>
-            <p class="intro__subtext"><span class="intro_bold">Природных заповедников</span> 105</p>
-            <p class="intro__subtext"><span class="intro_bold">Аэропортов</span> 241</p>
-            <!--Надо исправить:  intro__text_bold содержит в себе только модификатор. -->
+            <p class="intro__subtext"><span class="intro-bold">Часовых поясов</span> 11</p>
+            <p class="intro__subtext"><span class="intro-bold">Объектов природного наследия ЮНЕСКО</span> 12</p>
+            <p class="intro__subtext"><span class="intro-bold">Объектов культурного наследия ЮНЕСКО</span> 16</p>
+            <p class="intro__subtext"><span class="intro-bold">Природных заповедников</span> 105</p>
+            <p class="intro__subtext"><span class="intro-bold">Аэропортов</span> 241</p>
+             <!--Можно лучше: intro-bold скорее название элемента к intro
+                    Чтобы использовать универсальный блок для выделения жирного текста, используйте класс, не привязанный к названию родительского блока
+                    text-bold, например
+                -->
         </div>
     </section>
     <!-- Section gallery -->
@@ -87,8 +93,6 @@
                 <div class="card__links">
                     <span class="card__url">url</span>
                     <a href="http://park-kosa.ru/" class="card__link link-hover" target="_blank">park-kosa.ru</a>
-            <!--Надо исправить: link_hover модификатор от link. но самого класса link нет.
-            Переименуйте link_hover в link-hover, чтобы это был переиспользуемый блок. -->
                 </div>    
             </div>
             <div class="card__bot">
@@ -106,7 +110,6 @@
                 <div class="card__links">
                     <span class="card__url">url</span>
                     <a href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy" class="card__link link-hover" target="_blank">National Geographic</a>
-            <!--Надо исправить: link_hover модификатор от link. но самого класса link нет. -->
                 </div>    
             </div>
             <div class="card__bot">
@@ -202,8 +205,6 @@
         <!-- additional title and subtitle -->
         <h2 class="additional__title">А также</h2>
         <p class="additional__subtitle">места, рекомендованные нашими фотографами</p>
-            <!--Надо исправить: section__title и section__subtitle элементы блока section. но самого класса section нет.
-            Либо используйте как независимые заголовки с классом через тире, либо переименуйте в additional__title .. -->
         <!-- additional cards-->
         <div class="additional__cards">
             <!-- card 1 -->
@@ -345,12 +346,7 @@
 
     Нужно исправить:
 
-    Внешне работа соответствует макету. Осталось только поправить последние моменты с БЭМ.
-    Комментарии по БЭМ прописаны в index.html
-
-
-
-
+    Критичные комментарии исправлены. Спасибо за работу!
      
 
     Для получения зачета нужно исправить критичные замечания.
