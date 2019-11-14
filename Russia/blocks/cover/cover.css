@@ -1,7 +1,7 @@
-@import url('../cover/__link/cover__link.css');
-@import url('../cover/__subtitle/__subtitle.css');
-@import url('../cover/__title/cover__title.css');
-@import url('../cover/__opacity/cover__opacity.css');
+@import url('../../blocks/cover/__link/cover__link.css');
+@import url('../../blocks/cover/__subtitle/__subtitle.css');
+@import url('../../blocks/cover/__title/cover__title.css');
+@import url('../../blocks/cover/__opacity/cover__opacity.css');
 
 .cover {
     position: relative;

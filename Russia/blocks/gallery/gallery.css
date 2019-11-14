@@ -1,4 +1,4 @@
-@import url('./__photo/gallery__photo.css');
+@import url('../../blocks/gallery/__photo/gallery__photo.css');
 
 .gallery {
     width: 1184px;

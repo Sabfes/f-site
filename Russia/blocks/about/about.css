@@ -1,6 +1,6 @@
-@import url('../about/__title/about__title.css');
-@import url('../about/__subtitle/about__subtitle.css');
-@import url('../about/__figure/about__figure.css');
+@import url('../../blocks/about/__title/about__title.css');
+@import url('../../blocks/about/__subtitle/about__subtitle.css');
+@import url('../../blocks/about/__figure/about__figure.css');
 
 .about {
     font-family: "Inter" , Arial, sans-serif; 

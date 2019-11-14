@@ -1,6 +1,6 @@
-@import url('../additional/__subtitle/additional__subtitle.css');
-@import url('../additional/__title/additional__title.css');
-@import url('../additional/__cards/additional__cards.css');
+@import url('../../blocks/additional/__subtitle/additional__subtitle.css');
+@import url('../../blocks/additional/__title/additional__title.css');
+@import url('../../blocks/additional/__cards/additional__cards.css');
 
 .additional {
     margin: 102px auto 0px;

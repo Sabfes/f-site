@@ -1,4 +1,4 @@
-@import url('../places/card/card.css');
+@import url('../../blocks/places/card/card.css');
 
 .places {
     width: 984px;
