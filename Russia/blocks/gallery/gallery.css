@@ -32,3 +32,12 @@
         max-width: 343px;
     }
 }
+@media screen and (max-width: 375px) {
+    .gallery {
+        margin-top: 64px;
+        max-width: 288px;
+        grid-template-columns: 288px;
+        grid-template-rows: 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px;
+        grid-gap: 8px;
+    }
+}

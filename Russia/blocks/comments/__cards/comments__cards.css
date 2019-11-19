@@ -25,3 +25,9 @@
         max-width: 343px;
     }
 }
+@media screen and (max-width: 375px) {
+    .comments__cards {
+        max-width: 288px;
+        margin-top: 34px;
+    }
+}

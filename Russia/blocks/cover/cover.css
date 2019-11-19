@@ -48,3 +48,8 @@
         height: 272px;
     }
 }
+@media screen and (max-width: 375px) {
+    .cover {
+        max-width: 320px;
+    }
+}

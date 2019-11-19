@@ -33,3 +33,9 @@
         margin-top: 24px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .card__paragraph{
+        width: 288px;
+    }
+}

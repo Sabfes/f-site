@@ -4,8 +4,9 @@
 .about__figure {
     margin: 75px 0 0 0;
 }
-@media screen and (max-width: 768px) {
-    .about__img-figcaption {
-        width: 100%;
+
+@media screen and (max-width: 375px) {
+    .about__figure {
+        margin-top: 32px;
     }
 }

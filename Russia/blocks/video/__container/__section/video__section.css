@@ -56,3 +56,9 @@
         margin-top: 8px;
     }
 }
+@media screen and (max-width: 375px) {
+    .video__section {
+        width: 288px;
+        height: 192px;
+    }
+}

@@ -16,3 +16,8 @@
         line-height: 19px;
     }
 }
+@media screen and (max-width: 375px) {
+    .intro__subtext {
+        max-width: 288px;
+    }
+}

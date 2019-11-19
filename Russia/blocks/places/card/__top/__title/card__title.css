@@ -20,3 +20,10 @@
         line-height: 46px;
     }
 }
+@media screen and (max-width: 375px) {
+    .card__title {
+        font-size: 32px;
+        line-height: 35px;
+        max-width: 288px;
+    }
+}

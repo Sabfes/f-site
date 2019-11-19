@@ -17,3 +17,10 @@
         max-width: 300px;
     }
 }
+@media screen and (max-width: 375px) {
+    .about__subtitle {
+        width: 288px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
