@@ -16,3 +16,8 @@
         width: 550px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .cover__title {
+        margin-bottom: 45px;
+    }
+}

@@ -16,3 +16,10 @@
         grid-gap: 14px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: 352px 352px;
+        grid-template-rows: 234px 234px 234px 234px 234px 234px;
+        grid-gap: 10px;
+    }
+}

@@ -8,3 +8,9 @@
         height: 200px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .gallery__photo {
+        width: 352px;
+        height: 234px;
+    }
+}

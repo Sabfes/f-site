@@ -9,7 +9,14 @@
     margin-bottom: 0px;
 }
 @media screen and (max-width: 1280px) {
-    .card__img {
+    .card__title {
         width: 440px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .card__title {
+        width: 340px;
+        font-size: 42px;
+        line-height: 46px;
     }
 }

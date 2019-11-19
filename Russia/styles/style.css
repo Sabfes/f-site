@@ -27,6 +27,12 @@
 
 @media screen and (max-width: 1280px) {
     .page {
-        width: 928px;
+        max-width: 928px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page {
+        max-width: 720px;
     }
 }

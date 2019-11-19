@@ -6,3 +6,9 @@
     width: 41px;
     height: 41px;
 }
+@media screen and (max-width: 1024px) {
+    .video__icon {
+        left: 25px;
+        top: 20px;
+    }
+}

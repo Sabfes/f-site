@@ -1,6 +1,5 @@
 .video__duration {
     margin: 0px 30px 12px;
-    width: 44px;
     font-family: 'Inter', arial, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -8,4 +7,9 @@
     line-height: 13px;
     letter-spacing: 0.3em;
     z-index: 1;
+}
+@media screen and (max-width: 1024px) {
+    .video__duration {
+        margin: 0px 25px 8px;
+    }
 }

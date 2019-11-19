@@ -8,3 +8,9 @@
         height: 554px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .about__img {
+        width: 100%;
+        height: 420px;
+    }
+}
