@@ -1,6 +1,6 @@
 .card__paragraph {
     margin-top: 36px;
-    margin-left: 40px;
+    margin-left: 32px;
     margin-bottom: 0;
     font-family: 'Inter', arial, sans-serif;
     font-style: normal;
@@ -10,4 +10,9 @@
 }
 .card__paragraph:first-of-type {
     margin-top: 0px;
+}
+@media screen and (max-width: 1280px) {
+    .card__paragraph {
+        margin-top: 24px;
+    }
 }

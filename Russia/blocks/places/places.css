@@ -1,6 +1,11 @@
-@import url('../../blocks/places/card/card.css');
+@import url('../places/card/card.css');
 
 .places {
     width: 984px;
     margin: 0px auto 0px;
+}
+@media screen and (max-width: 1280px) {
+    .places {
+        width: auto;
+    }
 }

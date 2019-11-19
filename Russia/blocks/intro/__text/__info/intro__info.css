@@ -9,3 +9,8 @@
     font-size: 10px;
     line-height: 16px;
 }
+@media screen and (max-width: 1280px) {
+    .intro__info{
+        display: none;
+    }
+}

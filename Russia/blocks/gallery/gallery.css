@@ -1,6 +1,18 @@
-@import url('../../blocks/gallery/__photo/gallery__photo.css');
+@import url('./__photo/gallery__photo.css');
 
 .gallery {
     width: 1184px;
     margin: 92px auto 0px;
+    display: grid;
+    grid-template-columns: 284px 284px 284px 284px;
+    grid-template-rows: 188px 188px 188px;
+    grid-gap: 16px;
+}
+@media screen and (max-width: 1280px) {
+    .gallery {
+        width: auto;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-gap: 14px;
+    }
 }
