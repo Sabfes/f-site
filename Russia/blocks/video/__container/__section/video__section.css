@@ -46,3 +46,13 @@
         height: 200px;
     }
 }
+@media screen and (max-width: 768px) {
+    .video__section:first-of-type {
+        margin-top: 0;
+    }
+    .video__section {
+        width: 343px;
+        height: 200px;
+        margin-top: 8px;
+    }
+}

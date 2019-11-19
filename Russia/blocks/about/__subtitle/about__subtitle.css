@@ -1,5 +1,5 @@
 .about__subtitle {
-    width: 583px;
+    max-width: 583px;
     font-family: "Inter" , Arial, sans-serif; 
     font-style: normal;
     font-weight: normal;
@@ -8,4 +8,12 @@
     text-align: center;
     margin-top: 48px;
     margin-bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+    .about__subtitle {
+        font-size: 16px;
+        line-height: 23px;
+        margin-top: 8px;
+        max-width: 300px;
+    }
 }

@@ -21,3 +21,11 @@
         margin-bottom: 45px;
     }
 }
+@media screen and (max-width: 768px) {
+    .cover__title {
+        max-width: 343px;
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 7px;
+    }
+}

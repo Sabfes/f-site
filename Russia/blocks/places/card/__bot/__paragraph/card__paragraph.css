@@ -23,3 +23,13 @@
         line-height: 30px;
     }
 }
+@media screen and (max-width: 768px) {
+    .card__paragraph {
+        max-width: 343px;
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+    .card__paragraph:first-of-type {
+        margin-top: 24px;
+    }
+}

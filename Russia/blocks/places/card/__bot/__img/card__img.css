@@ -14,3 +14,9 @@
         height: 340px;
     }
 }
+@media screen and (max-width: 768px) {
+    .card__img {
+        width: 375px;
+        height: 375px;
+    }
+}

@@ -16,3 +16,10 @@
         line-height: 46px;
     }
 }
+@media screen and (max-width: 768px) {
+    .comments__title {
+        font-size: 32px;
+        line-height: 35px;
+        max-width: 343px;
+    }
+}

@@ -12,5 +12,6 @@
     .card {
         margin-top: 83px;
         width: auto;
+        align-items: center;
     }
 }

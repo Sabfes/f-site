@@ -7,3 +7,11 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .intro__title {
+        max-width: 343px;
+        font-size: 32px;
+        line-height: 35px;
+    }
+}

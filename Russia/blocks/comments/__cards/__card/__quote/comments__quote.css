@@ -15,3 +15,8 @@
         line-height: 23px;
     }
 }
+@media screen and (max-width: 768px) {
+    .comments__quote {
+        max-width: 343px;
+    }
+}

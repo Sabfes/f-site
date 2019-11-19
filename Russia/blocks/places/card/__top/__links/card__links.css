@@ -9,3 +9,8 @@
         margin-left: 28px;
     }
 }
+@media screen and (max-width: 768px) {
+    .card__links {
+        display: none;
+    }
+}

@@ -3,3 +3,8 @@
 .intro__subtexts {
     margin-top: 35px;
 }
+@media screen and (max-width: 768px) {
+    .intro__subtexts {
+        margin-top: 32px;
+    }
+}

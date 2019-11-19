@@ -20,3 +20,8 @@
         margin-top: 66px;
     }
 }
+@media screen and (max-width: 768px) {
+    .comments__cards {
+        max-width: 343px;
+    }
+}

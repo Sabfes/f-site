@@ -11,3 +11,8 @@
     margin-bottom: 0;
     text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+    .card__url {
+        display: none;
+    }
+}
