@@ -21,5 +21,6 @@
         grid-template-columns: 352px 352px;
         grid-template-rows: 234px 234px 234px 234px 234px 234px;
         grid-gap: 10px;
+        max-width: 720px;
     }
 }
