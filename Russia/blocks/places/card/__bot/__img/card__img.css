@@ -16,3 +16,10 @@
         height: 340px;
     }
 }
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .card__img {
+        width: 375px;
+        height: 375px;
+    }
+}

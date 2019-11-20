@@ -29,4 +29,13 @@
         grid-gap: 16px;
     }
 }
-
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .gallery {
+        max-width: 343px;
+        margin-top: 64px;
+        grid-template-columns: 343px;
+        grid-template-areas: 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px;
+        grid-gap: 15px;
+    }
+}

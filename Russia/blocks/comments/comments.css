@@ -22,3 +22,10 @@
         max-width: 720px;
     }
 }
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .comments {
+        margin-top: 64px;
+        max-width: 343px;
+    }
+}

@@ -16,3 +16,9 @@
         margin-top: 78px;
     }
 }
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .about__figure {
+        margin-top: 31px;
+    }
+}

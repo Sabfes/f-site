@@ -43,3 +43,11 @@
         max-width: 100%;
     }
 }
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .cover {
+        margin-top: 48px;
+        max-width: 100%;
+        height: 272px;
+    }
+}

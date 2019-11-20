@@ -13,3 +13,11 @@
         margin-top: 56px;
     }
 }
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .video__container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+}

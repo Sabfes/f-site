@@ -23,3 +23,10 @@
         max-width: 768px;
     }
 }
+/** 375px **/
+/** 375px **/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .about {
+        max-width: auto;
+    }
+}

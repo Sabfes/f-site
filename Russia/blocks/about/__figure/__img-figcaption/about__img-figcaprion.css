@@ -1,6 +1,6 @@
 .about__img-figcaption {
     margin-top: 8px;
-    width: 636px;
+    max-width: 636px;
     font-family: "Inter" , Arial, sans-serif; 
     font-style: normal;
     font-weight: normal;
