@@ -12,38 +12,16 @@
 @import url('../blocks/barentsburg/barentsburg.css');
 @import url('../blocks/footer/footer.css');
 
+
 .page {
     background-color: #2A2C2F;
     color: white;
-    margin: 0px auto;
-    max-width: 1440px;
+    
 }
 .link-hover:hover {
     opacity: 0.7;
 }
+
 .text-bold {
     font-weight: bold;
-}
-
-@media screen and (max-width: 1280px) {
-    .page {
-        max-width: 928px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .page {
-        max-width: 768px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .page {
-        max-width: 375px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .page {
-        width: 320px;
-    }
 }

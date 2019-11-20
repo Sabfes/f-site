@@ -1,16 +1,6 @@
 .card__links {
-    margin-left: 32px;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-@media screen and (max-width: 1024px) {
-    .card__links {
-        margin-left: 28px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .card__links {
-        display: none;
-    }
 }

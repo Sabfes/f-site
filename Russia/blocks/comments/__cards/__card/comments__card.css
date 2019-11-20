@@ -9,20 +9,3 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
-@media screen and (max-width: 1280px) {
-    .comments__card {
-        width: 296px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .comments__card {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 47px;
-    }
-    .comments__card:nth-of-type(1) {
-        margin-top: 0px;
-    }
-}

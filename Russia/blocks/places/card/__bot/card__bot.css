@@ -5,14 +5,3 @@
     display: flex;
     margin-top: 60px;
 }
-@media screen and (max-width: 1280px) {
-    .card__bot{
-        margin-top: 40px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .card__bot {
-        flex-direction: column;
-        align-items: center;
-    }
-}

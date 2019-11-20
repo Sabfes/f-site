@@ -3,41 +3,4 @@
 .gallery {
     width: 1184px;
     margin: 92px auto 0px;
-    display: grid;
-    grid-template-columns: 284px 284px 284px 284px;
-    grid-template-rows: 188px 188px 188px;
-    grid-gap: 16px;
-}
-@media screen and (max-width: 1280px) {
-    .gallery {
-        width: auto;
-        grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 200px 200px 200px 200px;
-        grid-gap: 14px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .gallery {
-        grid-template-columns: 352px 352px;
-        grid-template-rows: 234px 234px 234px 234px 234px 234px;
-        grid-gap: 10px;
-        max-width: 720px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .gallery {
-        grid-template-columns: 343px;
-        grid-template-rows: 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px 232px;
-        grid-gap: 16px;
-        max-width: 343px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .gallery {
-        margin-top: 64px;
-        max-width: 288px;
-        grid-template-columns: 288px;
-        grid-template-rows: 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px 192px;
-        grid-gap: 8px;
-    }
 }

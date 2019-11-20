@@ -9,8 +9,3 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
-    .about__img-figcaption {
-        width: 100%;
-    }
-}

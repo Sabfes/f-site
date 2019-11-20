@@ -8,8 +8,3 @@
     line-height: 15px;
     z-index: 1;
 }
-@media screen and (max-width: 1024px) {
-    .video__subname {
-        margin: 0px 25px 15px;
-    }
-}

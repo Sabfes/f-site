@@ -7,16 +7,3 @@
     margin-top: 42px;
     margin-bottom: 0;
 }
-
-@media screen and (max-width: 1024px) {
-    .comments__quote {
-        margin-top: 16px;
-        font-size: 16px;
-        line-height: 23px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .comments__quote {
-        max-width: 343px;
-    }
-}

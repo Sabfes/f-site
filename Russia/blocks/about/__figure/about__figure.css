@@ -2,11 +2,8 @@
 @import url('./__img/about__img.css');
 
 .about__figure {
-    margin: 75px 0 0 0;
-}
-
-@media screen and (max-width: 375px) {
-    .about__figure {
-        margin-top: 32px;
-    }
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }

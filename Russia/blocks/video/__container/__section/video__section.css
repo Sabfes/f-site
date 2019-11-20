@@ -3,6 +3,7 @@
 @import url('../__section/__name/video__name.css');
 @import url('../__section/__subname/video__subname.css');
 
+
 .video__section {
     border-radius: 5px;
     position: relative;
@@ -20,7 +21,6 @@
     background-image: url(../../../../images/video/Image2.jpg);
 }
 .video__section::after {
-    border-radius: 5px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -33,32 +33,4 @@
 .video__section:hover::after{
     opacity: .8;
     transition: .4s;
-}
-@media screen and (max-width: 1280px) {
-    .video__section {
-        width: 456px;
-        height: 288px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .video__section {
-        width: 352px;
-        height: 200px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .video__section:first-of-type {
-        margin-top: 0;
-    }
-    .video__section {
-        width: 343px;
-        height: 200px;
-        margin-top: 8px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .video__section {
-        width: 288px;
-        height: 192px;
-    }
 }

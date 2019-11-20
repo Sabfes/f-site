@@ -1,6 +1,6 @@
 .card__paragraph {
     margin-top: 36px;
-    margin-left: 32px;
+    margin-left: 40px;
     margin-bottom: 0;
     font-family: 'Inter', arial, sans-serif;
     font-style: normal;
@@ -10,32 +10,4 @@
 }
 .card__paragraph:first-of-type {
     margin-top: 0px;
-}
-@media screen and (max-width: 1280px) {
-    .card__paragraph {
-        margin-top: 24px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .card__paragraph {
-        margin-left: 28px;
-        font-size: 18px;
-        line-height: 30px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .card__paragraph {
-        max-width: 343px;
-        margin-top: 24px;
-        margin-left: 0px;
-    }
-    .card__paragraph:first-of-type {
-        margin-top: 24px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .card__paragraph{
-        width: 288px;
-    }
 }

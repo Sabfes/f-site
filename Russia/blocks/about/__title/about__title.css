@@ -5,19 +5,7 @@
     font-size: 96px;
     line-height: 93px;
     text-align: center;
+    width: 782px;
     margin-top: 0px;
     margin-bottom: 0px;
-}
-@media screen and (max-width: 768px) {
-    .about__title {
-        font-size: 40px;
-        line-height: 44px;
-    }
-}
-@media screen and (max-width: 375px) {
-    .about__title {
-        width: 288px;
-        font-size: 40px;
-        line-height: 44px;
-    }
 }

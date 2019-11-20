@@ -8,31 +8,3 @@
     align-items: center;
     margin: 0px auto 48px;
 }
-
-@media screen and (max-width: 1280px) {
-    .footer {
-        width: auto;
-        margin-top: 160px;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .footer {
-        max-width: 720px;
-        margin-top: 102px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .footer {
-        max-width: 343px;
-        margin-top: 64px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .footer {
-        max-width: 288px;
-    }
-}

@@ -8,15 +8,3 @@
     margin-top: 72px;
     margin-bottom: 0px;
 }
-@media screen and (max-width: 1280px) {
-    .card {
-        margin-top: 83px;
-        width: auto;
-        align-items: center;
-    }
-}
-@media screen and (max-width: 375px) {
-    .card {
-        margin-top: 48px;
-    }
-}

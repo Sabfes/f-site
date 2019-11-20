@@ -14,15 +14,3 @@
 .header__link:nth-of-type(2) {
     margin-right: 0px;
 }
-
-@media screen and (max-width: 768px) {
-    .header__link {
-        font-size: 18px;
-        line-height: 96.82%;
-    }
-}
-@media screen and (max-width: 375px) {
-    .header__link {
-        margin-right: 16px;
-    }
-}
