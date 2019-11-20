@@ -2,9 +2,16 @@
 @import url('./__logo/header__logo.css');
 
 .header {
-    margin: 30px auto;
+    margin: 30px auto 0px;
     display: flex;
-    width: 1184px;
+    max-width: 1184px;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .header {
+        max-width: 928px;
+    }
 }

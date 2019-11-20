@@ -5,9 +5,15 @@
 .about {
     font-family: "Inter" , Arial, sans-serif; 
     margin: 48px auto 0px;
-    width: 985px;
+    max-width: 985px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .about {
+        max-width: 928px;
+    }
 }

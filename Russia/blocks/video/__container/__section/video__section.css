@@ -34,3 +34,10 @@
     opacity: .8;
     transition: .4s;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .video__section {
+        width: 456px;
+        height: 288px;
+    }
+}

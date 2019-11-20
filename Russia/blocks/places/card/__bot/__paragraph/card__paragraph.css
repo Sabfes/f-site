@@ -11,3 +11,10 @@
 .card__paragraph:first-of-type {
     margin-top: 0px;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .card__paragraph {
+        margin-left: 32px;
+        margin-top: 24px;
+    }
+}

@@ -9,3 +9,9 @@
     flex-direction: column;
     align-items: center;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .video {
+        max-width: 928px;
+    }
+}

@@ -8,3 +8,6 @@
     margin-top: 72px;
     margin-bottom: 0px;
 }
+.card:nth-of-type(1) {
+    margin-top: 0;
+}

@@ -3,6 +3,6 @@
 .comments__cards {
     margin-top: 72px;
     display: flex;
-    width: 1184px;
+    width: 100%;
     justify-content: space-between;
 }

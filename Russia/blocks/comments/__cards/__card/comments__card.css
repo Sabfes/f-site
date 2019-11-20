@@ -9,3 +9,9 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .comments__card {
+        width: 296px;
+    }
+}

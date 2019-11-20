@@ -6,9 +6,16 @@
 
 .intro {
     width: 984px;
-    margin: 80px auto 20px;
+    margin: 100px auto 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .intro {
+        max-width: 928px;
+        margin-top: 106px;
+    }
 }

@@ -4,3 +4,9 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .card__links {
+        margin-left: 32px;
+    }
+}

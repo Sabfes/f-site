@@ -10,3 +10,9 @@
     align-items: center;
     justify-content: flex-start;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .comments {
+        width: 928px;
+    }
+}

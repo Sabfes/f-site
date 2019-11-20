@@ -5,3 +5,9 @@
     display: flex;
     margin-top: 60px;
 }
+/** 1024 **/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .card__bot {
+        margin-top: 40px;
+    }
+}
