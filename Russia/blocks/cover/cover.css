@@ -37,3 +37,9 @@
         height: 562px;
     }
 }
+/** 768px **/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .cover {
+        max-width: 100%;
+    }
+}

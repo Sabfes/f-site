@@ -11,3 +11,9 @@
         margin-top: 102px;
     }
 }
+/** 768px **/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .places {
+        max-width: 720px;
+    }
+}

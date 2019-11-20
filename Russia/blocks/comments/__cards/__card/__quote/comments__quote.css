@@ -7,3 +7,9 @@
     margin-top: 42px;
     margin-bottom: 0;
 }
+/** 768px **/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .comments__quote {
+        margin-top: 16px;
+    }
+}

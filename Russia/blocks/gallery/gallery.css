@@ -3,8 +3,8 @@
 .gallery {
     width: 1184px;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-areas: 200px 200px 200px;
+    grid-template-columns: 284px 284px 284px 284px;
+    grid-template-areas: 188px 188px 188px;
     grid-gap: 16px;
     margin: 92px auto 0px;
 }
@@ -19,3 +19,14 @@
         grid-gap: 14px;
     }
 }
+/** 768px **/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .gallery {
+        max-width: 720px;
+        margin-top: 97px;
+        grid-template-columns: 352px 352px;
+        grid-template-areas: 234px 234px 234px 234px 234px 234px;
+        grid-gap: 16px;
+    }
+}
+

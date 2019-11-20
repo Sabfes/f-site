@@ -10,3 +10,9 @@
         margin-left: 32px;
     }
 }
+/** 768px **/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .card__links {
+        margin-left: 28px;
+    }
+}
