@@ -18,7 +18,7 @@
     }
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .card__bot {
         margin-top: 32px;
         display: flex;

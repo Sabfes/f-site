@@ -26,12 +26,18 @@
     }
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .comments__card {
-        width: 343px;
+        max-width: 343px;
         margin-top: 47px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
+/** 320px **/
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .comments__card {
+        max-width: 288px;
+    }
+} 

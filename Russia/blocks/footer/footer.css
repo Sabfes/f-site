@@ -23,7 +23,7 @@
     }
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .footer {
         margin-top: 64px;
         max-width: 343px;
@@ -32,3 +32,9 @@
         align-items: flex-start;
     }
 }
+/** 320px **/
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .footer {
+        max-width: 288px;
+    }
+} 

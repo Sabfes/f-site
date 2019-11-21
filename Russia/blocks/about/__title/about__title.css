@@ -16,10 +16,16 @@
     }
 }   
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .about__title {
         max-width: 343px;
         font-size: 40px;
         line-height: 44px;
     }
 }
+/** 320px **/
+@media screen and (max-width: 374px) {
+    .about__title {
+        max-width: 288px;
+    }
+} 

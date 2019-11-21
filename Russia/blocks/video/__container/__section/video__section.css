@@ -49,9 +49,9 @@
     }
 }   
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .video__section {
-        width: 343px;
+        max-width: 343px;
         height: 200px;
         margin-top: 8px;
     }
@@ -59,3 +59,9 @@
         margin-top: 0;
     }
 }
+/** 320px **/
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .video__section {
+        max-width: 288px;
+    }
+} 

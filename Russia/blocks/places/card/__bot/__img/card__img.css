@@ -17,9 +17,16 @@
     }
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .card__img {
-        width: 375px;
+        width: 100%;
         height: 375px;
     }
 }
+/** 320px **/
+@media screen and (max-width: 374px) {
+    .card__img {
+        max-width: 100%;
+        max-height: 320px;
+    }
+} 

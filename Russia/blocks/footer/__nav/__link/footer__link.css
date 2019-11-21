@@ -1,5 +1,5 @@
 .footer__link {
-    width: 129px;
+    max-width: 129px;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -20,7 +20,7 @@
     }
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .footer__link {
         margin-top: 32px;
     }

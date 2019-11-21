@@ -12,7 +12,7 @@
     margin-top: 0;
 }
 /** 375px **/
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .card {
         margin-top: 48px;
     }
