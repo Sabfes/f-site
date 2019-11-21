@@ -22,7 +22,7 @@
 /** 375px **/
 @media screen and (max-width: 767px) {
     .footer__link {
-        margin-top: 32px;
+        margin-top: 14px;
     }
     .footer__link:nth-of-type(1) {
         margin-top: 0;
