@@ -1,5 +1,5 @@
 .video__subtitle {
-    width: 640px;
+    max-width: 640px;
     font-family: 'Inter', arial, sans-serif;
     font-style: normal;
     font-weight: normal;
