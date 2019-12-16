@@ -1,0 +1,12 @@
+.header__logo {
+    font-family: ;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 93px;
+    text-align: center;
+    letter-spacing: 0.11em;
+    text-transform: uppercase; 
+    margin-left: 64px;
+    color: #F2F2F2;
+}

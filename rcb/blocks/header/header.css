@@ -1,0 +1,10 @@
+@import url('./header__left-section/header__left-section.css');
+@import url('./header__right-section/header__right-section.css');
+
+.header {
+    width: 100%;
+    height: 132px;
+    position: fixed;
+
+    display: flex;
+}
