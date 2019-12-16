@@ -1,0 +1,21 @@
+.about__button-more {
+    background: #F2F2F2;
+    max-width: 586px;
+    height: 88px;
+    margin: 34px 0px 0px 172px;
+
+    font-family: ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 12px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    color: #F36956;
+}

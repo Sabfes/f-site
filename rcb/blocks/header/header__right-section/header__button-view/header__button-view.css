@@ -1,8 +1,8 @@
 @import url('./header__button-img-view/header__button-img-view.css');
 
 .header__button-view {
-    width: 132px;
-    height: 132px;
+    width: 130px;
+    height: 130px;
     border: 1px solid #F2F2F2;
 
     display: flex;

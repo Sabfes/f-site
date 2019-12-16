@@ -1,0 +1,19 @@
+@import url('./about__info/about__info.css');
+@import url('./about__title/about__title.css');
+@import url('./about__subtitle/about__subtitle.css');
+@import url('./about__button-more/about__button-more.css');
+
+
+.about__right-sec {
+    width: 970px;
+    height: 1080px;
+    background-color: #F36956;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url(../../../images/about-info-img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}

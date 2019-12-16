@@ -1,0 +1,12 @@
+@import url('./about__left-sec/about__left-sec.css');
+@import url('./about__right-sec/about__right-sec.css');
+
+.about {
+    height: 1080px;
+    width: 100%;
+    display: flex;
+
+    background-image: url(../../../images/about-main-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
