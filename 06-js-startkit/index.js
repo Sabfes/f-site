@@ -75,13 +75,22 @@ for (let i=0; i<10; i++) {
     
 }
 
-
+// ОТКРЫТИЕ ОКНА ЗАГРУЩКИ ДОП ФОТО
 document.querySelector('.user-info__button').addEventListener('click', function() {
     document.querySelector('.popup').classList.add('popup_is-opened');
 })
 document.querySelector('.popup__close').addEventListener('click', function() {
     document.querySelector('.popup').classList.remove('popup_is-opened');
 })
-  
+
+// ЛАЙКи
+document.querySelector('.places-list').addEventListener('click', function() {
+  if (event.target.classList.contains('place-card__like-icon_liked')) {
+    event.target.classList.remove('place-card__like-icon_liked');
+  } else if (event.target.classList.contains('place-card__like-icon')) {
+    event.target.classList.add('place-card__like-icon_liked');
+  }
+});
+
 
 
