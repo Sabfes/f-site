@@ -42,37 +42,39 @@ const initialCards = [
   ];
 
 
+function addCard(name, link) {
+  let cards = document.querySelector('.places-list');
+  let card = document.createElement('div');
+  card.classList.add('place-card');
+  cards.appendChild(card);
+
+  //  ТОП СЕКЦИЯ
+  let img = document.createElement('div');
+  img.classList.add('place-card__image');
+  card.appendChild(img);
+  img.style.background = `url(${link})`;
+
+  let btn_del = document.createElement('button');
+  btn_del.classList.add('place-card__delete-icon');
+  img.appendChild(btn_del);
+
+  // бОТ СЕКЦИЯ
+  let desc = document.createElement('div');
+  desc.classList.add('place-card__description');
+  card.appendChild(desc);
+
+  let h3 = document.createElement('h3');
+  h3.classList.add('place-card__name');
+  desc.appendChild(h3);
+  h3.textContent += `${name}`;
+
+  let btn_like = document.createElement('button');
+  btn_like.classList.add('place-card__like-icon');
+  desc.appendChild(btn_like);
+}
 
 for (let i=0; i<10; i++) {
-    let cards = document.querySelector('.places-list');
-    let card = document.createElement('div');
-    card.classList.add('place-card');
-    cards.appendChild(card);
-
-    //  ТОП СЕКЦИЯ
-    let img = document.createElement('div');
-    img.classList.add('place-card__image');
-    card.appendChild(img);
-    img.style.background = `url(${initialCards[i].link})`;
-
-    let btn_del = document.createElement('button');
-    btn_del.classList.add('place-card__delete-icon');
-    img.appendChild(btn_del);
-
-    // бОТ СЕКЦИЯ
-    let desc = document.createElement('div');
-    desc.classList.add('place-card__description');
-    card.appendChild(desc);
-
-    let h3 = document.createElement('h3');
-    h3.classList.add('place-card__name');
-    desc.appendChild(h3);
-    h3.textContent += `${initialCards[i].name}`;
-
-    let btn_like = document.createElement('button');
-    btn_like.classList.add('place-card__like-icon');
-    desc.appendChild(btn_like);
-    
+  addCard(initialCards[i].name, initialCards[i].link);
 }
 
 // ОТКРЫТИЕ ОКНА ЗАГРУЩКИ ДОП ФОТО
@@ -93,4 +95,15 @@ document.querySelector('.places-list').addEventListener('click', function() {
 });
 
 
+// ДОБАВЛЕНИЕ НОВОЙ КАРТОЧКИ
+let add = document.querySelector('.popup__button').addEventListener('click', function(event) {
+  event.preventDefault();
+  let form = document.forms.new;
+  let name = form.elements.name.value;
+  let link = form.elements.link.value;
 
+  addCard(name, link);
+  form.elements.name.value = '';
+  form.elements.link.value = '';
+  document.querySelector('.popup').classList.remove('popup_is-opened');
+});
