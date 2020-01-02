@@ -42,6 +42,14 @@ const initialCards = [
   ];
 
 
+document.querySelector('.places-list').addEventListener('click', function(event) {
+  let cards = document.querySelector('.places-list');
+  if (event.target.classList.contains('place-card__delete-icon')) {
+    cards.removeChild(event.target.closest('.place-card'));
+  };
+});
+
+
 function addCard(name, link) {
   let cards = document.querySelector('.places-list');
   let card = document.createElement('div');
