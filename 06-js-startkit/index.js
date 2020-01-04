@@ -39,79 +39,138 @@ const initialCards = [
       name: 'Владивосток',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/vladivostok.jpg'
      }
-  ];
+];
 
 
-document.querySelector('.places-list').addEventListener('click', function(event) {
-  let cards = document.querySelector('.places-list');
-  if (event.target.classList.contains('place-card__delete-icon')) {
-    cards.removeChild(event.target.closest('.place-card'));
-  };
-});
+// Переменные 
+const cards = document.querySelector('.places-list'); 
+const popupClose = document.querySelector('.popup__close');
+const popup = document.querySelector('.popup');
+const popupBtn = document.querySelector('.popup__button');
+const popupForm = document.querySelector('.popup__form');
+const addBtn = document.querySelector('.user-info__button');
+// Создание карты 
 
+/*
+  Можно лучше: разделить добавление карточки от её добавления в контейнер,
+  т.е. сделать две функции:
+  createCard - создает элемент карточки и возвращает его
+  addCard - добавляет карточку в контейнер
+*/
 
-function addCard(name, link) {
-  let cards = document.querySelector('.places-list');
-  let card = document.createElement('div');
-  card.classList.add('place-card');
-  cards.appendChild(card);
+// СОЗДАНИЕ КАРТЫ
+function createCard(name, link) {
+      /*
+      Можно лучше: создавать карточку не вручную через createElement, а использовать
+      для этого разметку в виде шаблонной строки.
+      Стоит обратить внимание, что вставка данных с помощью интерполяции шаблонной строки и insertAdjacentHTML
+      может привести к уязвимости XSS, т.к. данные вставляются на страницу как обычный html, а если они придут
+      с сервера в данных может быть код злоумышленника и он будет вставлен на страницу как html и исполнится.
+      Поэтому необходимо фильтровать html теги во вставляемых данных или вставлять данные с помощью textContent и 
+      style.backgroundImage уже после создания разметки элемента как показано ниже:
+  
+      const placeCard = document.createElement("div");
+      placeCard.classList.add("place-card");
+      placeCard.insertAdjacentHTML('beforeend', `
+        <div class="place-card__image">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name"></h3>
+          <button class="place-card__like-icon"></button>
+        </div>`);
+      placeCard.querySelector(".place-card__name").textContent = nameValue;
+      placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${linkValue})`;
+      */
+    const placeCard = document.createElement("div");
+    placeCard.classList.add("place-card");
+    placeCard.insertAdjacentHTML('beforeend', `
+        <div class="place-card__image">
+            <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+            <h3 class="place-card__name"></h3>
+            <button class="place-card__like-icon"></>
+        </div>`);
+    placeCard.querySelector(".place-card__name").textContent = name;
+    placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${link})`;
 
-  //  ТОП СЕКЦИЯ
-  let img = document.createElement('div');
-  img.classList.add('place-card__image');
-  card.appendChild(img);
-  img.style.background = `url(${link})`;
-
-  let btn_del = document.createElement('button');
-  btn_del.classList.add('place-card__delete-icon');
-  img.appendChild(btn_del);
-
-  // бОТ СЕКЦИЯ
-  let desc = document.createElement('div');
-  desc.classList.add('place-card__description');
-  card.appendChild(desc);
-
-  let h3 = document.createElement('h3');
-  h3.classList.add('place-card__name');
-  desc.appendChild(h3);
-  h3.textContent += `${name}`;
-
-  let btn_like = document.createElement('button');
-  btn_like.classList.add('place-card__like-icon');
-  desc.appendChild(btn_like);
+    addCard(placeCard);
+}
+// ДОБАВЛЕНИЕ КАРТЫ
+function addCard(child) {
+    cards.appendChild(child);
 }
 
-for (let i=0; i<10; i++) {
-  addCard(initialCards[i].name, initialCards[i].link);
-}
+initialCards.forEach( a => createCard(a.name, a.link));
 
-// ОТКРЫТИЕ ОКНА ЗАГРУЩКИ ДОП ФОТО
-document.querySelector('.user-info__button').addEventListener('click', function() {
-    document.querySelector('.popup').classList.add('popup_is-opened');
-})
-document.querySelector('.popup__close').addEventListener('click', function() {
-    document.querySelector('.popup').classList.remove('popup_is-opened');
-})
+// УДАЛЕНИЕ КАРТЫ
+function cardDelete() {
+    if (event.target.classList.contains('place-card__delete-icon')) {
+        cards.removeChild(event.target.closest('.place-card'));
+    };
+}
+cards.addEventListener('click', cardDelete);
 
 // ЛАЙКи
-document.querySelector('.places-list').addEventListener('click', function() {
-  if (event.target.classList.contains('place-card__like-icon_liked')) {
-    event.target.classList.remove('place-card__like-icon_liked');
-  } else if (event.target.classList.contains('place-card__like-icon')) {
-    event.target.classList.add('place-card__like-icon_liked');
-  }
-});
+function addLike() {
+    if (event.target.classList.contains('place-card__like-icon_liked')) {
+        event.target.classList.remove('place-card__like-icon_liked');
+    } else if (event.target.classList.contains('place-card__like-icon')) {
+        event.target.classList.add('place-card__like-icon_liked');
+   }
+}
+cards.addEventListener('click', addLike);
+
+// ОТКРЫТИЕ ОКНА ЗАГРУЩКИ ДОП ФОТО
+function openPopup() {
+    popup.classList.add('popup_is-opened');
+}
+addBtn.addEventListener('click', openPopup);
+
+function closePopup() {
+    popup.classList.remove('popup_is-opened');
+}
+popupClose.addEventListener('click', closePopup);
 
 
-// ДОБАВЛЕНИЕ НОВОЙ КАРТОЧКИ
-let add = document.querySelector('.popup__button').addEventListener('click', function(event) {
-  event.preventDefault();
-  let form = document.forms.new;
-  let name = form.elements.name.value;
-  let link = form.elements.link.value;
+// Добавление новой карточки
+function addNewCard(){
+    event.preventDefault();
+    const name = document.querySelector('.popup__input_type_name').value;
+    const link = document.querySelector('.popup__input_type_link-url').value;
+    
+    createCard(name, link);
+    popupForm.reset();
+    popup.classList.remove('popup_is-opened');
+}; 
 
-  addCard(name, link);
-  form.elements.name.value = '';
-  form.elements.link.value = '';
-  document.querySelector('.popup').classList.remove('popup_is-opened');
-});
+
+  
+/*
+  Весь необходимый по заданию функционал работает верно, но 
+  к организации кода есть ряд замечаний:
+
+  Надо исправить:
+  - поиск элементов на странице производится многократно, при каждом событии, при каждом добавлении
+    карточки. Поиск элемента на странице занимает время и делая его множество раз мы замедляем работу программы.
+    В дипломе на это есть отдельный критерий: "поиск по DOM-дереву выполняется минимально возможное количество раз"
+    Поэтому нужно в начале программы найти элементы на странице, запомнить ссылки на них в элементы, а уже потом
+    работать с ними:
+    const placesList = document.querySelector('.places-list');
+    const newCardPopup = document.querySelector('.popup');
+    .........
+
+  - обработчики событий открытия и закрытия попапа, лайка, удаления и добавления карточки сделать отдельными функциями
+  - для именования переменных использовать стиль camelCase, именно он является общепринятым в js
+
+  Можно лучше:
+  - если переменная не перезаписывается её следует объявлять как const, сейчас  как const объявлен только 
+    массив initialCards, но в программе сейчас все переменных можно было объявить как const
+  - для создания карточки использовать разметку
+  - для перебора массива использовать forEach или for of
+  - разбить функцию addCard на две - создание карточки и добавление карточки в контейнер
+  - ко всем элементам на странице обращаться однообразно (querySelector)
+  - добавление карточки делать по событию формы submit, а не по клику на кнопку
+  - для очистки формы использовать метод reset
+*/
