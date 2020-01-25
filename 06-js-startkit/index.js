@@ -51,6 +51,9 @@ const popupForm = document.querySelector('.popup__form');
 const addBtn = document.querySelector('.user-info__button');
 const nameNewCard = document.querySelector('.popup__input_type_name');
 const linkNewCard = document.querySelector('.popup__input_type_link-url');
+const editProfile = document.querySelector('.user-info__edit');
+const popupEditProfile = document.querySelector('.popupEditProfile');
+const popupEditProfileClose = document.querySelector('.popupEditProfile__close');
 
 // СОЗДАНИЕ КАРТЫ
 function createCard(name, link) {
@@ -113,3 +116,13 @@ function addNewCard(){
   closePopup(); 
 }; 
 
+// ОТКРЫТИЕ ОКНА РЕДАКТИРОВАНИЯ ПРОФИЛЯ
+function openPopupEditProfile() {
+  popupEditProfile.classList.add('popupEditProfile_is-opened');
+}
+editProfile.addEventListener('click', openPopupEditProfile);
+
+function closePopupEditProfile() {
+  popupEditProfile.classList.remove('popupEditProfile_is-opened');
+}
+popupEditProfileClose.addEventListener('click', closePopupEditProfile);
