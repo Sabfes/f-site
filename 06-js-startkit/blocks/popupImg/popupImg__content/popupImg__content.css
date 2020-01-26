@@ -1,0 +1,12 @@
+@import url('./__close/popupImg__close.css');
+
+.popupImg__content{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    display: flex;
+    width: 80vh;
+    height: 80vw;
+}

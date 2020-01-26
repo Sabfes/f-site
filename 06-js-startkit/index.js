@@ -51,6 +51,9 @@ const popupForm = document.querySelector('.popup__form');
 const addBtn = document.querySelector('.user-info__button');
 const nameNewCard = document.querySelector('.popup__input_type_name');
 const linkNewCard = document.querySelector('.popup__input_type_link-url');
+const popupImgContent = document.querySelector('.popupImg__content');
+const popupImg = document.querySelector('.popupImg');
+const popupImgClose = document.querySelector('.popupImg__close');
 
 // портфолио 
 const profileName = document.querySelector('.user-info__name'); 
@@ -61,6 +64,8 @@ const popupEditProfileClose = document.querySelector('.popupEditProfile__close')
 const popupEditProfileInputName = document.querySelector('.popupEditProfile__input_type_name');
 const popupEditProfileInputLink = document.querySelector('.popupEditProfile__input_type_link-url');
 const popupEditProfileBtnSave = document.querySelector('.popupEditProfile__button');
+
+
 // СОЗДАНИЕ КАРТЫ
 function createCard(name, link) {
   const placeCard = document.createElement("div");
@@ -80,6 +85,8 @@ function createCard(name, link) {
 }
 
 // ДОБАВЛЕНИЕ КАРТЫ
+popupForm.addEventListener('submit', addNewCard);
+
 function addCard(child) {
   cards.appendChild(child);
 }
@@ -140,8 +147,26 @@ popupEditProfileClose.addEventListener('click', closePopupEditProfile);
 
 function popupSave() {
   // Сохранение отредактированого профиля
+  event.preventDefault();
   profileName.textContent = `${popupEditProfileInputName.value}`;
   profileJob.textContent = `${popupEditProfileInputLink.value}`;
   closePopupEditProfile();
 }
 popupEditProfileBtnSave.addEventListener('click', popupSave);
+
+// Открытие фотографии
+
+
+function openImg(event) {
+  if (event.target.classList.contains('place-card__image')) {
+    popupImg.style.display = 'flex';
+    popupImgContent.style.backgroundImage = event.target.style.backgroundImage;
+  };
+}
+cards.addEventListener('click', openImg);
+
+
+function closeImg() {
+  popupImg.style.display = 'none';
+}
+popupImgClose.addEventListener('click', closeImg);
