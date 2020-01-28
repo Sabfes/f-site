@@ -54,6 +54,7 @@ const linkNewCard = document.querySelector('.popup__input_type_link-url');
 const popupImgContent = document.querySelector('.popupImg__content');
 const popupImg = document.querySelector('.popupImg');
 const popupImgClose = document.querySelector('.popupImg__close');
+const popupBigImage = document.querySelector('.popupImg__bigImage');
 
 // портфолио 
 const profileName = document.querySelector('.user-info__name'); 
@@ -142,6 +143,7 @@ editProfile.addEventListener('click', openPopupEditProfile);
 function closePopupEditProfile() {
   //Закрытие окна
   popupEditProfile.classList.remove('popupEditProfile_is-opened');
+
 }
 popupEditProfileClose.addEventListener('click', closePopupEditProfile);
 
@@ -158,10 +160,19 @@ popupEditProfileBtnSave.addEventListener('click', popupSave);
 
 
 function openImg(event) {
+  const urlImg = event.target.style.backgroundImage.slice(5,-2);
   if (event.target.classList.contains('place-card__image')) {
+    popupBigImage.src = urlImg;
     popupImg.style.display = 'flex';
-    popupImgContent.style.backgroundImage = event.target.style.backgroundImage;
+    popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
   };
+
+  document.addEventListener('keydown', (e) => {
+    if (e.keyCode == '27') {
+      closeImg()
+    } 
+  })
+  
 }
 cards.addEventListener('click', openImg);
 

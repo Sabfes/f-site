@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .user-info__edit:hover {
     background-color: #fff;
