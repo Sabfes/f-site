@@ -46,7 +46,6 @@ const initialCards = [
 const cards = document.querySelector('.places-list'); 
 const popupClose = document.querySelector('.popup__close');
 const popup = document.querySelector('.popup');
-const popupBtn = document.querySelector('.popup__button');
 const popupForm = document.querySelector('.popup__form');
 const addBtn = document.querySelector('.user-info__button');
 const nameNewCard = document.querySelector('.popup__input_type_name');
@@ -65,7 +64,7 @@ const popupEditProfileClose = document.querySelector('.popupEditProfile__close')
 const popupEditProfileInputName = document.querySelector('.popupEditProfile__input_type_name');
 const popupEditProfileInputLink = document.querySelector('.popupEditProfile__input_type_link-url');
 const popupEditProfileBtnSave = document.querySelector('.popupEditProfile__button');
-
+const popupEditProfileForm = document.querySelector('.popupEditProfile__form');
 
 // СОЗДАНИЕ КАРТЫ
 function createCard(name, link) {
@@ -154,7 +153,7 @@ function popupSave() {
   profileJob.textContent = `${popupEditProfileInputLink.value}`;
   closePopupEditProfile();
 }
-popupEditProfileBtnSave.addEventListener('click', popupSave);
+popupEditProfileForm.addEventListener('submit', popupSave);
 
 // Открытие фотографии
 
@@ -169,7 +168,7 @@ function openImg(event) {
 
   document.addEventListener('keydown', (e) => {
     if (e.keyCode == '27') {
-      closeImg()
+      closeImg();
     } 
   })
   
