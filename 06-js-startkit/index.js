@@ -133,31 +133,62 @@ function addNewCard(){
 popupEditProfileInputName.value = `${profileName.textContent}`;
 popupEditProfileInputLink.value = `${profileJob.textContent}`;
 
+// открытие окна
 function openPopupEditProfile() {
-  // открытие окна
   popupEditProfile.classList.add('popupEditProfile_is-opened');
 }
 editProfile.addEventListener('click', openPopupEditProfile);
 
+//Закрытие окна
 function closePopupEditProfile() {
-  //Закрытие окна
   popupEditProfile.classList.remove('popupEditProfile_is-opened');
-
 }
 popupEditProfileClose.addEventListener('click', closePopupEditProfile);
 
-function popupSave() {
-  // Сохранение отредактированого профиля
+
+// Сохранение отредактированого профиля
+function popupSave(event) {
+  const FormElem = Array.from(popupEditProfileForm);
   event.preventDefault();
+
   profileName.textContent = `${popupEditProfileInputName.value}`;
   profileJob.textContent = `${popupEditProfileInputLink.value}`;
+
+  setEventListeners(FormElem)
   closePopupEditProfile();
 }
 popupEditProfileForm.addEventListener('submit', popupSave);
 
+
+
+
+
+
+
+function setEventListeners(popup) {
+  // popup это форма
+  for (input of popup) {
+    if (input.id !== popupEditProfileBtnSave.id) {
+      input.addEventListener('input', checkInputValidity);
+    }
+  }
+}
+// Валидация формы
+function checkInputValidity(input) {
+  if (input.target.value.length === 0) {
+    // error.textContent = 'Мало букв или тп';
+  }
+}
+//Состояние кнопки 
+function setSubmitButtonState(btn, condition) {
+  console.log(btn, condition);
+  
+}
+popupEditProfileBtnSave.addEventListener('click', setEventListeners(popupEditProfileForm));
+
+
+
 // Открытие фотографии
-
-
 function openImg(event) {
   const urlImg = event.target.style.backgroundImage.slice(5,-2);
   if (event.target.classList.contains('place-card__image')) {
