@@ -164,25 +164,42 @@ popupEditProfileForm.addEventListener('submit', popupSave);
 
 
 
-
+// События
 function setEventListeners(popup) {
-  // popup это форма
   for (input of popup) {
     if (input.id !== popupEditProfileBtnSave.id) {
-      input.addEventListener('input', checkInputValidity);
+      input.addEventListener('input', checkInputValidity );
     }
   }
 }
 // Валидация формы
-function checkInputValidity(input) {
-  if (input.target.value.length === 0) {
-    // error.textContent = 'Мало букв или тп';
+function checkInputValidity(input) {  
+  const Error = event.target.closest('div').querySelector('.popupEditProfile__input-error')
+  let isValidity = true;
+
+  if (input.target.validity.valueMissing) {
+    isValidity = false;
+    setSubmitButtonState(isValidity);
+    return Error.textContent = 'Это обязательное поле';
+  } 
+  if (input.target.validity.tooLong || input.target.validity.tooShort) {
+    isValidity = false;
+    setSubmitButtonState(isValidity);
+    return Error.textContent = 'Должно быть от 2 до 30 символов';
   }
+  setSubmitButtonState(isValidity)
+  Error.textContent = '';
+  
 }
 //Состояние кнопки 
-function setSubmitButtonState(btn, condition) {
-  console.log(btn, condition);
-  
+function setSubmitButtonState(a) {
+  if (a) {
+    popupEditProfileBtnSave.removeAttribute('disabled');
+    popupEditProfileBtnSave.classList.remove('popupEditProfile__button_is-closes');
+  } else {
+    popupEditProfileBtnSave.setAttribute('disabled', 'disabled');
+    popupEditProfileBtnSave.classList.add('popupEditProfile__button_is-closes');
+  }
 }
 popupEditProfileBtnSave.addEventListener('click', setEventListeners(popupEditProfileForm));
 
