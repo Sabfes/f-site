@@ -1,7 +1,11 @@
 class CardList {
-    constructor(container, element) {
+    constructor(container, element, create, like, remove, opemImg) {
         this.container = container;
         this.element = element;
+        this.create = create;
+        this.like = like;
+        this.remove = remove;
+        this.openImg = opemImg;
         this.render();
     }
     addCard(child) { 
@@ -9,8 +13,11 @@ class CardList {
     }
     render() {
         this.element.forEach(element => {
-            const user = new Card(element.name, element.link);
-            this.addCard(user.card);
+            const user = this.create(element.name, element.link);
+            user.addEventListener('click', this.like);
+            user.addEventListener('click', this.remove);
+            user.addEventListener('click', this.openImg);
+            this.addCard(user);
         });
     }
 }

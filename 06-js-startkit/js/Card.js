@@ -2,11 +2,8 @@ class Card {
     constructor(name, link) {
         this.name = name;
         this.link = link;
-        this.card = this.create(name, link);
-        this.card.addEventListener('click', this.like);
-        this.card.addEventListener('click', this.remove);
-        this.card.addEventListener('click', this.openImg);
-        this.popupImgClose = document.querySelector('.popupImg__close').addEventListener('click', this.closeImg);
+        this.popupImgClose = document.querySelector('.popupImg__close');
+        this.popupImgClose.addEventListener('click', this.closeImg);
     }
     like() {
         if (event.target.classList.contains('place-card__like-icon')) {
@@ -14,6 +11,7 @@ class Card {
         }
     }
     remove() {
+        const cards = document.querySelector('.places-list');
         if (event.target.classList.contains('place-card__delete-icon')) {
             cards.removeChild(event.target.closest('.place-card'));
         };
