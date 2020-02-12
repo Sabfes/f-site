@@ -28,8 +28,6 @@ class FormValidator {
     error.textContent = '';
   }
   setSubmitButtonState(isValidity) {
-    console.log(isValidity);
-    
     if (isValidity) {
       popupEditProfileBtnSave.removeAttribute('disabled');
       popupEditProfileBtnSave.classList.remove('popupEditProfile__button_is-closes');

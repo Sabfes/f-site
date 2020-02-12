@@ -5,11 +5,11 @@ class UserInfo {
 
         const errorName = document.getElementById('input-error-name');
         const errorJob = document.getElementById('input-error-job');
-      
+
         errorName.textContent = '';
         errorJob.textContent = '';
     }
-    updateUserInfo() {
+    updateUserInfo(event) {
         event.preventDefault();
         profileName.textContent = `${userName.value}`;
         profileJob.textContent = `${userJob.value}`;
@@ -17,4 +17,3 @@ class UserInfo {
     }
 }
 
-  
