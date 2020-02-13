@@ -11,9 +11,13 @@ class FormValidator {
     }
   }
   checkInputValidity(elem) {
-    const error = event.target.closest('div').querySelector('.popupEditProfile__input-error')
+      /** REVIEW: Можно лучше:
+       *   Аргумент event не обьявлен.
+       *   Такое использование window.event будет работать, но не рекомендуется как устаревшее и приводящее к ошибкам
+       **/
+    const error = elem.target.closest('div').querySelector('.popupEditProfile__input-error')
     let isValidity = true;
-    
+
     if (elem.target.validity.valueMissing) {
       isValidity = false;
       validateStart.setSubmitButtonState(isValidity);

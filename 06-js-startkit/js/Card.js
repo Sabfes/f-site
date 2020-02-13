@@ -2,6 +2,7 @@ class Card {
     constructor(name, link) {
         this.name = name;
         this.link = link;
+        this.card = this.create(name ,link);
     }
     like(event) {
         if (event.target.classList.contains('place-card__like-icon')) {
@@ -9,15 +10,20 @@ class Card {
         }
     }
     remove(event) {
-        const cards = document.querySelector('.places-list');
         if (event.target.classList.contains('place-card__delete-icon')) {
-            cards.removeChild(event.target.closest('.place-card'));
+            /** REVIEW: Надо исправить:
+            *   Карточка ничего не должна знать о списке карточек.
+             *  Вариант как это исправить: В методе create после создания можно записать элемент карточки в поле
+             *  this.element и в методе remove вызвать this.element.remove
+            **/
+           event.target.parentNode.parentNode.remove();
+           
         };
     }
-    create(name, link, openImg) {
+    create(name, link) {
         const placeCard = document.createElement("div");
         placeCard.classList.add("place-card");
-        placeCard.insertAdjacentHTML('beforeend', 
+        placeCard.insertAdjacentHTML('beforeend',
         `
             <div class="place-card__image">
                 <button class="place-card__delete-icon"></button>
@@ -30,12 +36,10 @@ class Card {
         placeCard.querySelector(".place-card__name").textContent = name;
         placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${link})`;
 
-        // Не получается сделать на this.like и this.remove        
-        placeCard.addEventListener('click', card.like);
-        placeCard.addEventListener('click', card.remove);
-        
-        placeCard.addEventListener('click', openImg);
-        
+        /** REVIEW: Надо исправить:
+         *   События со всех карточек должны быть делегированы через один обработчик на списке карточек.
+         *  В данном случае создается N обработчиков на каждую карточку. Для 10 карточек будет создано N*10 обработчиков - это неоптимально.
+         **/
         return placeCard;
     }
 }

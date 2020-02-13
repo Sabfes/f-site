@@ -57,7 +57,7 @@ const profileName = document.querySelector('.user-info__name');
 const profileJob = document.querySelector('.user-info__job');
 const userName = document.querySelector('.popupEditProfile__input_type_name');
 const userJob = document.querySelector('.popupEditProfile__input_type_link-url');
-
+const cardsList = document.querySelector('.places-list');
 const popupStart = new Popup;
 const userInf = new UserInfo;
 
@@ -65,33 +65,47 @@ editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
 editProfForm.addEventListener("submit", userInf.updateUserInfo);
 
+/** REVIEW: Надо исправить:
+*   Для каждой карточки должен создаваться новый инстанс Card.
+ *  Card создает элемент карточки и содержит методы для манипуляций c DOM для лайка\удаления.
+ *  CardList должен хранить список инстансов Card, рендерить карточки в контейнере и делегировать события
+ *  со всех карточек через один обработчик.
+ *  Для создания инстансов Card внутрь CardList можно передать колбек: const getCard = (...args) => new Card(...args);
+ *  т.к. существует критерий `Инстансы классов не должны создаваться напрямую из других классов.`
+**/
 const card = new Card;
-const cardList = new CardList(document.querySelector('.places-list'), initialCards, card.create, popupStart.openImg);
+const getCard = (...args) => new Card(...args);
+const cardList = new CardList(document.querySelector('.places-list'), initialCards, getCard , card.like, card.remove, popupStart.openImg);
 const validateStart = new FormValidator(document.querySelector('.popupEditProfile__form'));
 
 popupEditProfileForm.addEventListener('submit', userInf.updateUserInfo);
 
-
-const popupImgClose = document.querySelector('.popupImg__close').addEventListener('click', popupStart.closeImg);
-const ddBtn = document.querySelector('.user-info__button').addEventListener('click', popupStart.openPopup);
-const popupClose = document.querySelector('.popup__close').addEventListener('click', popupStart.closePopup);
-const popupEditProfileClose = document.querySelector('.popupEditProfile__close').addEventListener('click', popupStart.closePopupEditProfile);
-const editProfile = document.querySelector('.user-info__edit').addEventListener('click', popupStart.openPopupEditProfile);
+/** REVIEW: Можно лучше:
+*   Лишние обьявления переменных. popupImgClose, ddBtn, popupClose, popupEditProfileClose, editProfile не используются.
+ *  В них содержатся undefined. addEventListener возвращает undefined.
+**/
+document.querySelector('.popupImg__close').addEventListener('click', popupStart.closeImg);
+document.querySelector('.user-info__button').addEventListener('click', popupStart.openPopup);
+document.querySelector('.popup__close').addEventListener('click', popupStart.closePopup);
+document.querySelector('.popupEditProfile__close').addEventListener('click', popupStart.closePopupEditProfile);
+document.querySelector('.user-info__edit').addEventListener('click', popupStart.openPopupEditProfile);
 
 // Добавление новой карточки
 popupForm.addEventListener('submit', addNewCard);
 
 function addNewCard(event){
   event.preventDefault();
-  const newCard = card.create(nameNewCard.value, linkNewCard.value, popupStart.openImg);
+  const newCard = new Card(nameNewCard.value, linkNewCard.value).card;
   cardList.addCard(newCard);
   popupForm.reset();
   popupStart.closePopup();
 };
 
 /** REVIEW: В целом по работе:
- * После рефакторинга на классы функциональность работает не в полном обьеме. Так же имеются критические замечания
- * к структуре классов и коду, которые не займет много времени поправить.
+ * !!! Просьба не удалять комментарии проверяющего до принятия работы - это затрудняет проверку !!!
+ *
+ * После рефакторинга на классы функциональность работает в полном обьеме. К коду и структуре
+ * классов остались критические замечания.
  *
  *  Большинство мест, которые отмечены "Можно лучше" было бы замечательно исправить в этом спринте
  *  - эти мелочи помогут не допускать ошибок в следующих спринтах
@@ -99,13 +113,22 @@ function addNewCard(event){
  * Внимание: Работа принимается только при исправлении всех "Надо исправить" - в этом блоке и комментариях по коду.
  *
  * Что важно исправить(работа принимается только при исправлении всех "Надо исправить"):
- * - Не открывается попап с картинкой
- * - Из класса карточки не должны производится действия с попапом
  * - События со всех карточек должны быть делегированы через один обработчик на списке карточек.
+ * - Для каждой карточки должен создаваться новый инстанс Card
  *
  * Что сделано хорошо:
- * - Пользовательский ввод вставлен через textContent.
- * Можно добавить функцию для очистки ввода от тегов и вставлять напрямую в шаблонную строку
+ * - Пользовательский ввод вставлен через textContent, после создания разметки через шаблонную строку.
+ * - Инстансы классов не создаются напрямую из других классов
+ * - Ясный код, понятная логика
+ *
+ *
+ * Что можно улучшить(необязательно):
+ * - Убрать из консоли отладочные сообщения
+ * - В обработчиках нужно явно обьявлять аргумент event. Использование window.event считается устаревшим и
+ * может приводить к ошибкам
+ * - Все данные необходимые для работы классса нужно передавать через аргументы конструктора или методов,
+ * а не связывать через глобальные переменные
+ * - Можно добавить функцию для очистки ввода от тегов и вставлять напрямую в шаблонную строку
  * безопасный результат обработки функцией.
  function sanitize(string) {
                 const map = {
@@ -119,16 +142,7 @@ function addNewCard(event){
                 const reg = /[&<>"'/]/ig;
                 return string.replace(reg, (match)=>(map[match]));
             }
- * - Инстансы классов не создаются напрямую из других классов
- * - Ясный код, понятная логика
- *
- *
- * Что можно улучшить(необязательно):
- * - Убрать из консоли отладочные сообщения
- * - В обработчиках нужно явно обьявлять аргумент event. Использование window.event считается устаревшим и
- * может приводить к ошибкам
- * - Все данные необходимые для работы классса нужно передавать через аргументы конструктора или методов,
- * а не связывать через глобальные переменные
- *
+ * - Данные, необходимые для работы классов должны передаваться через аргументы методов или конструктора.
+ * Использование глобаных переменных для этой цели сильно связывает код.
  *
  **/
