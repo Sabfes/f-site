@@ -19,6 +19,9 @@ class CardList {
         });
     }
     eventListener() {
+        /** REVIEW: Можно лучше:
+        *   CardList не должен знать о реализации Card(какая внутри разметка, названия css-классов)
+        **/
         this.container.addEventListener('click', (event)=> {
             //delete
             if (event.target.classList.contains('place-card__delete-icon')) {
@@ -32,10 +35,10 @@ class CardList {
             if (event.target.classList.contains('place-card__image')) {
                 this.opemImg(event);
             }
-            
+
         })
-        
-        
+
+
     }
 }
 

@@ -57,7 +57,7 @@ const profileName = document.querySelector('.user-info__name');
 const profileJob = document.querySelector('.user-info__job');
 const userName = document.querySelector('.popupEditProfile__input_type_name');
 const userJob = document.querySelector('.popupEditProfile__input_type_link-url');
-const cardsList = document.querySelector('.places-list');
+
 const popupStart = new Popup;
 const userInf = new UserInfo;
 
@@ -65,14 +65,7 @@ editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
 editProfForm.addEventListener("submit", userInf.updateUserInfo);
 
-/** REVIEW: Надо исправить:
-*   Для каждой карточки должен создаваться новый инстанс Card.
- *  Card создает элемент карточки и содержит методы для манипуляций c DOM для лайка\удаления.
- *  CardList должен хранить список инстансов Card, рендерить карточки в контейнере и делегировать события
- *  со всех карточек через один обработчик.
- *  Для создания инстансов Card внутрь CardList можно передать колбек: const getCard = (...args) => new Card(...args);
- *  т.к. существует критерий `Инстансы классов не должны создаваться напрямую из других классов.`
-**/
+
 const card = new Card;
 const getCard = (...args) => new Card(...args);
 const cardList = new CardList(document.querySelector('.places-list'), initialCards, getCard , card.like, card.remove, popupStart.openImg);
@@ -80,10 +73,7 @@ const validateStart = new FormValidator(document.querySelector('.popupEditProfil
 
 popupEditProfileForm.addEventListener('submit', userInf.updateUserInfo);
 
-/** REVIEW: Можно лучше:
-*   Лишние обьявления переменных. popupImgClose, ddBtn, popupClose, popupEditProfileClose, editProfile не используются.
- *  В них содержатся undefined. addEventListener возвращает undefined.
-**/
+
 document.querySelector('.popupImg__close').addEventListener('click', popupStart.closeImg);
 document.querySelector('.user-info__button').addEventListener('click', popupStart.openPopup);
 document.querySelector('.popup__close').addEventListener('click', popupStart.closePopup);
@@ -110,24 +100,12 @@ function addNewCard(event){
  *  Большинство мест, которые отмечены "Можно лучше" было бы замечательно исправить в этом спринте
  *  - эти мелочи помогут не допускать ошибок в следующих спринтах
  *
- * Внимание: Работа принимается только при исправлении всех "Надо исправить" - в этом блоке и комментариях по коду.
- *
- * Что важно исправить(работа принимается только при исправлении всех "Надо исправить"):
- * - События со всех карточек должны быть делегированы через один обработчик на списке карточек.
- * - Для каждой карточки должен создаваться новый инстанс Card
- *
  * Что сделано хорошо:
  * - Пользовательский ввод вставлен через textContent, после создания разметки через шаблонную строку.
  * - Инстансы классов не создаются напрямую из других классов
  * - Ясный код, понятная логика
  *
- *
  * Что можно улучшить(необязательно):
- * - Убрать из консоли отладочные сообщения
- * - В обработчиках нужно явно обьявлять аргумент event. Использование window.event считается устаревшим и
- * может приводить к ошибкам
- * - Все данные необходимые для работы классса нужно передавать через аргументы конструктора или методов,
- * а не связывать через глобальные переменные
  * - Можно добавить функцию для очистки ввода от тегов и вставлять напрямую в шаблонную строку
  * безопасный результат обработки функцией.
  function sanitize(string) {

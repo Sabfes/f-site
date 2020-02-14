@@ -11,10 +11,6 @@ class FormValidator {
     }
   }
   checkInputValidity(elem) {
-      /** REVIEW: Можно лучше:
-       *   Аргумент event не обьявлен.
-       *   Такое использование window.event будет работать, но не рекомендуется как устаревшее и приводящее к ошибкам
-       **/
     const error = elem.target.closest('div').querySelector('.popupEditProfile__input-error')
     let isValidity = true;
 
