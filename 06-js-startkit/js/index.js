@@ -58,8 +58,17 @@ const profileJob = document.querySelector('.user-info__job');
 const userName = document.querySelector('.popupEditProfile__input_type_name');
 const userJob = document.querySelector('.popupEditProfile__input_type_link-url');
 
+
 const popupStart = new Popup;
 const userInf = new UserInfo;
+const api = new Api({
+  baseUrl: 'https://praktikum.tk/cohort8',
+  headers: {
+    authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+    'Content-Type': 'application/json'
+  }
+});
+
 
 editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
@@ -91,36 +100,3 @@ function addNewCard(event){
   popupStart.closePopup();
 };
 
-/** REVIEW: В целом по работе:
- * !!! Просьба не удалять комментарии проверяющего до принятия работы - это затрудняет проверку !!!
- *
- * После рефакторинга на классы функциональность работает в полном обьеме. К коду и структуре
- * классов остались критические замечания.
- *
- *  Большинство мест, которые отмечены "Можно лучше" было бы замечательно исправить в этом спринте
- *  - эти мелочи помогут не допускать ошибок в следующих спринтах
- *
- * Что сделано хорошо:
- * - Пользовательский ввод вставлен через textContent, после создания разметки через шаблонную строку.
- * - Инстансы классов не создаются напрямую из других классов
- * - Ясный код, понятная логика
- *
- * Что можно улучшить(необязательно):
- * - Можно добавить функцию для очистки ввода от тегов и вставлять напрямую в шаблонную строку
- * безопасный результат обработки функцией.
- function sanitize(string) {
-                const map = {
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                    '"': '&quot;',
-                    "'": '&#x27;',
-                    "/": '&#x2F;',
-                };
-                const reg = /[&<>"'/]/ig;
-                return string.replace(reg, (match)=>(map[match]));
-            }
- * - Данные, необходимые для работы классов должны передаваться через аргументы методов или конструктора.
- * Использование глобаных переменных для этой цели сильно связывает код.
- *
- **/

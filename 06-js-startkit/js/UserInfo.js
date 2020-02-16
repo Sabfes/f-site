@@ -11,8 +11,8 @@ class UserInfo {
     }
     updateUserInfo(event) {
         event.preventDefault();
+        profileName.textContent =` ${userJob.value}`;
         profileName.textContent = `${userName.value}`;
-        profileJob.textContent = `${userJob.value}`;
         popupStart.closePopupEditProfile();
     }
 }
