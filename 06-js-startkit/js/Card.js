@@ -25,7 +25,10 @@ class Card {
             </div>
             <div class="place-card__description">
                 <h3 class="place-card__name"></h3>
-                <button class="place-card__like-icon"></>
+                <div class="place-card__like-box">
+                    <button class="place-card__like-icon"></button>
+                    <p class="place-card__like-counter">0</p>
+                </div>
             </div>
         `);
         placeCard.querySelector(".place-card__name").textContent = name;
