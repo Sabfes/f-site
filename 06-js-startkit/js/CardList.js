@@ -1,22 +1,22 @@
 class CardList {
-    constructor(container, element, create, likeFunc, removeFunc, openImgFunc) {
+    constructor(container, create, likeFunc, removeFunc, openImgFunc, api) {
         this.container = container;
-        this.element = element;
         this.create = create;
         this.like = likeFunc;
         this.remove = removeFunc;
         this.opemImg = openImgFunc;
+        this.api = api;
         this.eventListener();
-        this.render();
+        this.loadCards();
     }
     addCard(child) {
         this.container.appendChild(child);
     }
-    render() {
-        this.element.forEach(element => {
-            const user = this.create(element.name, element.link).card;
+    render(data) {
+        for( let i=0; i<10; i++) {
+            const user = this.create(data[i].name, data[i].link).card;
             this.addCard(user);
-        });
+        }
     }
     eventListener() {
         this.container.addEventListener('click', (event)=> {
@@ -34,8 +34,11 @@ class CardList {
             }
 
         })
-
-
+    }
+    loadCards() {
+        this.api().then( (data)=> {
+            this.render(data);
+        })
     }
 }
 

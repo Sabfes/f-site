@@ -1,48 +1,3 @@
-const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    },
-    {
-      name: 'Нургуш',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/khrebet-nurgush.jpg'
-    },
-    {
-      name: 'Тулиновка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/tulinovka.jpg'
-    },
-    {
-      name: 'Остров Желтухина',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/zheltukhin-island.jpg'
-    },
-    {
-      name: 'Владивосток',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/vladivostok.jpg'
-     }
-];
-
-
-
 const popupEditProfileBtnSave = document.querySelector('.popupEditProfile__button');
 const popupForm = document.querySelector('.popup__form');
 const popupEditProfile = document.querySelector('.popupEditProfile')
@@ -61,14 +16,6 @@ const userJob = document.querySelector('.popupEditProfile__input_type_link-url')
 
 const popupStart = new Popup;
 const userInf = new UserInfo;
-const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort8',
-  headers: {
-    authorization: 'e76d975f-8925-4594-89b3-80a717000895',
-    'Content-Type': 'application/json'
-  }
-});
-
 
 editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
@@ -77,7 +24,7 @@ editProfForm.addEventListener("submit", userInf.updateUserInfo);
 
 const card = new Card;
 const getCard = (...args) => new Card(...args);
-const cardList = new CardList(document.querySelector('.places-list'), initialCards, getCard , card.like, card.remove, popupStart.openImg);
+const cardList = new CardList(document.querySelector('.places-list'), getCard , card.like, card.remove, popupStart.openImg, api.getCardArray);
 const validateStart = new FormValidator(document.querySelector('.popupEditProfile__form'));
 
 popupEditProfileForm.addEventListener('submit', userInf.updateUserInfo);
@@ -99,4 +46,5 @@ function addNewCard(event){
   popupForm.reset();
   popupStart.closePopup();
 };
+
 
