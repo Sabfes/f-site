@@ -15,8 +15,7 @@ const userJob = document.querySelector('.popupEditProfile__input_type_link-url')
 
 
 const popupStart = new Popup;
-const userInf = new UserInfo;
-
+const userInf = new UserInfo(api.renameUserInfo, popupStart.closePopupEditProfile);
 editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
 editProfForm.addEventListener("submit", userInf.updateUserInfo);

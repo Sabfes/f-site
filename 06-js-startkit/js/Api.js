@@ -3,10 +3,6 @@ class Api{
         this.optionals = optionals;
         this.authorizationCode = optionals.headers.authorization;
         this.getUserInfo();
-        this.test(this.optionals.headers.authorization);
-    }
-    test(a) {
-        console.log(a);
     }
     // Получаем name и about с сервера
     async getUserInfo() {
@@ -38,7 +34,23 @@ class Api{
             console.log(error);
         })
     }
+    renameUserInfo(name , about) {
+        fetch('https://praktikum.tk/cohort8/users/me', {
+            method: 'PATCH',
+            headers: {
+                authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: `${name}`,
+                about: `${about}`,
+            })
+        });
+    }
 }
+
+
+
 const api = new Api({
     baseUrl: 'https://praktikum.tk/cohort8',
     headers: {

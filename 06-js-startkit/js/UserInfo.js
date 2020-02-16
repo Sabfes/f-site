@@ -11,6 +11,7 @@ class UserInfo {
     }
     updateUserInfo(event) {
         event.preventDefault();
+        api.renameUserInfo(userName.value, userJob.value);
         profileJob.textContent =` ${userJob.value}`;
         profileName.textContent = `${userName.value}`;
         popupStart.closePopupEditProfile();
