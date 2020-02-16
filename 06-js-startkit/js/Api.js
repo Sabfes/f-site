@@ -34,6 +34,7 @@ class Api{
             console.log(error);
         })
     }
+    // Редактирование имени
     renameUserInfo(name , about) {
         fetch('https://praktikum.tk/cohort8/users/me', {
             method: 'PATCH',
@@ -46,6 +47,21 @@ class Api{
                 about: `${about}`,
             })
         });
+    }
+    //Добавление карты
+    cardAdd(name, link) {
+        fetch('https://praktikum.tk/cohort8/cards', {
+            method: 'POST',
+            headers: {
+                authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: `${name}`,
+                link: `${link}`,
+            })
+        })
+        .then( (res) => {console.log(res);})
     }
 }
 

@@ -41,6 +41,7 @@ popupForm.addEventListener('submit', addNewCard);
 function addNewCard(event){
   event.preventDefault();
   const newCard = new Card(nameNewCard.value, linkNewCard.value).card;
+  api.cardAdd(nameNewCard.value, linkNewCard.value);
   cardList.addCard(newCard);
   popupForm.reset();
   popupStart.closePopup();

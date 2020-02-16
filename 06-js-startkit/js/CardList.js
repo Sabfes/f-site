@@ -13,10 +13,12 @@ class CardList {
         this.container.appendChild(child);
     }
     render(data) {
-        for( let i=0; i<10; i++) {
-            const user = this.create(data[i].name, data[i].link).card;
-            this.addCard(user);
-        }
+        data.forEach(card => {
+            if (card.owner.name === 'Denis Bitaev') {
+                const user = this.create(card.name, card.link).card;
+                this.addCard(user);
+            }
+        });
     }
     eventListener() {
         this.container.addEventListener('click', (event)=> {
@@ -37,7 +39,7 @@ class CardList {
     }
     loadCards() {
         this.api().then( (data)=> {
-            this.render(data);
+            this.render(data)
         })
     }
 }
