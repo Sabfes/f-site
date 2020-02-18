@@ -13,9 +13,20 @@ const profileJob = document.querySelector('.user-info__job');
 const userName = document.querySelector('.popupEditProfile__input_type_name');
 const userJob = document.querySelector('.popupEditProfile__input_type_link-url');
 
+const api = new Api({
+  baseUrl: 'https://praktikum.tk/cohort8',
+  headers: {
+    authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+    'Content-Type': 'application/json'
+  }
+});
+api.getUserInfo();
+
+
 
 const popupStart = new Popup;
-const userInf = new UserInfo(api.renameUserInfo, popupStart.closePopupEditProfile);
+const userInf = new UserInfo(api.getUserInfo);
+userInf.setName();
 editProfBtn.addEventListener('click', userInf.setUserInfo);
 const editProfForm = document.getElementById('popupEditProfForm');
 editProfForm.addEventListener("submit", userInf.updateUserInfo);
@@ -23,7 +34,9 @@ editProfForm.addEventListener("submit", userInf.updateUserInfo);
 
 const card = new Card;
 const getCard = (...args) => new Card(...args);
-const cardList = new CardList(document.querySelector('.places-list'), getCard , card.like, card.remove, popupStart.openImg, api.getCardArray);
+const cardList = new CardList(document.querySelector('.places-list'), getCard, card.like, card.disLike, card.remove, popupStart.openImg, api.getCardArray, api.cardLike, api.cardDislike, api.cardDelete);
+cardList.eventListener();
+cardList.loadCards();
 const validateStart = new FormValidator(document.querySelector('.popupEditProfile__form'));
 
 popupEditProfileForm.addEventListener('submit', userInf.updateUserInfo);
@@ -36,15 +49,24 @@ document.querySelector('.popupEditProfile__close').addEventListener('click', pop
 document.querySelector('.user-info__edit').addEventListener('click', popupStart.openPopupEditProfile);
 
 // Добавление новой карточки
-popupForm.addEventListener('submit', addNewCard);
 
-function addNewCard(event){
+function addNewCard(event) {
   event.preventDefault();
   const newCard = new Card(nameNewCard.value, linkNewCard.value).card;
-  api.cardAdd(nameNewCard.value, linkNewCard.value);
-  cardList.addCard(newCard);
-  popupForm.reset();
-  popupStart.closePopup();
+  // Надо исправить
+  // Нельзя менять данные на странице до того как сервер вернул положительный ответ
+  // Сначала надо убедиться, что сервер вернул положительный результат, потом менять DOM
+  // То же самое касается и окон попапов -- после сабмита формы сначала опрашиваем сервер,
+  // получаем подтверждение операции и только потом попап закрываем и вносим изменения в DOM
+  // Исправить надо и в прочих подобных этому слачаях
+  api.cardAdd(nameNewCard.value, linkNewCard.value).then( (res)=> {
+    console.log(res);
+    
+    newCard.id = res._id;
+    cardList.addCard(newCard);
+    popupForm.reset();
+    popupStart.closePopup();
+  })
 };
-
+popupForm.addEventListener('submit', addNewCard);
 

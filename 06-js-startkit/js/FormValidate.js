@@ -3,13 +3,15 @@ class FormValidator {
     this.form = popup;
     this.setEventListeners(this.form);
   }
+
   setEventListeners(form) {
     for (let elem of form) {
       if (elem.id !== popupEditProfileBtnSave.id) {
-        elem.addEventListener('input', this.checkInputValidity );
+        elem.addEventListener('input', this.checkInputValidity);
       }
     }
   }
+
   checkInputValidity(elem) {
     const error = elem.target.closest('div').querySelector('.popupEditProfile__input-error')
     let isValidity = true;
@@ -27,6 +29,7 @@ class FormValidator {
     validateStart.setSubmitButtonState(isValidity);
     error.textContent = '';
   }
+
   setSubmitButtonState(isValidity) {
     if (isValidity) {
       popupEditProfileBtnSave.removeAttribute('disabled');

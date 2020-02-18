@@ -14,15 +14,15 @@ class Popup {
     popupEditProfile.classList.remove('popupEditProfile_is-opened');
   }
   openImg(event) {
-    const urlImg = event.target.style.backgroundImage.slice(5,-2);
+    const urlImg = event.target.style.backgroundImage.slice(5, -2);
     if (event.target.classList.contains('place-card__image')) {
-        popupBigImage.src = urlImg;
-        popupImg.style.display = 'flex';
-        popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
+      popupBigImage.src = urlImg;
+      popupImg.style.display = 'flex';
+      popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
     };
   }
   closeImg() {
-      popupImg.style.display = 'none';
+    popupImg.style.display = 'none';
   }
 }
 

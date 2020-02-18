@@ -1,4 +1,13 @@
 class UserInfo {
+    constructor(api) {
+        this.api = api;
+    }
+    setName() {
+        this.api().then( (res)=>{
+            profileName.textContent = res.name;
+            profileJob.textContent = res.about;
+        })
+    }
     setUserInfo() {
         userName.value = profileName.textContent;
         userJob.value = profileJob.textContent;
