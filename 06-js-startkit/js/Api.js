@@ -1,95 +1,127 @@
-/* eslint-disable class-methods-use-this */
+
 class Api {
   constructor(options) {
     this.options = options;
-    this.IP = 'https://praktikum.tk/cohort8';
-    this.authorizationKey = 'e76d975f-8925-4594-89b3-80a717000895';
   }
   // Получаем name и about с сервера
   getUserInfo() {
-    return fetch(`https://praktikum.tk/cohort8/users/me`, {
+    return fetch(`${this.options.baseUrl}/users/me`, {
       headers: {
-        authorization: `e76d975f-8925-4594-89b3-80a717000895`,
+        authorization: `${this.options.headers.authorization}`,
+      } 
+    })
+    .then( res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(`Error ${res.status}`);
       }
     })
-    .then(res => res.json());
+    .then( (res)=> {
+      return res
+    })
+    .catch( (err) => {
+      console.log(err);
+    })
   };
-
   // Получаем промис с картами
   getCardArray() {
-    return fetch(`https://praktikum.tk/cohort8/cards`, {
+    return fetch(`${this.options.baseUrl}/cards`, {
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
       }
     })
-      .then((res) => {
+    .then((res) => {
+      if (res.ok) {
         return res.json();
-      })
-      .then((data) => {
-        return data;
-      })
+      } else {
+        return Promise.reject(`Error ${res.status}`);
+      }
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch( (err) => {
+      console.log(err);
+    })
   }
-
   // Редактирование имени
   renameUserInfo(name, about) {
-    fetch(`https://praktikum.tk/cohort8/users/me`, {
+    fetch(`${this.options.baseUrl}/users/me`, {
       method: 'PATCH',
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: `${name}`,
         about: `${about}`,
       })
-    });
+    })
+    .catch( (err) => {
+      console.log(err);
+    })
   }
 
   //Добавление карты
   cardAdd(name, link) {
-    return fetch(`https://praktikum.tk/cohort8/cards`, {
+    return fetch(`${this.options.baseUrl}/cards`, {
       method: 'POST',
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: `${name}`,
         link: `${link}`,
       })
-    }).then((res)=> {
-      return res.json();
+    })
+    .then((res)=> {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(`Error ${res.status}`)
+      }
+    })
+    .catch( (err) => {
+      console.log(err);
     })
   }
   //Удаление карты
   cardDelete(id) {
-    fetch(`https://praktikum.tk/cohort8/cards/${id}`, {
+    fetch(`${this.options.baseUrl}/cards/${id}`, {
       method: 'DELETE',
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    });
+    }).catch( (err) => {
+      console.log(err);
+    })
   }
   // Лайк карточки
   cardLike(id) {
-    fetch(`https://praktikum.tk/cohort8/cards/like/${id}`, {
+    fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'PUT',
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    });
+    }).catch( (err) => {
+      console.log(err);
+    })
   }
   // Дизлайк карточки
   cardDislike(id) {
-    fetch(`https://praktikum.tk/cohort8/cards/like/${id}`, {
+    fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'DELETE',
       headers: {
-        authorization: 'e76d975f-8925-4594-89b3-80a717000895',
+        authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    });
+    }).catch( (err) => {
+      console.log(err);
+    })
   }
 }
 

@@ -1,16 +1,21 @@
 class UserInfo {
-    constructor(api) {
-        this.api = api;
+    constructor(nameProfile, jobProfile, nameUser, jobUser, apiRename, popupClose) {
+        this.nameProfile = nameProfile;
+        this.jobProfile = jobProfile;
+        this.nameUser = nameUser;
+        this.jobUser = jobUser;
+        this.apiRename = apiRename;
+        this.popupClose = popupClose;
     }
-    setName() {
-        this.api().then( (res)=>{
-            profileName.textContent = res.name;
-            profileJob.textContent = res.about;
+    setName(api) {
+        api().then( (res)=>{
+            this.nameProfile.textContent = res.name;
+            this.jobProfile.textContent = res.about;
         })
     }
     setUserInfo() {
-        userName.value = profileName.textContent;
-        userJob.value = profileJob.textContent;
+        this.nameUser.value = this.nameProfile.textContent;
+        this.jobUser.value = this.jobProfile.textContent;
 
         const errorName = document.getElementById('input-error-name');
         const errorJob = document.getElementById('input-error-job');
@@ -20,10 +25,10 @@ class UserInfo {
     }
     updateUserInfo(event) {
         event.preventDefault();
-        api.renameUserInfo(userName.value, userJob.value);
-        profileJob.textContent =` ${userJob.value}`;
-        profileName.textContent = `${userName.value}`;
-        popupStart.closePopupEditProfile();
+        this.apiRename(this.nameUser.value, this.jobUser.value);
+        this.jobProfile.textContent = `${this.jobUser.value}`;
+        this.nameProfile.textContent = `${this.nameUser.value}`;
+        this.popupClose();
     }
 }
 

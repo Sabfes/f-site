@@ -47,7 +47,11 @@ class Card {
         if (like > 0) {
             placeCard.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
         }
-        placeCard.querySelector(".place-card__like-counter").textContent = `${like}`;
+        if (like === 'undefined') {
+            placeCard.querySelector(".place-card__like-counter").textContent = `0`;
+        } else {
+            placeCard.querySelector(".place-card__like-counter").textContent = `${like}`;
+        }
         placeCard.querySelector(".place-card__name").textContent = name;
         placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${link})`;
 

@@ -1,28 +1,35 @@
 class Popup {
+  constructor(popup, btnSave, popupEdit, popupBigImg, popupImg) {
+    this.popup = popup;
+    this.btnSave = btnSave;
+    this.popupEdit = popupEdit;
+    this.popupBigImage = popupBigImage;
+    this.popupImg = popupImg;
+  }
   openPopup() {
-    popup.classList.add('popup_is-opened');
+    this.popup.classList.add('popup_is-opened');
   }
   closePopup() {
-    popup.classList.remove('popup_is-opened');
+    this.popup.classList.remove('popup_is-opened');
   }
   openPopupEditProfile() {
-    popupEditProfileBtnSave.classList.remove('popupEditProfile__button_is-closes')
-    popupEditProfileBtnSave.removeAttribute('disabled');
-    popupEditProfile.classList.add('popupEditProfile_is-opened');
+    this.btnSave.classList.remove('popupEditProfile__button_is-closes')
+    this.btnSave.removeAttribute('disabled');
+    this.popupEdit.classList.add('popupEditProfile_is-opened');
   }
   closePopupEditProfile() {
-    popupEditProfile.classList.remove('popupEditProfile_is-opened');
+    this.popupEdit.classList.remove('popupEditProfile_is-opened');
   }
   openImg(event) {
     const urlImg = event.target.style.backgroundImage.slice(5, -2);
     if (event.target.classList.contains('place-card__image')) {
-      popupBigImage.src = urlImg;
-      popupImg.style.display = 'flex';
-      popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
+      this.popupBigImage.src = urlImg;
+      this.popupImg.style.display = 'flex';
+      this.popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
     };
   }
   closeImg() {
-    popupImg.style.display = 'none';
+    this.popupImg.style.display = 'none';
   }
 }
 
