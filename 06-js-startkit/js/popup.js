@@ -3,7 +3,7 @@ class Popup {
     this.popup = popup;
     this.btnSave = btnSave;
     this.popupEdit = popupEdit;
-    this.popupBigImage = popupBigImage;
+    this.popupBigImg = popupBigImg;
     this.popupImg = popupImg;
   }
   openPopup() {
@@ -22,10 +22,10 @@ class Popup {
   }
   openImg(event) {
     const urlImg = event.target.style.backgroundImage.slice(5, -2);
-    if (event.target.classList.contains('place-card__image')) {
-      this.popupBigImage.src = urlImg;
+    if (event.target.classList.contains('place-card__image')) {     
+      this.popupBigImg.src = urlImg;
       this.popupImg.style.display = 'flex';
-      this.popupBigImage.style.backgroundImage = event.target.style.backgroundImage;
+      this.popupBigImg.style.backgroundImage = event.target.style.backgroundImage;
     };
   }
   closeImg() {

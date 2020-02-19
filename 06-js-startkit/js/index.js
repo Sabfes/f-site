@@ -30,7 +30,7 @@ editProfForm.addEventListener("submit", userInf.updateUserInfo.bind(userInf));
 
 const card = new Card;
 const getCard = (...args) => new Card(...args);
-const cardList = new CardList(document.querySelector('.places-list'), getCard, card.like, card.disLike, card.remove, popupStart.openImg, api.getCardArray.bind(api), api.cardLike.bind(api), api.cardDislike.bind(api), api.cardDelete.bind(api));
+const cardList = new CardList(document.querySelector('.places-list'), getCard, card.like, card.disLike, card.remove, popupStart.openImg.bind(popupStart), api.getCardArray.bind(api), api.cardLike.bind(api), api.cardDislike.bind(api), api.cardDelete.bind(api));
 cardList.eventListener(); 
 cardList.loadCards();
 const validateStart = new FormValidator(popupEditProfileBtnSave);
