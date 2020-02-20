@@ -12,11 +12,27 @@ class Card {
     }
     like(event) {
         event.target.classList.add('place-card__like-icon_liked');
-        this.cardLike(event.target.closest('.place-card').id);
+        this.cardLike(event.target.closest('.place-card').id)
+        .then( (res) => {
+            console.log(res.likes.length);
+            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+            +event.target.parentNode.querySelector('.place-card__like-counter').textContent + 1;
+        })
+        .catch( (err) => {
+            console.log(err);
+        })
     }
     disLike(event) {
         event.target.classList.remove('place-card__like-icon_liked');
-        this.cardDislike(event.target.closest('.place-card').id);
+        this.cardDislike(event.target.closest('.place-card').id)
+        .then( (res) => {
+            console.log(res.likes.length);
+            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+            +event.target.parentNode.querySelector('.place-card__like-counter').textContent - 1;
+        })
+        .catch( (err) => {
+            console.log(err);
+        })
     }
     remove(event) {
         if (event.target.classList.contains('place-card__delete-icon')) {

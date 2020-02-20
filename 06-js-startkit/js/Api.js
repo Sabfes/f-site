@@ -47,7 +47,7 @@ class Api {
   }
   // Редактирование имени
   renameUserInfo(name, about) {
-    fetch(`${this.options.baseUrl}/users/me`, {
+    return fetch(`${this.options.baseUrl}/users/me`, {
       method: 'PATCH',
       headers: {
         authorization: `${this.options.headers.authorization}`,
@@ -57,7 +57,9 @@ class Api {
         name: `${name}`,
         about: `${about}`,
       })
-    })
+    }).then( (res) => {
+      return res.json();
+    }) 
     .catch( (err) => {
       console.log(err);
     })
@@ -89,37 +91,46 @@ class Api {
   }
   //Удаление карты
   cardDelete(id) {
-    fetch(`${this.options.baseUrl}/cards/${id}`, {
+    return fetch(`${this.options.baseUrl}/cards/${id}`, {
       method: 'DELETE',
       headers: {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).catch( (err) => {
+    }).then( (res) => {
+      return res.json();
+    }) 
+    .catch( (err) => {
       console.log(err);
     })
   }
   // Лайк карточки
   cardLike(id) {
-    fetch(`${this.options.baseUrl}/cards/like/${id}`, {
+    return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'PUT',
       headers: {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).catch( (err) => {
+    }).then( (res) => {
+      return res.json();
+    }) 
+    .catch( (err) => {
       console.log(err);
     })
   }
   // Дизлайк карточки
   cardDislike(id) {
-    fetch(`${this.options.baseUrl}/cards/like/${id}`, {
+    return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'DELETE',
       headers: {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).catch( (err) => {
+    }).then( (res) => {
+      return res.json();
+    }) 
+    .catch( (err) => {
       console.log(err);
     })
   }

@@ -1,12 +1,12 @@
 class CardList {
-    constructor(container, create, likeFunc, dislike, removeFunc, openImgFunc, api, cardLike, cardDislike, cardDelete) {
+    constructor(container, create, likeFunc, dislike, removeFunc, openImgFunc, apiGetCard, cardLike, cardDislike, cardDelete) {
         this.container = container;
         this.create = create;
         this.like = likeFunc;
         this.dislike = dislike;
         this.remove = removeFunc;
         this.opemImg = openImgFunc;
-        this.api = api;
+        this.apiGetCard = apiGetCard;
         this.cardLike = cardLike;
         this.cardDislike = cardDislike;
         this.cardDelete = cardDelete;
@@ -43,8 +43,11 @@ class CardList {
         })
     }
     loadCards() {
-        this.api().then( (data)=> {
+        this.apiGetCard().then( (data)=> {
             this.render(data)
+        })
+        .catch( (err) => {
+            console.log(err);
         })
     }
 }
