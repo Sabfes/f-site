@@ -22,7 +22,15 @@ const api = new Api({
 });
 
 const popupStart = new Popup(document.querySelector('.popup'), popupEditProfileBtnSave, popupEditProfile, popupBigImage, popupImg);
-const userInf = new UserInfo(profileName, profileJob, userName, userJob, api.renameUserInfo.bind(api), popupStart.closePopupEditProfile.bind(popupStart));
+const userInf = new UserInfo(
+  profileName, 
+  profileJob, 
+  userName, 
+  userJob, 
+  api.renameUserInfo.bind(api), 
+  popupStart.closePopupEditProfile.bind(popupStart)
+);
+
 userInf.setName(api.getUserInfo.bind(api));
 userInf.setAvatar(api.getUserInfo.bind(api), userAvatar);
 
@@ -33,7 +41,20 @@ editProfForm.addEventListener("submit", userInf.updateUserInfo.bind(userInf));
 const card = new Card;
 const getCard = (...args) => new Card(...args);
 // тут прям таки просится деструктуризация ну или хотя бы перенос на новую строку каждого аргумента
-const cardList = new CardList(document.querySelector('.places-list'), getCard, card.like, card.disLike, card.remove, popupStart.openImg.bind(popupStart), api.getCardArray.bind(api), api.cardLike.bind(api), api.cardDislike.bind(api), api.cardDelete.bind(api));
+const descDataCardList = {};
+const cardList = new CardList(
+  document.querySelector('.places-list'), 
+  getCard, 
+  card.like, 
+  card.disLike, 
+  card.remove, 
+  popupStart.openImg.bind(popupStart), 
+  api.getCardArray.bind(api), 
+  api.cardLike.bind(api), 
+  api.cardDislike.bind(api), 
+  api.cardDelete.bind(api)
+);
+
 cardList.eventListener();
 cardList.loadCards();
 const validateStart = new FormValidator(popupEditProfileBtnSave);
