@@ -43,9 +43,11 @@ class UserInfo {
     // что будет если сервер вернул ошибку?
     this.apiRename(this.nameUser.value, this.jobUser.value)
     .then( (res) =>  {
-      this.jobProfile.textContent = `${this.jobUser.value}`;
-      this.nameProfile.textContent = `${this.nameUser.value}`;
-      this.popupClose();
+      if (res.ok) {
+        this.jobProfile.textContent = `${this.jobUser.value}`;
+        this.nameProfile.textContent = `${this.nameUser.value}`;
+        this.popupClose();
+      }
     })
     .catch( (err) => {
       console.log(err);

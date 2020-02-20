@@ -11,24 +11,26 @@ class Card {
         this.cardDelete = cardDelete;
     }
     like(event) {
-        event.target.classList.add('place-card__like-icon_liked');
         this.cardLike(event.target.closest('.place-card').id)
         .then( (res) => {
-            console.log(res.likes.length);
-            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
-            +event.target.parentNode.querySelector('.place-card__like-counter').textContent + 1;
+            if (res.ok) {
+                event.target.parentNode.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
+                event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+                +event.target.parentNode.querySelector('.place-card__like-counter').textContent + 1;
+            }
         })
         .catch( (err) => {
             console.log(err);
         })
     }
     disLike(event) {
-        event.target.classList.remove('place-card__like-icon_liked');
         this.cardDislike(event.target.closest('.place-card').id)
         .then( (res) => {
-            console.log(res.likes.length);
-            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
-            +event.target.parentNode.querySelector('.place-card__like-counter').textContent - 1;
+            if (res.ok) {
+                event.target.parentNode.querySelector('.place-card__like-icon').classList.remove('place-card__like-icon_liked');
+                event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+                +event.target.parentNode.querySelector('.place-card__like-counter').textContent - 1;
+            }
         })
         .catch( (err) => {
             console.log(err);
@@ -37,8 +39,15 @@ class Card {
     remove(event) {
         if (event.target.classList.contains('place-card__delete-icon')) {
             if (window.confirm('Удалить карту?')) { 
-                event.target.parentNode.parentNode.remove();
-                this.cardDelete(event.target.parentNode.parentNode.id);
+                this.cardDelete(event.target.parentNode.parentNode.id)
+                .then( (res) => {
+                    if (res.ok) {
+                        event.target.parentNode.parentNode.remove();
+                    }
+                })
+                .catch( (err) => {
+                    console.log(err);
+                })
             } 
         };
     }
@@ -60,14 +69,8 @@ class Card {
                 </div>
             </div>
         `);
-        if (like > 0) {
-            placeCard.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
-        }
-        if (like === 'undefined') {
-            placeCard.querySelector(".place-card__like-counter").textContent = `0`;
-        } else {
-            placeCard.querySelector(".place-card__like-counter").textContent = `${like}`;
-        }
+
+        placeCard.querySelector(".place-card__like-counter").textContent = `${like}`;
         placeCard.querySelector(".place-card__name").textContent = name;
         placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${link})`;
 

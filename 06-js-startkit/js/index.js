@@ -51,7 +51,7 @@ document.querySelector('.user-info__edit').addEventListener('click', popupStart.
 
 function addNewCard(event) {
   event.preventDefault();
-  const newCard = new Card(nameNewCard.value, linkNewCard.value).card;
+  
   // Надо исправить
   // Нельзя менять данные на странице до того как сервер вернул положительный ответ
   // Сначала надо убедиться, что сервер вернул положительный результат, потом менять DOM
@@ -59,7 +59,8 @@ function addNewCard(event) {
   // получаем подтверждение операции и только потом попап закрываем и вносим изменения в DOM
   // Исправить надо и в прочих подобных этому слачаях
   api.cardAdd(nameNewCard.value, linkNewCard.value).then((res) => {
-    newCard.id = res._id;
+    const newCard = new Card(nameNewCard.value, linkNewCard.value, res._id, res.likes.length).card;
+    console.log(res);
     cardList.addCard(newCard);
     popupForm.reset();
     popupStart.closePopup();
