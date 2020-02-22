@@ -46,7 +46,6 @@ class CardList {
     this.apiGetCard().then((data) => {
       this.render(data)
     }).catch((err) => {
-        // тут уже промис не нужен
         console.log(err);  
       })
   }

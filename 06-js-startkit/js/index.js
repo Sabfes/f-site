@@ -76,8 +76,6 @@ function addNewCard(event) {
       popupStart.closePopup();
     })
     .catch((err) => {
-      // Тут промис уже возвращать не надо, достоаточно вывод в консоль сделать,
-      // или оверлей красивый
       console.log(err.message);
     })
 };
