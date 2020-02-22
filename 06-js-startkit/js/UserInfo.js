@@ -1,36 +1,43 @@
 class UserInfo {
-  constructor(nameProfile, jobProfile, nameUser, jobUser, apiRename, popupClose) {
+  constructor(nameProfile, jobProfile, nameUser, jobUser, apiRename, popupClose, divAvatar) {
     this.nameProfile = nameProfile;
     this.jobProfile = jobProfile;
     this.nameUser = nameUser;
     this.jobUser = jobUser;
     this.apiRename = apiRename;
     this.popupClose = popupClose;
+    this.divAvatar = divAvatar;
+    // Элементы DOM вы сохранили, а как насчет данных о пользователе?
+    // например this.name=''; this.job='';
+    this.name = '';
+    this.job = '';
+    this.avatarUrl = '';
   }
-  setAvatar(apiGetName , divAvatar) {
+  GetInfo(apiGetName) {
     apiGetName().then((res) => {
-      divAvatar.style.backgroundImage  = `Url(${res.avatar})`;
+      this.avatarUrl = `Url(${res.avatar})`;
+      this.name = res.name;
+      this.job = res.about;
+      this.setUserInfo();
+      //this.divAvatar.style.backgroundImage = `Url(${res.avatar})`;
+      //this.nameProfile.textContent = res.name;
+      //this.jobProfile.textContent = res.about;
+      // Здесь нужно сохранить данные о пользователе внутри класса, в переменных класса.
     })
-    .catch( (res) => {
-      console.log(res);
-    })
+      .catch((err) => {
+        // тут уже промис не нужен, можно в консоль отписать
+        console.log(err.message);
+      })
   }
-  setName(apiGetName) {
-    // плохое имя для метода, непонятно что вы тут делаете, вместо api надо что-то более очевидное использовать
-    apiGetName().then((res) => {
-      // если catch из метода Api не вернет reject, то ответ прилетит в then, сюда,
-      // поэтому даже сбой операции будет считаться успешным
-      // и такая беда у вас везде где к Api обращаетесь.
-      this.nameProfile.textContent = res.name;
-      this.jobProfile.textContent = res.about;
-    })
-    .catch( (res) => {
-      console.log(res);
-    })
-  }
+
   setUserInfo() {
-    this.nameUser.value = this.nameProfile.textContent;
-    this.jobUser.value = this.jobProfile.textContent;
+    this.divAvatar.style.backgroundImage =  this.avatarUrl;
+    this.nameProfile.textContent = this.name;
+    this.jobProfile.textContent = this.job;
+    // Тут надо не из DOM брать данные о юзере, а из переменных класса
+    // мало ли кто-то другой уже элемент поменял
+    this.nameUser.value = this.name;
+    this.jobUser.value = this.job;
 
     const errorName = document.getElementById('input-error-name');
     const errorJob = document.getElementById('input-error-job');
@@ -38,21 +45,21 @@ class UserInfo {
     errorName.textContent = '';
     errorJob.textContent = '';
   }
+
   updateUserInfo(event) {
     event.preventDefault();
-    // что будет если сервер вернул ошибку?
     this.apiRename(this.nameUser.value, this.jobUser.value)
-    .then( (res) =>  {
-      if (res.ok) {
-        this.jobProfile.textContent = `${this.jobUser.value}`;
-        this.nameProfile.textContent = `${this.nameUser.value}`;
-        this.popupClose();
-      }
-    })
-    .catch( (err) => {
-      console.log(err);
-    })
+      .then((res) => {
+        if (res.ok) {
+          this.jobProfile.textContent = `${this.jobUser.value}`;
+          this.nameProfile.textContent = `${this.nameUser.value}`;
+          this.popupClose();
+        }
+      })
+      .catch((err) => {
+        // тут уже промис не нужен, можно в консоль отписать
+        console.log(err.message);
+      })
   }
-
 }
 

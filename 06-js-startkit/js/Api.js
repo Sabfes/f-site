@@ -7,22 +7,24 @@ class Api {
     return fetch(`${this.options.baseUrl}/users/me`, {
       headers: {
         authorization: `${this.options.headers.authorization}`,
-      } 
-    })
-    .then( res => {
-      if (res.ok) {
-        return res.json();
-      } else {
-        return Promise.reject(`Error ${res.status}`);
       }
     })
-    .then( (res)=> {
-      return res
-    })
-    .catch( (err) => {
-      console.log(err);
-    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject(new Error(`Ошибка ${err.message}`));
+        }
+      })
+      .then((res) => {
+        return res
+      })
+      .catch((err) => {
+        console.log(err);
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
+      })
   };
+
   // Получаем промис с картами
   getCardArray() {
     return fetch(`${this.options.baseUrl}/cards`, {
@@ -30,20 +32,22 @@ class Api {
         authorization: `${this.options.headers.authorization}`,
       }
     })
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
-      } else {
-        return Promise.reject(`Error ${res.status}`);
-      }
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch( (err) => {
-      console.log(err);
-    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject(new Error(`Ошибка ${err.message}`));
+        }
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((err) => {
+        console.log(err);
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
+      })
   }
+
   // Редактирование имени
   renameUserInfo(name, about) {
     return fetch(`${this.options.baseUrl}/users/me`, {
@@ -56,15 +60,16 @@ class Api {
         name: `${name}`,
         about: `${about}`,
       })
-    }).then( (res) => {
+    })
+    .then((res) => {
       if (res.ok) {
         return res;
       } else {
-        return Promise.reject(`Error ${res.status}`)
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
       }
-    }) 
-    .catch( (err) => {
-      console.log(err);
+    })
+    .catch((err) => {
+      return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
 
@@ -81,17 +86,18 @@ class Api {
         link: `${link}`,
       })
     })
-    .then((res)=> {
-      if (res.ok) {
-        return res;
-      } else {
-        return Promise.reject(`Error ${res.status}`)
-      }
-    })
-    .catch( (err) => {
-      console.log(err);
-    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject(new Error(`Ошибка ${err.message}`));
+        }
+      })
+      .catch((err) => {
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
+      })
   }
+
   //Удаление карты
   cardDelete(id) {
     return fetch(`${this.options.baseUrl}/cards/${id}`, {
@@ -100,17 +106,18 @@ class Api {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).then( (res) => {
+    }).then((res) => {
       if (res.ok) {
         return res;
       } else {
-        return Promise.reject(`Error ${res.status}`)
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
       }
-    }) 
-    .catch( (err) => {
-      console.log(err);
+    })
+    .catch((err) => {
+      return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
+
   // Лайк карточки
   cardLike(id) {
     return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
@@ -119,18 +126,19 @@ class Api {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).then( (res) => {
+    }).then((res) => {
       if (res.ok) {
-        return res;
+        return res.json();
       } else {
-        return Promise.reject(`Error ${res.status}`)
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
       }
-    }) 
-    .catch( (err) => {
-      console.log(err);
+    })
+    .catch((err) => {
+      return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
   // Дизлайк карточки
+
   cardDislike(id) {
     return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'DELETE',
@@ -138,21 +146,16 @@ class Api {
         authorization: `${this.options.headers.authorization}`,
         'Content-Type': 'application/json'
       },
-    }).then( (res) => {
+    }).then((res) => {
       if (res.ok) {
-        return res;
+        return res.json();
       } else {
-        return Promise.reject(`Error ${res.status}`)
+        return Promise.reject(new Error(`Ошибка ${err.message}`));
       }
-    }) 
-    .catch( (err) => {
-      console.log(err);
+    })
+    .catch((err) => {
+      return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
 }
-
-
-
-
-
 

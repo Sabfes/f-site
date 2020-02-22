@@ -13,27 +13,24 @@ class Card {
     like(event) {
         this.cardLike(event.target.closest('.place-card').id)
         .then( (res) => {
-            if (res.ok) {
-                event.target.parentNode.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
-                event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
-                +event.target.parentNode.querySelector('.place-card__like-counter').textContent + 1;
-            }
+            event.target.parentNode.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
+            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+            +event.target.parentNode.querySelector('.place-card__like-counter').textContent + 1;
+        
         })
         .catch( (err) => {
-            console.log(err);
+            console.log(err.message); 
         })
     }
     disLike(event) {
         this.cardDislike(event.target.closest('.place-card').id)
         .then( (res) => {
-            if (res.ok) {
-                event.target.parentNode.querySelector('.place-card__like-icon').classList.remove('place-card__like-icon_liked');
-                event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
-                +event.target.parentNode.querySelector('.place-card__like-counter').textContent - 1;
-            }
+            event.target.parentNode.querySelector('.place-card__like-icon').classList.remove('place-card__like-icon_liked');
+            event.target.parentNode.querySelector('.place-card__like-counter').textContent = 
+            +event.target.parentNode.querySelector('.place-card__like-counter').textContent - 1;
         })
         .catch( (err) => {
-            console.log(err);
+            console.log(err.message);
         })
     }
     remove(event) {
@@ -46,13 +43,12 @@ class Card {
                     }
                 })
                 .catch( (err) => {
-                    console.log(err);
+                    console.log(err.message);
                 })
             } 
         };
     }
     create(name, link, id, like) {
-    
         const placeCard = document.createElement("div");
         placeCard.classList.add("place-card");
         placeCard.setAttribute('id', `${id}`);
@@ -69,11 +65,12 @@ class Card {
                 </div>
             </div>
         `);
-
+        if (like > 0) {
+            placeCard.querySelector(".place-card__like-icon").classList.add('place-card__like-icon_liked');    
+        }
         placeCard.querySelector(".place-card__like-counter").textContent = `${like}`;
         placeCard.querySelector(".place-card__name").textContent = name;
         placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${link})`;
-
         return placeCard;
     }
 }

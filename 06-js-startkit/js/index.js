@@ -23,35 +23,32 @@ const api = new Api({
 
 const popupStart = new Popup(document.querySelector('.popup'), popupEditProfileBtnSave, popupEditProfile, popupBigImage, popupImg);
 const userInf = new UserInfo(
-  profileName, 
-  profileJob, 
-  userName, 
-  userJob, 
-  api.renameUserInfo.bind(api), 
-  popupStart.closePopupEditProfile.bind(popupStart)
+  profileName,
+  profileJob,
+  userName,
+  userJob,
+  api.renameUserInfo.bind(api),
+  popupStart.closePopupEditProfile.bind(popupStart),
+  userAvatar
 );
 
-userInf.setName(api.getUserInfo.bind(api));
-userInf.setAvatar(api.getUserInfo.bind(api), userAvatar);
-
+userInf.GetInfo(api.getUserInfo.bind(api));
 editProfBtn.addEventListener('click', userInf.setUserInfo.bind(userInf));
 const editProfForm = document.getElementById('popupEditProfForm');
 editProfForm.addEventListener("submit", userInf.updateUserInfo.bind(userInf));
 
 const card = new Card;
 const getCard = (...args) => new Card(...args);
-// тут прям таки просится деструктуризация ну или хотя бы перенос на новую строку каждого аргумента
-const descDataCardList = {};
 const cardList = new CardList(
-  document.querySelector('.places-list'), 
-  getCard, 
-  card.like, 
-  card.disLike, 
-  card.remove, 
-  popupStart.openImg.bind(popupStart), 
-  api.getCardArray.bind(api), 
-  api.cardLike.bind(api), 
-  api.cardDislike.bind(api), 
+  document.querySelector('.places-list'),
+  getCard,
+  card.like,
+  card.disLike,
+  card.remove,
+  popupStart.openImg.bind(popupStart),
+  api.getCardArray.bind(api),
+  api.cardLike.bind(api),
+  api.cardDislike.bind(api),
   api.cardDelete.bind(api)
 );
 
@@ -69,26 +66,20 @@ document.querySelector('.popupEditProfile__close').addEventListener('click', pop
 document.querySelector('.user-info__edit').addEventListener('click', popupStart.openPopupEditProfile.bind(popupStart));
 
 // Добавление новой карточки
-
 function addNewCard(event) {
   event.preventDefault();
-  
-  // Надо исправить
-  // Нельзя менять данные на странице до того как сервер вернул положительный ответ
-  // Сначала надо убедиться, что сервер вернул положительный результат, потом менять DOM
-  // То же самое касается и окон попапов -- после сабмита формы сначала опрашиваем сервер,
-  // получаем подтверждение операции и только потом попап закрываем и вносим изменения в DOM
-  // Исправить надо и в прочих подобных этому слачаях
-  api.cardAdd(nameNewCard.value, linkNewCard.value).then((res) => {
-    const newCard = new Card(nameNewCard.value, linkNewCard.value, res._id, res.likes.length).card;
-    console.log(res);
-    cardList.addCard(newCard);
-    popupForm.reset();
-    popupStart.closePopup();
-  })
-  .catch( (res) => {
-    console.log(res);
-  })
+  api.cardAdd(nameNewCard.value, linkNewCard.value)
+    .then((res) => {
+      const newCard = new Card(nameNewCard.value, linkNewCard.value, res._id, res.likes.length).card;
+      cardList.addCard(newCard);
+      popupForm.reset();
+      popupStart.closePopup();
+    })
+    .catch((err) => {
+      // Тут промис уже возвращать не надо, достоаточно вывод в консоль сделать,
+      // или оверлей красивый
+      console.log(err.message);
+    })
 };
 popupForm.addEventListener('submit', addNewCard);
 
