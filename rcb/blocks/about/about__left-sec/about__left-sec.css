@@ -1,8 +1,0 @@
-@import url('./about__button/about__button.css');
-
-.about__left-sec {
-    width: 950px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
