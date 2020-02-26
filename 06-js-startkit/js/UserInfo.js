@@ -11,6 +11,7 @@ class UserInfo {
     this.job = '';
     this.avatarUrl = '';
   }
+  // Получение данных с сервера
   GetInfo(apiGetName) {
     apiGetName().then((res) => {
       this.avatarUrl = `Url(${res.avatar})`;
@@ -22,7 +23,7 @@ class UserInfo {
         console.log(err.message);
       })
   }
-
+  // Установка данных
   setUserInfo() {
     this.divAvatar.style.backgroundImage = this.avatarUrl;
     this.nameProfile.textContent = this.name;
@@ -37,7 +38,7 @@ class UserInfo {
     errorName.textContent = '';
     errorJob.textContent = '';
   }
-
+  // Обновление данных
   updateUserInfo(event) {
     event.preventDefault();
     this.apiRename(this.nameUser.value, this.jobUser.value)

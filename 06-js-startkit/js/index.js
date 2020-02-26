@@ -65,7 +65,7 @@ document.querySelector('.popup__close').addEventListener('click', popupStart.clo
 document.querySelector('.popupEditProfile__close').addEventListener('click', popupStart.closePopupEditProfile.bind(popupStart));
 document.querySelector('.user-info__edit').addEventListener('click', popupStart.openPopupEditProfile.bind(popupStart));
 
-// Добавление новой карточки
+// Функция добавление новой карточки
 function addNewCard(event) {
   event.preventDefault();
   api.cardAdd(nameNewCard.value, linkNewCard.value)

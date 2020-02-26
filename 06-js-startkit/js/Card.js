@@ -10,6 +10,7 @@ class Card {
         this.cardDislike = cardDislike;
         this.cardDelete = cardDelete;
     }
+    // Лайк карточки
     like(event) {
         this.cardLike(event.target.closest('.place-card').id)
         .then( (res) => {
@@ -22,6 +23,7 @@ class Card {
             console.log(err.message); 
         })
     }
+    // Дизлайк карточки
     disLike(event) {
         this.cardDislike(event.target.closest('.place-card').id)
         .then( (res) => {
@@ -33,6 +35,7 @@ class Card {
             console.log(err.message);
         })
     }
+    // Удаление карточки
     remove(event) {
         if (event.target.classList.contains('place-card__delete-icon')) {
             if (window.confirm('Удалить карту?')) { 
@@ -48,6 +51,7 @@ class Card {
             } 
         };
     }
+    // Создание карточки
     create(name, link, id, like) {
         const placeCard = document.createElement("div");
         placeCard.classList.add("place-card");

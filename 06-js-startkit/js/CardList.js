@@ -11,9 +11,11 @@ class CardList {
     this.cardDislike = cardDislike;
     this.cardDelete = cardDelete;
   }
+  // Добавление карты в контейнер
   addCard(child) {
     this.container.insertBefore(child, this.container.firstChild);
   }
+  // Рендер данных с сервера, и добавление в контейнер
   render(data) {
     data.forEach(card => {
       if (card.owner.name === 'Denis Bitaev') {
@@ -22,13 +24,14 @@ class CardList {
       }
     });
   }
+  // Накладываем события (удаление, лайк и тд) на карточки
   eventListener() {
     this.container.addEventListener('click', (event) => {
-      //delete
+      // Событие Удаления
       if (event.target.classList.contains('place-card__delete-icon')) {
         this.remove(event);
       }
-      //like and dis
+      // События лайка и дизлайка
       if (event.target.classList.contains('place-card__like-icon')) {
         if (event.target.classList.contains('place-card__like-icon_liked')) {
           this.dislike(event);
@@ -36,12 +39,13 @@ class CardList {
           this.like(event);
         }
       }
-      //openImg
+      // Событие открытия картинки
       if (event.target.classList.contains('place-card__image')) {
         this.opemImg(event);
       }
     })
   }
+  // Получение данных с сервера
   loadCards() {
     this.apiGetCard().then((data) => {
       this.render(data)

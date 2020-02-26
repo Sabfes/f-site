@@ -2,6 +2,7 @@ class FormValidator {
   constructor(btnSave) {
     this.btnSave = btnSave;
   }
+  // Накладываем события
   setEventListeners(form) {
     for (let elem of form) {
       if (elem.id !== this.btnSave.id) {
@@ -9,6 +10,7 @@ class FormValidator {
       }
     }
   }
+  // Проверка на валидность
   checkInputValidity(elem) {
     const error = elem.target.closest('div').querySelector('.popupEditProfile__input-error')
     let isValidity = true;
@@ -26,7 +28,7 @@ class FormValidator {
     this.setSubmitButtonState(isValidity);
     error.textContent = '';
   }
-
+  // Активируем/Деактивируем кнопку
   setSubmitButtonState(isValidity) {
     if (isValidity) {
       this.btnSave.removeAttribute('disabled');

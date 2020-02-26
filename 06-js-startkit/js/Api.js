@@ -24,8 +24,7 @@ class Api {
         return Promise.reject(new Error(`Ошибка ${err.message}`));
       })
   };
-
-  // Получаем промис с картами
+  // Получаем массив с картами
   getCardArray() {
     return fetch(`${this.options.baseUrl}/cards`, {
       headers: {
@@ -47,7 +46,6 @@ class Api {
         return Promise.reject(new Error(`Ошибка ${err.message}`));
       })
   }
-
   // Редактирование имени
   renameUserInfo(name, about) {
     return fetch(`${this.options.baseUrl}/users/me`, {
@@ -72,7 +70,6 @@ class Api {
       return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
-
   //Добавление карты
   cardAdd(name, link) {
     return fetch(`${this.options.baseUrl}/cards`, {
@@ -97,7 +94,6 @@ class Api {
         return Promise.reject(new Error(`Ошибка ${err.message}`));
       })
   }
-
   //Удаление карты
   cardDelete(id) {
     return fetch(`${this.options.baseUrl}/cards/${id}`, {
@@ -117,7 +113,6 @@ class Api {
       return Promise.reject(new Error(`Ошибка ${err.message}`));
     })
   }
-
   // Лайк карточки
   cardLike(id) {
     return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
@@ -138,7 +133,6 @@ class Api {
     })
   }
   // Дизлайк карточки
-
   cardDislike(id) {
     return fetch(`${this.options.baseUrl}/cards/like/${id}`, {
       method: 'DELETE',
