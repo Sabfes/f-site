@@ -6,6 +6,7 @@ ctx.font = '30px arial';
 
 let width = 500;
 let height = 500;
+const timeWhenGameStarted = Date.now();
 
 document.onmousemove = function(move) {
   const mouseX = move.clientX;
@@ -74,6 +75,12 @@ function update() {
     let isColliding = testCollisionEntity(player1, enemyList[key]);
     if (isColliding) {
       player1.hp -= 1;
+      if (player1.hp <= 0) {
+        const timeSurv = Date.now() - timeWhenGameStarted;
+        console.log('You surv ' + timeSurv/1000 + "s");
+        timeWhenGameStarted = Date.now();
+        player1.hp = 20;
+      }
     }
   }
 
