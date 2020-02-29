@@ -7,38 +7,51 @@ ctx.font = '30px arial';
 let width = 500;
 let height = 500;
 
+document.onmousemove = function(move) {
+  const mouseX = move.clientX;
+  const mouseY = move.clientY;
+  
+  player1.x = mouseX;
+  player1.y = mouseY;
+  
+}
 // player1
 const player1 = {
-  x: 50,
-  y: 40,
   name: 'P',
-  speedX: 30,
-  speedY: 5,
+  hp: 20,
+};
+
+const enemyList = {};
+
+enemyCreate('E1', 150, 350, 10, 15);
+enemyCreate('E2', 250, 350, 10, -15);
+enemyCreate('E3', 350, 150, 10, -5);
+
+function getDistanceBetweenEntity(entity1, entity2) {
+  const vx = entity1.x - entity2.x;
+  const vy = entity1.y - entity2.y;
+  return Math.sqrt(vx*vx + vy*vy);
+}
+function testCollisionEntity(entity1, entity2) {
+  const distance = getDistanceBetweenEntity(entity1, entity2);
+  return distance < 30;
 }
 
-// Enemy 
-const enemy1 = {
-  x: 150,
-  y: 350,
-  name: 'E',
-  speedX: 10,
-  speedY: 15,
+function enemyCreate(id, x, y, speedX, speedY) {
+  const enemy = {
+    x: x,
+    y: y,
+    name: 'E',
+    speedX: speedX,
+    speedY: speedY,
+  };
+  enemyList[id] = enemy;
 }
-const enemy2 = {
-  x: 250,
-  y: 350,
-  name: 'E',
-  speedX: 20,
-  speedY: 10,
+function updateEntity(something){
+  updateEntityPosition(something);
+  drawEntity(something);
 }
-const enemyList = {
-  'E1': enemy1,
-  'E2': enemy2,
-}
-
-
-function updateEntity(something) {
-  ctx.fillText(something.name , something.x, something.y);
+function updateEntityPosition(something) {
   something.x += something.speedX;
   something.y += something.speedY;
 
@@ -48,14 +61,25 @@ function updateEntity(something) {
   if (something.y < 0 || something.y > height) {
     something.speedY = -something.speedY;
   }
+};
+function drawEntity(something) {
+  ctx.fillText(something.name , something.x, something.y);
 }
 function update() {
   ctx.clearRect(0,0, width, height);
-  updateEntity(player1);
+  
   for (let key in enemyList) {
     updateEntity(enemyList[key]);
+
+    let isColliding = testCollisionEntity(player1, enemyList[key]);
+    if (isColliding) {
+      player1.hp -= 1;
+    }
   }
-}
+
+  drawEntity(player1);
+  ctx.fillText(player1.hp + ' HP',0,30)
+};
 setInterval(update, 40);
 
 // document.addEventListener('keydown', function(event) {
