@@ -20,13 +20,16 @@ document.onmousemove = function(move) {
 const player1 = {
   name: 'P',
   hp: 20,
+  width: 20,
+  height: 20,
+  color: 'green',
 };
 
 const enemyList = {};
 
-enemyCreate('E1', 150, 350, 10, 15);
-enemyCreate('E2', 250, 350, 10, -15);
-enemyCreate('E3', 350, 150, 10, -5);
+enemyCreate('E1', 150, 350, 10, 15 , 30, 30, 'red');
+enemyCreate('E2', 250, 350, 10, -15, 20, 20, 'red');
+enemyCreate('E3', 350, 150, 10, -5, 40, 10, 'red');
 
 function getDistanceBetweenEntity(entity1, entity2) {
   const vx = entity1.x - entity2.x;
@@ -34,17 +37,38 @@ function getDistanceBetweenEntity(entity1, entity2) {
   return Math.sqrt(vx*vx + vy*vy);
 }
 function testCollisionEntity(entity1, entity2) {
-  const distance = getDistanceBetweenEntity(entity1, entity2);
-  return distance < 30;
+  let rect1 = {
+    x: entity1.x - entity1.width/2,
+    y: entity1.y - entity1.height/2,
+    width: entity1.width,
+    height: entity1.height,
+  }
+  let rect2 = {
+    x: entity2.x - entity2.width/2,
+    y: entity2.y - entity2.height/2,
+    width: entity2.width,
+    height: entity2.height,
+  }
+  return testcollisionRectRect(rect1, rect2);
 }
 
-function enemyCreate(id, x, y, speedX, speedY) {
+function testcollisionRectRect(rect1, rect2) {
+  return rect1.x <= rect2.x + rect2.width
+    && rect2.x <= rect1.x + rect1.width
+    && rect1.y <= rect2.y + rect2.height
+    && rect2.y <= rect1.y + rect1.height;
+}
+
+function enemyCreate(id, x, y, speedX, speedY,width, height, color) {
   const enemy = {
     x: x,
     y: y,
     name: 'E',
     speedX: speedX,
     speedY: speedY,
+    width: width,
+    height: height,
+    color: color,
   };
   enemyList[id] = enemy;
 }
@@ -63,9 +87,14 @@ function updateEntityPosition(something) {
     something.speedY = -something.speedY;
   }
 };
+
 function drawEntity(something) {
-  ctx.fillText(something.name , something.x, something.y);
+  ctx.save();
+  ctx.fillStyle = something.color;
+  ctx.fillRect(something.x-something.width/2, something.y-something.height/2, something.width, something.height);
+  ctx.restore();
 }
+
 function update() {
   ctx.clearRect(0,0, width, height);
   
@@ -88,29 +117,3 @@ function update() {
   ctx.fillText(player1.hp + ' HP',0,30)
 };
 setInterval(update, 40);
-
-// document.addEventListener('keydown', function(event) {
-//     if (x === test.posX && y === test.posY) {
-//         console.log('asd');
-//     }
-//     if (event.code == 'ArrowRight') {
-//     ctx.clearRect(x, y, w, h);
-//     x += 10;
-//     ctx.fillRect(x, y, w, h);
-//   }
-//   if (event.code == 'ArrowLeft') {
-//     ctx.clearRect(x, y, w, h);
-//     x -= 10;
-//     ctx.fillRect(x, y, w, h);
-//   }
-//   if (event.code == 'ArrowUp') {
-//     ctx.clearRect(x, y, w, h);
-//     y -= 10;
-//     ctx.fillRect(x, y, w, h);
-//   }
-//   if (event.code == 'ArrowDown') {
-//     ctx.clearRect(x, y, w, h);
-//     y += 10;
-//     ctx.fillRect(x, y, w, h);
-//   }
-// });
