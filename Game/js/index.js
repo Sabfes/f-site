@@ -4,18 +4,28 @@ let ctx = canvas.getContext("2d");
 ctx.fillStyle = 'black';
 ctx.font = '30px arial';
 
-let width = 500;
-let height = 500;
-const timeWhenGameStarted = Date.now();
+let WIDTH = 500;
+let HEIGHT = 500;
+let timeWhenGameStarted = Date.now();
 
 document.onmousemove = function(move) {
-  const mouseX = move.clientX;
-  const mouseY = move.clientY;
+  const mouseX = move.clientX - canvas.getBoundingClientRect().left;
+  const mouseY = move.clientY - canvas.getBoundingClientRect().top;
   
+  if (mouseX < player1.width/2) 
+    mouseX = player1.width/2;
+  if (mouseX > WIDTH - player1.width/2)
+    mouseX = WIDTH - player1.width/2;
+  if (mouseY < player1.height/2) 
+    mouseY = player1.height/2;
+  if (mouseY > HEIGHT - player1.height/2) 
+    mouseY = HEIGHT - player1.height/2;
+
   player1.x = mouseX;
   player1.y = mouseY;
   
 }
+let frameCount = 0;
 // player1
 const player1 = {
   name: 'P',
@@ -25,11 +35,20 @@ const player1 = {
   color: 'green',
 };
 
-const enemyList = {};
+let enemyList = {};
 
-enemyCreate('E1', 150, 350, 10, 15 , 30, 30, 'red');
-enemyCreate('E2', 250, 350, 10, -15, 20, 20, 'red');
-enemyCreate('E3', 350, 150, 10, -5, 40, 10, 'red');
+
+function randomGenerateEnemy() {
+  const x = Math.random() * WIDTH;
+  const y = Math.random() * HEIGHT;
+  const height = 10 + Math.random() * 30;
+  const width = 10 + Math.random() * 30;
+  const speedX = 5 + Math.random() * 5;
+  const speedY = 5 + Math.random() * 5;
+  const id = Math.random();
+  enemyCreate(id, x, y, speedX, speedY, width, height)
+}
+
 
 function getDistanceBetweenEntity(entity1, entity2) {
   const vx = entity1.x - entity2.x;
@@ -59,7 +78,7 @@ function testcollisionRectRect(rect1, rect2) {
     && rect2.y <= rect1.y + rect1.height;
 }
 
-function enemyCreate(id, x, y, speedX, speedY,width, height, color) {
+function enemyCreate(id, x, y, speedX, speedY,width, height) {
   const enemy = {
     x: x,
     y: y,
@@ -68,7 +87,8 @@ function enemyCreate(id, x, y, speedX, speedY,width, height, color) {
     speedY: speedY,
     width: width,
     height: height,
-    color: color,
+    color: 'red',
+    id: id,
   };
   enemyList[id] = enemy;
 }
@@ -80,10 +100,10 @@ function updateEntityPosition(something) {
   something.x += something.speedX;
   something.y += something.speedY;
 
-  if (something.x < 0 || something.x > width) {
+  if (something.x < 0 || something.x > WIDTH) {
     something.speedX = -something.speedX;
   }
-  if (something.y < 0 || something.y > height) {
+  if (something.y < 0 || something.y > HEIGHT) {
     something.speedY = -something.speedY;
   }
 };
@@ -96,24 +116,42 @@ function drawEntity(something) {
 }
 
 function update() {
-  ctx.clearRect(0,0, width, height);
+  ctx.clearRect(0,0, WIDTH, HEIGHT);
   
+  frameCount += 1;
+
+  if (frameCount % 100 === 0) {
+    randomGenerateEnemy();
+  }
+
   for (let key in enemyList) {
     updateEntity(enemyList[key]);
 
     let isColliding = testCollisionEntity(player1, enemyList[key]);
     if (isColliding) {
       player1.hp -= 1;
-      if (player1.hp <= 0) {
-        const timeSurv = Date.now() - timeWhenGameStarted;
-        console.log('You surv ' + timeSurv/1000 + "s");
-        timeWhenGameStarted = Date.now();
-        player1.hp = 20;
-      }
+    }
+    if (player1.hp <= 0) {
+      const timeSurv = Date.now() - timeWhenGameStarted;
+      console.log('You surv ' + timeSurv/1000 + "s");
+      startNewGame();
     }
   }
 
   drawEntity(player1);
   ctx.fillText(player1.hp + ' HP',0,30)
 };
+
+
+function startNewGame() {
+  player1.hp = 20;
+  timeWhenGameStarted = Date.now();
+  frameCount = 0;
+  enemyList = {};
+  randomGenerateEnemy();
+  randomGenerateEnemy();
+}
+
+startNewGame();
+
 setInterval(update, 40);
