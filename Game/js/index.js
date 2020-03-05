@@ -26,6 +26,7 @@ document.onmousemove = function(move) {
   
 }
 let frameCount = 0;
+let gameScore = 0;
 // player1
 const player1 = {
   name: 'P',
@@ -118,7 +119,8 @@ function drawEntity(something) {
 function update() {
   ctx.clearRect(0,0, WIDTH, HEIGHT);
   
-  frameCount += 1;
+  frameCount++;
+  gameScore++;
 
   if (frameCount % 100 === 0) {
     randomGenerateEnemy();
@@ -134,12 +136,14 @@ function update() {
     if (player1.hp <= 0) {
       const timeSurv = Date.now() - timeWhenGameStarted;
       console.log('You surv ' + timeSurv/1000 + "s");
+      console.log('You score ' + gameScore + "point");
       startNewGame();
     }
   }
 
   drawEntity(player1);
   ctx.fillText(player1.hp + ' HP',0,30)
+  ctx.fillText('Score: ' + gameScore,200,30)
 };
 
 
@@ -148,6 +152,7 @@ function startNewGame() {
   timeWhenGameStarted = Date.now();
   frameCount = 0;
   enemyList = {};
+  gameScore = 0;
   randomGenerateEnemy();
   randomGenerateEnemy();
 }
