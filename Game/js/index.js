@@ -37,7 +37,7 @@ const player1 = {
 };
 
 let enemyList = {};
-
+let upgradeList = {};
 
 function randomGenerateEnemy() {
   const x = Math.random() * WIDTH;
@@ -50,12 +50,12 @@ function randomGenerateEnemy() {
   enemyCreate(id, x, y, speedX, speedY, width, height)
 }
 
-
 function getDistanceBetweenEntity(entity1, entity2) {
   const vx = entity1.x - entity2.x;
   const vy = entity1.y - entity2.y;
   return Math.sqrt(vx*vx + vy*vy);
 }
+
 function testCollisionEntity(entity1, entity2) {
   let rect1 = {
     x: entity1.x - entity1.width/2,
@@ -93,10 +93,38 @@ function enemyCreate(id, x, y, speedX, speedY,width, height) {
   };
   enemyList[id] = enemy;
 }
+
+function upgrade(id, x, y, speedX, speedY,width, height) {
+  const asd = {
+    x: x,
+    y: y,
+    name: 'E',
+    speedX: speedX,
+    speedY: speedY,
+    width: width,
+    height: height,
+    color: 'orange',
+    id: id,
+  };
+  upgradeList[id] = asd;
+}
+
+function randomGenerateEnemyUpgrade() {
+  const x = Math.random() * WIDTH;
+  const y = Math.random() * HEIGHT;
+  const height = 10;
+  const width = 10;
+  const speedX = 0;
+  const speedY = 0;
+  const id = Math.random();
+  upgrade(id, x, y, speedX, speedY, width, height)
+}
+
 function updateEntity(something){
   updateEntityPosition(something);
   drawEntity(something);
 }
+
 function updateEntityPosition(something) {
   something.x += something.speedX;
   something.y += something.speedY;
@@ -125,6 +153,18 @@ function update() {
   if (frameCount % 100 === 0) {
     randomGenerateEnemy();
   }
+  if (frameCount % 75 === 0 ) {
+    randomGenerateEnemyUpgrade();
+  }
+
+  for (let key in upgradeList) {
+    updateEntity(upgradeList[key]);
+    let isColliding = testCollisionEntity(player1, upgradeList[key]);
+    if (isColliding) {
+      gameScore += 100;
+      delete upgradeList[key];
+    }
+  }
 
   for (let key in enemyList) {
     updateEntity(enemyList[key]);
@@ -143,7 +183,7 @@ function update() {
 
   drawEntity(player1);
   ctx.fillText(player1.hp + ' HP',0,30)
-  ctx.fillText('Score: ' + gameScore,200,30)
+  ctx.fillText('Score: ' + gameScore ,100,30)
 };
 
 
@@ -152,6 +192,7 @@ function startNewGame() {
   timeWhenGameStarted = Date.now();
   frameCount = 0;
   enemyList = {};
+  upgradeList = {};
   gameScore = 0;
   randomGenerateEnemy();
   randomGenerateEnemy();
