@@ -1,9 +1,40 @@
 import React, {Component} from 'react';
 import './Car.css';
-import Radium from 'radium';
+// import Radium from 'radium';
 
 class Car extends Component {
+    componentWillReceiveProps(nextProps) {
+        console.log('car componentWillReceiveProps', nextProps)
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('car shouldComponentUpdate', nextProps,nextState)
+        return nextProps.name.trim() !== this.props.name.trim() 
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        console.log('car componentWillUpdate', nextProps, nextState)
+    }
+ 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        console.log('car getDerivedStateFromProps', nextProps, prevState)
+        return prevState
+    }
+
+    componentDidUpdate() {
+        console.log('car componentDidUpdate')
+    }
+
+    getSnapshotBeforeUpdate() {
+        console.log('car getCnapshot')
+    }
+
+    componentWillUnmount() {
+        console.log('car componentWillUnmount')
+    }
+
     render() {
+        console.log('car render');
         const inputClasses = ['input'];
         if (this.props.name !== '') {
             inputClasses.push('green');
@@ -41,4 +72,4 @@ class Car extends Component {
     }
 }
 
-export default Radium(Car);
+export default Car;

@@ -3,16 +3,14 @@ import './App.css';
 import Car from './Car/Car.js';
 
 class App extends Component {
-  
   constructor(props) {
     super(props);
     
     this.state = {
       cars: [
         {name: 'Ford', year: 2018},
-        {name: 'Audi', year: 2016},
-        {name: 'Mazda', year: 2010},
-        {name: 'Mercedes-Benz CLA', year: 2020},
+        // {name: 'Audi', year: 2016},
+        // {name: 'Mazda', year: 2010},
       ],
       pageTitle: 'React component',
       showCars: false,
@@ -50,6 +48,7 @@ class App extends Component {
   }
   // Рендер
   render() {
+    console.log('app render')
     return (
       <div className="App">
         {/* <h1>{this.state.pageTitle}</h1> */}
