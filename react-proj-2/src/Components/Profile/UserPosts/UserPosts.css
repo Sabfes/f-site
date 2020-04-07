@@ -17,4 +17,5 @@
 }
 .UserPosts__textarea {
     min-height: 100px;
+    resize: none;
 }

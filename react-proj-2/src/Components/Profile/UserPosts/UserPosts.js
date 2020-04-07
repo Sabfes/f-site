@@ -10,7 +10,10 @@ const UserPosts = () => {
                 <textarea className='UserPosts__textarea' placeholder='Your news...'></textarea>
                 <div className='UserPosts__button'>Send</div>
             </div>
-            <Post />
+            <Post 
+                feed='Hey, why nobody love me?' 
+                srcImg='https://manshet.org/templates/teensy/dleimages/noavatar.png'
+            />
         </div>
     )
 }
