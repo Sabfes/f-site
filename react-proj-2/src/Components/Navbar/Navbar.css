@@ -1,4 +1,11 @@
 .Navbar {
+    display: flex;
+    flex-direction: column;
     grid-area: nav;
     background-color: #edeef0;
+}
+.Navbar__link {
+  text-decoration: none;
+  margin-top: 15px;
+  margin-left: 10px;
 }

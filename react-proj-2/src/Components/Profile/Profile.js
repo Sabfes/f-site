@@ -6,7 +6,7 @@ import UserInfo from './UserInfo/UserInfo'
 const Profile = () => {
     return (
         <main className='Profile'>
-            <img className='Profile__img' src='https://404store.com/2017/08/15/CpRGNUC.jpg' alt='as'/>
+            <img className='Profile__img' src='https://www.4kpapers.com/assets/2016/09/27/mount-fitz-roy-wallpaper.jpg' alt='as'/>
             <UserInfo />
             <UserPosts />
         </main>
