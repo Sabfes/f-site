@@ -1,0 +1,15 @@
+.UserInfo {
+    margin-top: 10px;
+    display: flex;
+}
+.UserInfo__img {
+    width: 150px;
+    height: 150px;
+}
+.UserInfo__info {
+    margin-left: 10px;
+}
+.UserInfo__info-item {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

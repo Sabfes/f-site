@@ -1,9 +1,9 @@
 import React from 'react'
-import Classes from './Navbar.module.css'
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav className={Classes.nav}> 
+        <nav className='Navbar'> 
             <div><a href='#a'>Profile</a></div>
             <div><a href='#s'>Messages</a></div>
             <div><a href='#sas'>News</a></div>

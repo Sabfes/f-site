@@ -2,7 +2,7 @@
   grid-area: header;
   background-color: #5b88bd;
 }
-.header img {
+.header__img {
   width: 40px;
   height: 40px;
   margin: 10px;
