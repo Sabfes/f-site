@@ -1,6 +1,6 @@
 .UserInfo {
-    margin-top: 10px;
     display: flex;
+    flex-direction: column;
 }
 .UserInfo__img {
     width: 150px;
@@ -12,4 +12,12 @@
 .UserInfo__info-item {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+.UserInfo__content {
+    margin-top: 20px;
+    display: flex;
+}
+.UserInfo__bg-Img {
+    width: 100%;
+    height: 150px;
 }

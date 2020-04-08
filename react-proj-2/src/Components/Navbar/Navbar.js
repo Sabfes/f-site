@@ -1,14 +1,15 @@
 import React from 'react'
 import './Navbar.css'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className='Navbar'> 
-            <a className='Navbar__link' href='/profile'>Profile</a>
-            <a className='Navbar__link' href='/Messages'>Messages</a>
-            <a className='Navbar__link' href='/News'>News</a>
-            <a className='Navbar__link' href='/Music'>Music</a>
-            <a className='Navbar__link' href='/Settings'>Settings</a>
+            <NavLink className='Navbar__link' to='/Profile'>Profile</NavLink>
+            <NavLink className='Navbar__link' to='/Messages'>Messages</NavLink>
+            <NavLink className='Navbar__link' to='/News'>News</NavLink>
+            <NavLink className='Navbar__link' to='/Music'>Music</NavLink>
+            <NavLink className='Navbar__link' to='/Settings'>Settings</NavLink>
         </nav>
     )
 }
