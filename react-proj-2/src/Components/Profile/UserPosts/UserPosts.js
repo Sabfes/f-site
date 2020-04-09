@@ -2,18 +2,21 @@ import React from 'react'
 import './UserPosts.css'
 import Post from './Post/Post'
 
-const UserPosts = () => {
-    let postData = [
-        {id:1, text: 'Hi world!', likeConter: 12, img: 'https://manshet.org/templates/teensy/dleimages/noavatar.png'},
-        {id:2, text: 'Hi world!2e123', likeConter: 2, img: 'https://manshet.org/templates/teensy/dleimages/noavatar.png'},
-        {id:3, text: 'asdasHi world!', likeConter: 55, img: 'https://manshet.org/templates/teensy/dleimages/noavatar.png'}
-    ]
+const UserPosts = (props) => {
+    let postData = props.dataBillPost;
+
+    let newPostEl = React.createRef();
+
+    let addPost = () => {
+        props.addPost(`${newPostEl.current.value}`)
+        newPostEl.current.value = ''
+    }
     return (
         <div>
             <div className='UserPosts'>
                 <h1>My posts</h1>
-                <textarea className='UserPosts__textarea' placeholder='Your news...'></textarea>
-                <div className='UserPosts__button'>Send</div>
+                <textarea ref={newPostEl} className='UserPosts__textarea' placeholder='Your news...'></textarea>
+                <div className='UserPosts__button' onClick={addPost}>Send</div>
             </div>
             <div>
                 {postData.map( (item, index) => {

@@ -5,16 +5,14 @@ import Chat from './Chat/Chat'
 
 
 const Messages = (props) => {
-    let dialogsData = [
-        {id:1, name: 'Dima'},
-        {id:2, name: 'Liza'},
-        {id:3, name: 'Misha'}
-    ]
-    let messagesData = [
-        {id:1, text: 'Hi world!'},
-        {id:2, text: 'Hi world!2e123'},
-        {id:3, text: 'asdasHi world!'}
-    ]
+    console.log(props)
+    let dialogsData = props.dataBillDialogs;
+    let messagesData = props.dataBillMessages;
+
+    let newMsg = React.createRef()
+    let addMsg = () => {
+        console.log(newMsg.current.value)
+    }
 
     return (
         <div className='Messages'>
@@ -33,6 +31,8 @@ const Messages = (props) => {
                             <Chat key={index} text={item.text}/>
                         )
                     })}
+                    <textarea ref={newMsg} className='Messages__textarea' placeholder='Your text...'></textarea>
+                    <div className='Messages__send-btn' onClick={addMsg}>Send</div>
                 </div>
             </div>
         </div>
