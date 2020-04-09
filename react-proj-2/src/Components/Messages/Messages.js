@@ -5,13 +5,10 @@ import Chat from './Chat/Chat'
 
 
 const Messages = (props) => {
-    console.log(props)
-    let dialogsData = props.dataBillDialogs;
-    let messagesData = props.dataBillMessages;
-
     let newMsg = React.createRef()
     let addMsg = () => {
-        console.log(newMsg.current.value)
+        props.dispatch({type: 'ADD-MESSAGE', text: newMsg.current.value})
+        newMsg.current.value = ''
     }
 
     return (
@@ -19,14 +16,14 @@ const Messages = (props) => {
             <h1 className='Messages__h1'>Messages</h1>
             <div className='Messages__container'>
                 <div className='Messages__chat-list'>
-                    {dialogsData.map( (item, index) => {
+                    {props.dataBillDialogs.map( (item, index) => {
                         return (
                             <Dialog key={index} link={`/Messages/${item.id}`} dialogName={item.name}/>
                         )
                     })}
                 </div>
                 <div className='Messages__chat'>
-                    {messagesData.map( (item, index) => {
+                    {props.dataBillMessages.map( (item, index) => {
                         return (
                             <Chat key={index} text={item.text}/>
                         )

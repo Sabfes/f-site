@@ -1,14 +1,13 @@
 import React from 'react'
 import './UserPosts.css'
 import Post from './Post/Post'
+import {addPostActionCreator} from './../../../redux/state.js'
 
 const UserPosts = (props) => {
-    let postData = props.dataBillPost;
-
+    // let postData = props.dataBillPost;
     let newPostEl = React.createRef();
-
     let addPost = () => {
-        props.addPost(`${newPostEl.current.value}`)
+        props.dispatch(addPostActionCreator(`${newPostEl.current.value}`))
         newPostEl.current.value = ''
     }
     return (
@@ -19,7 +18,7 @@ const UserPosts = (props) => {
                 <div className='UserPosts__button' onClick={addPost}>Send</div>
             </div>
             <div>
-                {postData.map( (item, index) => {
+                {props.dataBillPost.map( (item, index) => {
                     return (
                         <Post key={index} text={item.text} srcImg={item.img} likes={item.likeConter} />
                     )
