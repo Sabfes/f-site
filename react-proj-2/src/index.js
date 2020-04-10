@@ -4,7 +4,7 @@ import './index.css'
 import App from './App'
 import './index.css'
 import * as serviceWorker from './serviceWorker'
-import store from './redux/state.js'
+import store from './redux/redux-store'
 
 let rerenderThree = ()=> {
   ReactDOM.render(
@@ -16,7 +16,10 @@ let rerenderThree = ()=> {
 }
 
 rerenderThree(store.getState);
-store.subscribe(rerenderThree);
+store.subscribe(()=>{
+  let state = store.getState();
+  rerenderThree(state)
+});
 
 
 // If you want your app to work offline and load faster, you can change

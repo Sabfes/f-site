@@ -3,8 +3,8 @@ import './Chat.css'
 
 const Chat = (props) => {
     return (
-        <div>
-            <div>{props.text}</div>
+        <div className='Chat'>
+            <p className='Chat__p'>{props.text}</p>
         </div>
     )
 }

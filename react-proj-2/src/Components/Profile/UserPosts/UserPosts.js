@@ -1,7 +1,7 @@
 import React from 'react'
 import './UserPosts.css'
 import Post from './Post/Post'
-import {addPostActionCreator} from './../../../redux/state.js'
+import {addPostActionCreator} from '../../../redux/store.js'
 
 const UserPosts = (props) => {
     // let postData = props.dataBillPost;

@@ -15,8 +15,8 @@ const App = (props) => {
       <div className='app-wrapper'>
         <Header />
         <Navbar />
-        <Route path='/Profile'><Profile dataBillPost={props.state.dataBillPost} dispatch={props.dispatch}/></Route>
-        <Route path='/Messages'><Messages dataBillMessages={props.state.messagesData} dataBillDialogs={props.state.dialogsData} dispatch={props.dispatch}/></Route>
+        <Route path='/Profile'><Profile dataBillPost={props.state.dataBillPostReducer} dispatch={props.dispatch}/></Route>
+        <Route path='/Messages'><Messages dataBillMessages={props.state.messagesDataReducer} dataBillDialogs={props.state.dialogBillDataReducer} dispatch={props.dispatch}/></Route>
         <Route path='/News'><News /></Route>
         <Route path='/Music'><Music /></Route>
         <Route path='/Settings'><Settings /></Route>

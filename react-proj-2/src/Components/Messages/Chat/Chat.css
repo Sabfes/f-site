@@ -1,0 +1,6 @@
+.Chat__p {
+    margin-top: 15px;
+}
+.Chat__p:nth-of-type(1) {
+    margin-top: 0;
+}
