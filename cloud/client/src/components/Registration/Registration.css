@@ -1,0 +1,17 @@
+.registration {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 260px;
+    justify-content: space-between;
+}
+
+.registration__button {
+    height: 60px;
+    font-size: 20px;
+    outline: none;
+}
+.registration__button:hover {
+    cursor: pointer;
+
+}

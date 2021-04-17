@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+}
+
+.navbar__buttons {
+    display: flex;
+}
