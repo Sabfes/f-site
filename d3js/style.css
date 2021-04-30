@@ -1,0 +1,10 @@
+.testDiv {
+    width: 400px;
+    height: 200px;
+    transition: border 22s;
+}
+
+.testDiv:hover {
+    transition: 20s;
+    border: 1px solid black
+}
